@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>D.1 輸入手機號碼</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body>
+    <!-- mask 1 -->
+    <section id="mask">
+      <div class="container">
+        <h3>手機號碼已被註冊</h3>
+        <p>此手機號碼已註冊成為郵政會員，是否要立即進行登入？</p>
+        <div class="btnGrp">
+          <button class="btn _second">返回</button>
+          <button class="btn _primary">下一步</button>
+        </div>
+        <button class="btnClose">關閉</button>
+      </div>
+    </section>
+    <!-- mask 2 -->
+    <section id="mask_below" class="_hide">
+      <div class="container">
+        <h3>標題</h3>
+        <p>請閱讀完條款內容，方可點擊同意按鈕</p>
+        <div class="scrollCover">
+          <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae modi animi fugit laborum quidem aperiam eum pariatur, ducimus sequi perspiciatis ad odio, maxime recusandae distinctio sapiente ut natus rem beatae.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae modi animi fugit laborum quidem aperiam eum pariatur, ducimus sequi perspiciatis ad odio, maxime recusandae distinctio sapiente ut natus rem beatae.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae modi animi fugit laborum quidem aperiam eum pariatur, ducimus sequi perspiciatis ad odio, maxime recusandae distinctio sapiente ut natus rem beatae.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae modi animi fugit laborum quidem aperiam eum pariatur, ducimus sequi perspiciatis ad odio, maxime recusandae distinctio sapiente ut natus rem beatae.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae modi animi fugit laborum quidem aperiam eum pariatur, ducimus sequi perspiciatis ad odio, maxime recusandae distinctio sapiente ut natus rem beatae.
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae modi animi fugit laborum quidem aperiam eum pariatur, ducimus sequi perspiciatis ad odio, maxime recusandae distinctio sapiente ut natus rem beatae.
+            <ol>
+              <li>有序清單</li>
+              <li>有序清單</li>
+              <li>有序清單</li>
+              <li>有序清單</li>
+              <li>有序清單</li>
+            </ol>
+            <ul>
+              <li>無序清單</li>
+              <li>無序清單</li>
+              <li>無序清單</li>
+              <li>無序清單</li>
+              <li>無序清單</li>
+            </ul>
+          </div>
+        </div>
+        <div class="btnGrp">
+          <button class="btn _primary _openMask">同意條款</button>
+        </div>
+        <button class="btnClose">關閉</button>
+      </div>
+    </section>
+    <header>
+      <div class="container">
+        <a href="#"><h1>中華郵政會員資訊網</h1></a>
+        <nav>
+          <a href="#" class="lang">English</a>
+          <div class="menu">
+            <a href="#">郵政會員</a>
+            <a href="#">最新消息</a>
+            <a href="#">常見問題</a>
+            <a href="#">下載行動郵局</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- 內容 -->
+    <div class="main">
+      <div class="container">
+        <div class="centerLimit">
+          <div class="imgBox">
+            <img src="images/01.jpg" alt="" class="cover">
+          </div>
+          <h3>輸入您的手機號碼</h3>
+          <p>此組手機號碼將成為您未來的會員帳號</p>
+          <!-- 福利 -->
+          <div class="info">
+            <h4>郵政會員專屬福利</h4>
+            <ul>
+              <li>用一組手機號碼，通行各大郵政服務</li>
+              <li>消費即可累積啵幣 (Po coins)，兌換專屬好禮</li>
+              <li>第一手最新消息即時推播，優惠資訊不錯過</li>
+            </ul>
+          </div>
+          <!-- 取消福利 -->
+          <div class="info _cancel">
+            <h4>取消連結郵寄便</h4>
+            <ul>
+              <li><b>資料刪除：</b>刪除帳號後，您的所有資料將被永久刪除，未來若重新註冊，將成為全新的帳戶。</li>
+              <li><b>服務影響：</b>將同時刪除已綁定的郵寄便、i 郵購、i 集郵會員資料，如購買紀錄、訂閱紀錄、個人資料等，且將無法繼續累積啵幣。</li>
+              <li><b>儲金帳戶：</b>若您有儲金帳戶，仍可透過儲金登入，保有數位資料及使用相關功能，但無法再累積啵幣等回饋。</li>
+              <li><b個人化設定：></b個人化設定：>刪除帳號後，所有個人化設定和偏好將會一併刪除。</li>
+            </ul>
+          </div>
+          <!-- 功能卡 -->
+          <section>
+            <!-- 樣式一 -->
+            <div class="listCard">
+              <div class="itemName">
+                <img src="images/logos/logo1.png" alt="郵寄便">
+                <p><b>郵寄便</b><br>手機號碼已成為此平台會員，立即驗證並連結服務</p>
+              </div>
+              <div class="state">
+                <!-- 狀態1、Unselected -->
+                <input type="checkbox">
+              </div>
+            </div>
+            <div class="listCard">
+              <div class="itemName">
+                <img src="images/logos/logo2.png" alt="i郵購">
+                <p><b>i郵購</b><br>手機號碼已成為此平台會員，立即驗證並連結服務</p>
+              </div>
+              <div class="state">
+                <!-- 狀態2、Selected -->
+                <input type="checkbox" checked>
+              </div>
+            </div>
+            <div class="listCard">
+              <div class="itemName">
+                <img src="images/logos/logo3.png" alt="i集郵">
+                <p><b>i集郵</b><br>手機號碼已成為此平台會員，立即驗證並連結服務</p>
+              </div>
+              <div class="state">
+                <!-- 狀態3、服務平台已連結 -->
+                已連結
+              </div>
+            </div>
+            <div class="listCard">
+              <div class="itemName">
+                <img src="images/logos/logo3.png" alt="i集郵">
+                <p><b>i集郵</b><br>手機號碼已成為此平台會員，立即驗證並連結服務</p>
+              </div>
+              <div class="state">
+                <!-- 狀態3、服務平台已連結 -->
+                連結設定中
+              </div>
+            </div>
+            <div class="listCard">
+              <div class="itemName">
+                <img src="images/logos/logo1.png" alt="郵寄便">
+                <p><b>郵寄便</b><br>手機號碼已成為此平台會員，立即驗證並連結服務</p>
+              </div>
+              <div class="state">
+                <!-- 狀態4、待驗證服務 -->
+                <img src="images/icon-arrow-right.svg" alt="">
+              </div>
+            </div>
+            <!-- 樣式二 -->
+            <div class="listCard">
+              <div class="state">
+                <input type="checkbox">
+              </div>
+              <div class="itemName">
+                <p>取消原因1</p>
+              </div>
+            </div>
+            <div class="listCard">
+              <div class="state">
+                <input type="checkbox">
+              </div>
+              <div class="itemName">
+                <p>取消原因2</p>
+              </div>
+            </div>
+            <div class="listCard">
+              <div class="state">
+                <input type="checkbox">
+              </div>
+              <div class="itemName">
+                <p>取消原因3</p>
+              </div>
+            </div>
+          </section>
+          <!-- 表單 -->
+          <form action="">
+            <!-- input -->
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">舊手機號碼：</label>
+              <div class="content">
+                <p>0900-000000</p>
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">新手機號碼<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
+              <div class="content">
+                <input type="text" id="fake-legend" placeholder="請輸入文字">
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">舊 Email：</label>
+              <div class="content">
+                <p>user@email.com</p>
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">input<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
+              <div class="content">
+                <input type="text" id="fake-legend" placeholder="請輸入文字">
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">input<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
+              <div class="content">
+                <input type="text" id="fake-legend" placeholder="請輸入文字" value="readonly" readonly>
+              </div>
+            </div>
+            <!-- select -->
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">select<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
+              <div class="content">
+                <select name="" id="fake-legend">
+                  <option value="">台北市</option>
+                  <option value="">新北市</option>
+                  <option value="">桃園市</option>
+                  <option value="">新竹市</option>
+                  <option value="">...</option>
+                </select>
+              </div>
+            </div>
+            <!-- 密碼 -->
+            <div class="formGrp">
+              <label for="password" class="title">會員密碼：</label>
+              <div class="content _psssToggle">
+                <input name="password" id="password" type="password" placeholder="請輸入6~12 位半形英數字密碼" value="1234">
+                <button type="button" class="btn" aria-label="顯示密碼">顯示密碼</button>
+              </div>
+              <a href="#" class="forgetPassword">忘記密碼</a>
+            </div>
+            <!-- 日期 -->
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">出生年月日<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
+              <div class="content">
+                <input type="date" id="fake-legend" placeholder="請輸入日期">
+              </div>
+            </div>
+            <!-- checkGrp -->
+            <div class="checkGrp">
+              <label><input type="checkbox" disabled>我已閱讀並同意<a href="javascript:;" class="_openMask">郵政會員與個資同意條款</a></label>
+            </div>
+            <!-- 驗證碼 -->
+            <div class="formGrp">
+              <label for="password" class="title">輸入驗證碼：</label>
+              <div class="content _inline">
+                <input type="text" id="fake-legend" placeholder="1">
+                <input type="text" id="fake-legend" placeholder="2">
+                <input type="text" id="fake-legend" placeholder="3">
+                <input type="text" id="fake-legend" placeholder="4">
+                <input type="text" id="fake-legend" placeholder="5">
+                <input type="text" id="fake-legend" placeholder="6">   
+              </div>
+              <div class="tip">
+                <p>已發送驗證碼，請在<b>179</b>秒內完成驗證</p>
+                <button>重新發送</button>
+              </div>
+              <div class="tip">
+                <p>收不到簡訊驗證碼？<a href="#">使用會員密碼驗證</a></p>
+              </div>
+            </div>
+          </form>
+          <!-- 按鈕組合 -->
+          <div class="btnGrp">
+            <button class="btn _second">返回</button>
+            <button class="btn _primary">下一步</button>
+          </div>
+          <div class="btnGrp">
+            <button class="btn _primary">主要按鈕</button>
+            <button class="btn _second">次要按鈕</button>
+            <button class="btn">一般按鈕</button>
+          </div>
+          <div class="btnGrp _full">
+            <button class="btn _primary">主要按鈕</button>
+            <button class="btn _second">次要按鈕</button>
+            <button class="btn">一般按鈕</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <footer>
+      <div class="container">這是footer</div>
+    </footer>
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/customize.js"></script>
+  </body>
+</html>
