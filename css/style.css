@@ -756,4 +756,19 @@
     background: url(../images/icon-li-style2.svg) left 4px no-repeat;
     background-size: 24px 24px;
   }
+  .main .centerLimit .info._user {
+    background: #F6F7EE;
+  }
+  .main .centerLimit .info._user h4 {
+    margin: 1.25em 0 0;
+    font-weight: normal;
+  }
+  .main .centerLimit .info._user h4:first-child {
+    margin-top: 0;
+  }
+  .main .centerLimit .info._user p {
+    font-size: 1.45em;
+    font-weight: bold;
+    color: #333;
+  }
 }/*# sourceMappingURL=style.css.map */
