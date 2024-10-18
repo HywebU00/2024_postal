@@ -578,9 +578,6 @@
     background: url(../images/icon-close.svg) 50% 50% no-repeat #eee;
     background-size: 18px 18px;
   }
-  #mask {
-    display: none;
-  }
   #mask_below {
     z-index: 10000;
     transition: 0.3s;
