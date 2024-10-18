@@ -752,4 +752,8 @@
     background: url(../images/icon-li-style.svg) left 4px no-repeat;
     background-size: 24px 24px;
   }
+  .main .centerLimit .info._cancel ol li, .main .centerLimit .info._cancel ul li {
+    background: url(../images/icon-li-style2.svg) left 4px no-repeat;
+    background-size: 24px 24px;
+  }
 }/*# sourceMappingURL=style.css.map */
