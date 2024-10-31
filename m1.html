@@ -12,7 +12,7 @@
     <!-- favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon">
   </head>
-  <body>
+  <body class="mp">
     <header>
       <div class="container">
         <a href="#"><h1>中華郵政會員資訊網</h1></a>
@@ -29,58 +29,66 @@
       </div>
     </header>
     <!-- 內容 -->
-    <div class="main _mp">
+    <div class="main">
       <!-- hero -->
-      <div class="hero">
-        <div class="container _full">
-          <h2>成為郵政會員一同開啟<br><b>中華郵政</b>生活圈</h2>
+      <section class="hero">
+        <div class="container">
+          <h2 class="mainTitle">成為郵政會員一同開啟<br><b>中華郵政</b>生活圈</h2>
           <p>讓行動郵局化身你的多元生活好厝邊</p>
-          <div class="btnGrp">
-            <a href="#">下載行動郵局</a>
-            <a href="#">瞭解郵政會員</a>
+          <div class="btnGrp _narrow">
+            <a href="#" class="btn _primary">下載行動郵局</a>
+            <a href="#" class="btn">瞭解郵政會員</a>
           </div>
         </div>
-      </div>
-      <!-- 郵政會員專屬福利 -->
-      <div>
+      </section>
+      <!-- 共用背景1 -->
+      <section class="mixDeco">
+        <!-- 郵政會員專屬福利 -->
         <div class="container">
-          <h3>郵政會員專屬福利</h3>
+          <h3 class="mainTitle">郵政會員專屬福利</h3>
           <p>享受便利新生活，專屬好禮享不完</p>
-          <section>
+          <section class="discountInfo">
             <div class="col">
-              <img src="" alt="">
-              <h4></h4>
-              <p></p>
+              <img src="images/icon-m1-discountInfo-01.png" alt="">
+              <h4>暢通各大郵政服務</h4>
+              <p>只要一組手機號碼<br>即可通行各大郵政業務服務</p>
             </div>
             <div class="col">
-              <img src="" alt="">
-              <h4></h4>
-              <p></p>
+              <img src="images/icon-m1-discountInfo-02.png" alt="">
+              <h4>點數回饋兌好禮</h4>
+              <p>消費<b>1</b>元 = <b>1 點啵幣</b>（Pcoins）<br>兌換專屬好禮與折抵消費</p>
             </div>
             <div class="col">
-              <img src="" alt="">
-              <h4></h4>
-              <p></p>
+              <img src="images/icon-m1-discountInfo-03.png" alt="">
+              <h4>活動消息不漏接</h4>
+              <p>第一手最新消息即時推播<br>優惠資訊不錯過</p>
             </div>
             <div class="col">
-              <img src="" alt="">
-              <h4></h4>
-              <p></p>
+              <img src="images/icon-m1-discountInfo-04.png" alt="">
+              <h4>福利標題</h4>
+              <p>Lorem ipsum dolor sit amet consectetur. Posuere.</p>
             </div>
           </section>
-          <a href="">啵幣是什麼</a>
+          <div class="btnGrp _narrow _center">
+              <a href="#" class="btn _more"><img src="images/icon-m1-coin.svg" alt="">啵幣是什麼</a>
+            </div>
         </div>
-      </div>
-      <!-- 一同暢遊郵政生活圈 -->
-      <div>
-        <div class="container">
-          <h3>一同暢遊郵政生活圈</h3>
-          <p>串連儲金與郵政服務，生活大小事一點通</p>
-          <div class="steps">
-            123
+        <!-- 一同暢遊郵政生活圈 -->
+        <div class="container gsap-outer">
+          <div class="pin">
+            <h3 class="mainTitle">一同暢遊郵政生活圈</h3>
+            <p>串連儲金與郵政服務，生活大小事一點通</p>
+            <div class="steps">
+              <div class="target">now</div>
+              <ul>
+                <li class="now">1</li>
+                <li>2</li>
+                <li>3</li>
+              </ul>
+            </div>
           </div>
           <!-- 視差滾動 -->
-          <section>
+          <section class="">
             <div class="cardInfo">
               <div class="col">
                 <div>
@@ -88,9 +96,16 @@
                   <h4>線上快速填單，寄件託運一把罩</h4>
                   <p>在網站填寫寄件資訊，至各分行郵局即可快速寄件，加入會員還能使用點數折抵郵資</p>
                 </div>
-                <a href="#" class="more">前往郵寄便</a>
+                <div class="btnGrp _narrow">
+                  <a href="#" class="btn _more">前往郵寄便</a>
+                </div>
               </div>
-              <img src="" alt="">
+              <div class="col">
+                <div class="imgContainer">
+                  <img src="images/img-m1-cardInfo-01.jpg" alt="">
+                </div>
+                <div class="deco-gray"></div>
+              </div>
             </div>
             <div class="cardInfo">
               <div class="col">
@@ -99,9 +114,16 @@
                   <h4>日常商品、認證農產品郵夠安心</h4>
                   <p>一站式網購生鮮食品、日常用品、認證在地小農產品，會員消費即可累積點數折抵商品金額</p>
                 </div>
-                <a href="#" class="more">前往 i 郵購</a>
+                <div class="btnGrp _narrow">
+                  <a href="#" class="btn _more">前往 i 郵購</a>
+                </div>
               </div>
-              <img src="" alt="">
+              <div class="col">
+                <div class="imgContainer">
+                  <img src="images/img-m1-cardInfo-02.jpg" alt="">
+                </div>
+                <div class="deco-gray"></div>
+              </div>
             </div>
             <div class="cardInfo">
               <div class="col">
@@ -109,17 +131,215 @@
                   <div class="tag">特色集郵</div>
                   <h4>探索集郵樂趣，打造專屬個人郵票</h4>
                 </div>
-                <a href="#" class="more">前往 i 集郵</a>
+                <div class="btnGrp _narrow">
+                  <a href="#" class="btn _more">前往 i 集郵</a>
+                </div>
               </div>
-              <img src="" alt="">
+              <div class="col">
+                <div class="imgContainer">
+                  <img src="images/img-m1-cardInfo-03.jpg" alt="">
+                </div>
+                <div class="deco-gray"></div>
+              </div>
             </div>
           </section>
         </div>
-      </div>
+        <!-- deco -->
+        <div class="deco _1_L1 rellax" data-rellax-speed="-1">
+          <img src="images/bg-mp-deco-1-L1.png" alt="">
+        </div>
+        <div class="deco _1_L2 rellax" data-rellax-speed="-3">
+          <img src="images/bg-mp-deco-1-L2.png" alt="">
+        </div>
+        <div class="deco _1_L3 rellax" data-rellax-speed="-5">
+          <img src="images/bg-mp-deco-1-L3.png" alt="">
+        </div>
+      </section>
       <!-- 郵你生活圈，就差你一員！ -->
+      <section class="pushAd">
+        <div class="container">
+          <div class="col">
+            <h3 class="mainTitle">郵你生活圈，就差你一員！</h3>
+            <p>使用儲金帳戶留存的手機號碼快速完成升級</p>
+            <ul class="step">
+              <li><span>1</span>使用儲金帳戶，登入行動郵局 App </li>
+              <li><span>2</span>點擊「立即升級郵政會員」按鈕</li>
+              <li><span>3</span>確認即將升級的手機號碼，並準備接收驗證碼</li>
+              <li><span>4</span>填寫會員升級資料</li>
+              <li><span>5</span>恭喜您，您已升級完成囉！</li>
+            </ul>
+            <div class="btnGrp _narrow">
+              <a class="btn _more">看更多升級方式</a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="mpSlider">
+              <!-- 圖片輪播 start -->
+              <div class="swiperBox">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-title="圖說1">
+                      <img src="images/img-phone-02.png" alt="圖說1" />
+                    </div>
+                    <div class="swiper-slide" data-title="圖說2">
+                      <img src="images/img-phone-02.png" alt="圖說2" />
+                    </div>
+                    <div class="swiper-slide" data-title="圖說3">
+                      <img src="images/img-phone-02.png" alt="圖說3" />
+                    </div>
+                    <div class="swiper-slide" data-title="圖說4">
+                      <img src="images/img-phone-02.png" alt="圖說4" />
+                    </div>
+                    <div class="swiper-slide" data-title="圖說4">
+                      <img src="images/img-phone-02.png" alt="圖說4" />
+                    </div>
+                  </div>
+                </div>
+                <!--前一筆-->
+                <div class="prevSlider swiperArrow"></div>
+                <!--下一筆-->
+                <div class="nextSlider swiperArrow"></div>
+                <!-- swiper 點切換-->
+                <div class="swiperDots"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- deco -->
+        <div class="deco _2_L1 rellax">
+          <img src="images/bg-mp-deco-2-L1.png" alt="">
+        </div>
+        <div class="deco _2_L2 rellax">
+          <img src="images/bg-mp-deco-2-L2.png" alt="">
+        </div>
+      </section>
       <!-- 馬上下載行動郵局 App -->
-      <!-- 精彩活動都在這 -->
-      <!-- 服務公告 -->
+      <section class="downloadApp">
+        <div class="container">
+          <div class="col">
+            <img src="images/img-phone.png" alt="">
+          </div>
+          <div class="col">
+            <h3 class="mainTitle">馬上下載行動郵局 App</h3>
+            <p>體驗中華郵你生活圈，享受便利新生活</p>
+            <div class="appLink">
+              <a href="#"><img src="images/img-AppStore.png" alt="AppStore"></a>
+              <a href="#"><img src="images/img-GooglePlay.png" alt="GooglePlay"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 共用背景2 -->
+      <section class="mixDeco">
+        <!-- 精彩活動都在這 -->
+        <div class="container">
+          <h3 class="mainTitle _bar">精彩活動都在這</h3>
+          <!-- 活動卡 -->
+          <div class="actInfo">
+            <!-- 1 -->
+            <div class="card">
+              <a href="#">
+                <div class="imgContainer">
+                  <img src="https://hywebu00.github.io/hyui_flex/images/demo/01.jpg" class="cover" alt="圖說1" />
+                </div>
+                <time datetime="">活動期間：2025/01/01 - 2025/07/31</time>
+                <h4>歡慶郵政會員上線，升級會員人人通通郵獎！</h4>
+                <div class="tag">
+                  <ul>
+                    <li>郵政會員</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!-- 2 -->
+            <div class="card">
+              <a href="#">
+                <div class="imgContainer">
+                  <img src="https://hywebu00.github.io/hyui_flex/images/demo/01.jpg" class="cover" alt="圖說1" />
+                </div>
+                <time datetime="">活動期間：2025/01/01 - 2025/07/31</time>
+                <h4>歡慶郵政會員上線，升級會員人人通通郵獎！</h4>
+                <div class="tag">
+                  <ul>
+                    <li>活動分類A</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!-- 3 -->
+            <div class="card">
+              <a href="#">
+                <div class="imgContainer">
+                  <img src="https://hywebu00.github.io/hyui_flex/images/demo/01.jpg" class="cover" alt="圖說1" />
+                </div>
+                <time datetime="">活動期間：2025/01/01 - 2025/07/31</time>
+                <h4>歡慶郵政會員上線，升級會員人人通通郵獎！</h4>
+                <div class="tag">
+                  <ul>
+                    <li>活動分類B</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <!-- 4 -->
+            <div class="card">
+              <a href="#">
+                <div class="imgContainer">
+                  <img src="https://hywebu00.github.io/hyui_flex/images/demo/01.jpg" class="cover" alt="圖說1" />
+                </div>
+                <time datetime="">活動期間：2025/01/01 - 2025/07/31</time>
+                <h4>歡慶郵政會員上線，升級會員人人通通郵獎！</h4>
+                <div class="tag">
+                  <ul>
+                    <li>活動分類B</li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="btnGrp _narrow _center">
+            <a class="btn _more">更多活動</a>
+          </div>
+        </div>
+        <!-- 服務公告 -->
+        <div class="container">
+          <h3 class="mainTitle _bar">服務公告</h3>
+          <ul class="list">
+            <li>
+              <a href="#" class="tag">
+                <time datetime="">2024/08/20</time>07/01 1會員系統全面升級，立即移轉帳戶保障權益
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <time datetime="">2024/08/20</time>07/01 2會員系統全面升級，立即移轉帳戶保障權益
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <time datetime="">2024/08/20</time>07/01 3會員系統全面升級，立即移轉帳戶保障權益
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <time datetime="">2024/08/20</time>07/01 4會員系統全面升級，立即移轉帳戶保障權益
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <time datetime="">2024/08/20</time>07/01 5會員系統全面升級，立即移轉帳戶保障權益
+              </a>
+            </li>
+          </ul>
+          <div class="btnGrp _narrow _center">
+            <a class="btn _more">查看更多</a>
+          </div>
+        </div>
+        <!-- deco -->
+        <div class="deco _3_L1 rellax" data-rellax-speed="-2">
+          <img src="images/bg-mp-deco-3-L1.png" alt="">
+        </div>
+      </section>
     </div>
     <footer>
       <div class="container">
@@ -151,6 +371,83 @@
     </footer>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- js -->
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="js/customize.js"></script>
+    <!-- rellax -->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      // Accepts any class name
+      var rellax = new Rellax('.rellax');
+    </script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script>
+      // 註冊 GSAP 插件 ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
+
+      const outer = document.querySelector('.gsap-outer'); // 觸發點元素
+      const pin = outer.querySelector('.pin'); // 固定的 pinBox 元素
+      const boxes = outer.querySelectorAll('.cardInfo'); // 所有 cardInfo 元素
+      const steps = outer.querySelectorAll('.steps ul li'); // 所有步驟的 li 元素
+      const target = outer.querySelector('.steps .target'); // 用於顯示當前位置的 target
+
+      // 定義 pinBox 的 ScrollTrigger
+      const pinTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: outer, // 觸發點為 .outer
+          pin: pin,       // 固定 pinBox
+          pinSpacing: false, // 不留間距
+          start: "top top+=60",  // 開始位置
+          end: () => `${outer.scrollHeight - pin.scrollHeight - boxes[boxes.length - 1].scrollHeight}px`,
+        }
+      });
+
+      // 為每個 cardInfo 設置 ScrollTrigger
+      boxes.forEach((box, i) => {
+        const boxTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: box, // 為當前的 cardInfo 設置觸發點
+            pin: true,
+            pinSpacing: false,
+            start: () => `top ${pin.scrollHeight + 150}px`, // 開始位置為 pinBox 高度加 150px
+            end: () => `${(boxes.length - i - 1) * box.scrollHeight - pin.scrollHeight}px`, // 根據剩餘 box 設置結束位置
+
+            // 每次滾動到新的 .cardInfo 元素時觸發以下功能
+            onEnter: () => updateStepsAndTarget(i),
+            onEnterBack: () => updateStepsAndTarget(i)
+          }
+        });
+      });
+
+      // 更新 steps 中的 .now 狀態和 target 的 left 位置
+      function updateStepsAndTarget(index) {
+        // 移除所有步驟的 .now 類，並在當前序數加上 .now
+        steps.forEach((step, idx) => step.classList.toggle('now', idx === index));
+
+        // 計算 .target 的 left 位置
+        if (index > 0) {
+          const leftPosition = `calc(${100 / (steps.length - 1) * index}% - 5px)`;
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: leftPosition,
+            ease: "power2.out" // 設置緩動效果
+          });
+        } else {
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: '0', // 將第一個位置的 .target 設為起始位置
+            ease: "power2.out" // 設置緩動效果
+          });
+        }
+      }
+
+    </script>
   </body>
 </html>
