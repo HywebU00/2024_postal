@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>m5</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body class="mp">
+    <header>
+      <div class="container">
+        <a href="#"><h1>中華郵政會員資訊網</h1></a>
+        <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
+        <nav>
+          <a href="#" class="lang">English</a>
+          <div class="menu">
+            <a href="#">郵政會員</a>
+            <a href="#">最新消息</a>
+            <a href="#">常見問題</a>
+            <a href="#">下載行動郵局</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- 內容 -->
+    <div class="main">
+      <!-- 馬上下載行動郵局 App -->
+      <section class="downloadApp _type2">
+        <div class="container">
+          <div class="col">
+            <img src="images/img-phone.png" alt="">
+          </div>
+          <div class="col">
+            <h3 class="mainTitle">下載行動郵局 App<br>登入並升級郵政會員，多樣好禮贈與你</h3>
+            <div class="f_icons">
+              <img src="images/QRcode.jpg" alt="">
+              <div class="appLink">
+                <a href="#"><img src="images/img-AppStore.png" alt="AppStore"></a>
+                <a href="#"><img src="images/img-GooglePlay.png" alt="GooglePlay"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  -->
+      <section>
+        <div class="container">
+          <h3 class="mainTitle">郵政生活圈，就差你一員！</h3>
+          <p>邀請您加入郵政會員，輕鬆暢遊中華郵政各大服務，累積啵幣兌換專屬好禮！</p>
+          <div class="btnGrp _narrow _center">
+              <a href="#" class="btn _more">瞭解郵政會員</a>
+            </div>
+        </div>
+      </section>
+      <!--  -->
+      <section>
+        <div class="container">
+          <!--RWD圖片 -->
+          <div class="imgContainer">
+            <img src="images/img-m5.jpg" class="" alt="" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="flex">
+          <div class="f_links">
+            <a href="#">中華郵政全球資訊網</a>
+            <a href="#">常見問題</a>
+            <a href="#">隱私權與各項條款</a>
+          </div>
+          <section class="f_info">
+            <div class="col">
+              <h3 class="f_logo"><img src="images/logo-footer.png" alt=""></h3>
+              <p>地址：臺北市大安區金山南路2段55號<br>客服電話：(02) 2321-4311、(02)2392-1310</p>
+            </div>
+            <div class="col">
+              <h3>下載行動郵局 App</h3>
+              <div class="f_icons">
+                <img src="images/QRcode.jpg" alt="QRcode">
+                <div>
+                  <a href="#"><img src="images/img-AppStore.png" alt="AppStore"></a>
+                  <a href="#"><img src="images/img-GooglePlay.png" alt="GooglePlay"></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <p class="Copyright">中華郵政 版權所有 © 2013 Chunghwa Post All Rights Reserved.　</p>
+      </div>
+    </footer>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- js -->
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="js/customize.js"></script>
+    <!-- rellax -->
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script>
+      // Accepts any class name
+      var rellax = new Rellax('.rellax');
+    </script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script>
+      // 註冊 GSAP 插件 ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
+
+      const outer = document.querySelector('.gsap-outer'); // 觸發點元素
+      const pin = outer.querySelector('.pin'); // 固定的 pinBox 元素
+      const boxes = outer.querySelectorAll('.cardInfo'); // 所有 cardInfo 元素
+      const steps = outer.querySelectorAll('.steps ul li'); // 所有步驟的 li 元素
+      const target = outer.querySelector('.steps .target'); // 用於顯示當前位置的 target
+
+      // 定義 pinBox 的 ScrollTrigger
+      const pinTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: outer, // 觸發點為 .outer
+          pin: pin,       // 固定 pinBox
+          pinSpacing: false, // 不留間距
+          start: "top top+=60",  // 開始位置
+          end: () => `${outer.scrollHeight - pin.scrollHeight - boxes[boxes.length - 1].scrollHeight}px`,
+        }
+      });
+
+      // 為每個 cardInfo 設置 ScrollTrigger
+      boxes.forEach((box, i) => {
+        const boxTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: box, // 為當前的 cardInfo 設置觸發點
+            pin: true,
+            pinSpacing: false,
+            start: () => `top ${pin.scrollHeight + 150}px`, // 開始位置為 pinBox 高度加 150px
+            end: () => `${(boxes.length - i - 1) * box.scrollHeight - pin.scrollHeight}px`, // 根據剩餘 box 設置結束位置
+
+            // 每次滾動到新的 .cardInfo 元素時觸發以下功能
+            onEnter: () => updateStepsAndTarget(i),
+            onEnterBack: () => updateStepsAndTarget(i)
+          }
+        });
+      });
+
+      // 更新 steps 中的 .now 狀態和 target 的 left 位置
+      function updateStepsAndTarget(index) {
+        // 移除所有步驟的 .now 類，並在當前序數加上 .now
+        steps.forEach((step, idx) => step.classList.toggle('now', idx === index));
+
+        // 計算 .target 的 left 位置
+        if (index > 0) {
+          const leftPosition = `calc(${100 / (steps.length - 1) * index}% - 5px)`;
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: leftPosition,
+            ease: "power2.out" // 設置緩動效果
+          });
+        } else {
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: '0', // 將第一個位置的 .target 設為起始位置
+            ease: "power2.out" // 設置緩動效果
+          });
+        }
+      }
+
+    </script>
+  </body>
+</html>

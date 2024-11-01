@@ -6730,6 +6730,27 @@ img {
   .mp .main .downloadApp .container .appLink a {
     margin: 1em;
   }
+  .mp .main .downloadApp._type2 h3.mainTitle {
+    text-align: left;
+    font-size: 2.125rem;
+    color: #333;
+  }
+  .mp .main .downloadApp._type2 .f_icons {
+    margin: 2em 0;
+  }
+  .mp .main .downloadApp._type2 .f_icons > img {
+    width: 120px;
+    height: 120px;
+  }
+  .mp .main .downloadApp._type2:after {
+    display: none;
+  }
+  .mp .main .downloadApp._type2 .container .col:last-child {
+    padding-left: 5em;
+  }
+  .mp .main .downloadApp._type2 .container .appLink a {
+    margin: 0 0 10px;
+  }
   .mp .main .gsap-outer h3.mainTitle {
     margin: 0;
     padding-top: 1em;
@@ -6984,6 +7005,18 @@ img {
     .mp .main .downloadApp .container {
       flex-direction: column;
     }
+    .mp .main .downloadApp .container .col:last-child {
+      padding-left: 0;
+    }
+    .mp .main .downloadApp._type2 .container .col:last-child {
+      padding-left: 0;
+    }
+    .mp .main .downloadApp._type2 .container .col:last-child h3.mainTitle {
+      text-align: center;
+    }
+    .mp .main .downloadApp._type2 .container .col:last-child .f_icons {
+      justify-content: center;
+    }
     .mp .main .pushAd .container {
       flex-direction: column;
     }
@@ -7048,18 +7081,6 @@ img {
     font-size: 1.125rem;
     letter-spacing: 1px;
   }
-  footer .f_icons {
-    display: flex;
-  }
-  footer .f_icons div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 16px;
-  }
-  footer .f_icons div a img {
-    display: block;
-  }
   footer .Copyright {
     color: #fff;
     font-size: 0.875rem;
@@ -7099,6 +7120,22 @@ img {
     footer .Copyright {
       text-align: center;
     }
+  }
+  .f_icons {
+    display: flex;
+  }
+  .f_icons > img {
+    width: 100px;
+    height: 100px;
+  }
+  .f_icons div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 16px;
+  }
+  .f_icons div a img {
+    display: block;
   }
   h1.title,
   h2.title {
