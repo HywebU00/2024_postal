@@ -150,51 +150,6 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         e.preventDefault();
     });
 
-    // m1 郵你生活圈，就差你一員！
-    // 初始化 Swiper
-    const swiper = new Swiper(".swiper", {
-        navigation: {
-            nextEl: ".nextSlider",
-            prevEl: ".prevSlider"
-        },
-        on: {
-            init: function () {
-            // 初始化時對應的第一個 li 加入 .act
-            document.querySelectorAll("ul.step li")[0].classList.add("act");
-            },
-            slideChange: function () {
-            // 取得所有的 li
-            const steps = document.querySelectorAll("ul.step li");
-
-            // 清除所有 li 上的 .act
-            steps.forEach((li) => li.classList.remove("act"));
-
-            // 根據 Swiper 的 activeIndex 加入 .act
-            const activeIndex = this.activeIndex;
-            if (steps[activeIndex]) {
-                steps[activeIndex].classList.add("act");
-            }
-            }
-        }
-    });
-
-    // m4 常見問題
-    document.querySelectorAll('._QA .item').forEach((item, index) => {
-        const btnSwitch = item.querySelector('.btn-switch');
-        const answerSection = item.querySelector('.A');
-
-        btnSwitch.addEventListener('click', function() {
-            // 判斷 btn-switch 是否有 .act 類
-            if (btnSwitch.classList.contains('act')) {
-                btnSwitch.classList.remove('act');  // 移除 .act
-                answerSection.classList.remove('show');  // 隱藏 .A
-            } else {
-                btnSwitch.classList.add('act');  // 添加 .act
-                answerSection.classList.add('show');  // 顯示 .A
-            }
-        });
-    });
-
     //cp輪播
     const cpSwiper = new Swiper('.cpSlider .swiper', {
         slidesPerView: 4,
@@ -300,6 +255,51 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         thumbs: {
         swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
         },
+    });
+
+    // m1 郵你生活圈，就差你一員！
+    // 初始化 Swiper
+    const swiper = new Swiper(".swiper", {
+        navigation: {
+            nextEl: ".nextSlider",
+            prevEl: ".prevSlider"
+        },
+        on: {
+            init: function () {
+            // 初始化時對應的第一個 li 加入 .act
+            document.querySelectorAll("ul.step li")[0].classList.add("act");
+            },
+            slideChange: function () {
+            // 取得所有的 li
+            const steps = document.querySelectorAll("ul.step li");
+
+            // 清除所有 li 上的 .act
+            steps.forEach((li) => li.classList.remove("act"));
+
+            // 根據 Swiper 的 activeIndex 加入 .act
+            const activeIndex = this.activeIndex;
+            if (steps[activeIndex]) {
+                steps[activeIndex].classList.add("act");
+            }
+            }
+        }
+    });
+
+    // m4 常見問題
+    document.querySelectorAll('._QA .item').forEach((item, index) => {
+        const btnSwitch = item.querySelector('.btn-switch');
+        const answerSection = item.querySelector('.A');
+
+        btnSwitch.addEventListener('click', function() {
+            // 判斷 btn-switch 是否有 .act 類
+            if (btnSwitch.classList.contains('act')) {
+                btnSwitch.classList.remove('act');  // 移除 .act
+                answerSection.classList.remove('show');  // 隱藏 .A
+            } else {
+                btnSwitch.classList.add('act');  // 添加 .act
+                answerSection.classList.add('show');  // 顯示 .A
+            }
+        });
     });
 })();
 
