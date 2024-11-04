@@ -6581,7 +6581,7 @@ img {
   }
   .mp .main h3.mainTitle {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     color: #008C38;
     margin: 1em 0 0;
   }
@@ -6608,36 +6608,31 @@ img {
     left: 50%;
     transform: translateX(-50%);
   }
-  .mp .main .hero {
-    background: url(../images/img-hero.jpg) 50% 50% no-repeat;
-    height: 670px;
-    position: relative;
-  }
-  .mp .main .hero:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 6%;
-    width: 700px;
-    height: 445px;
-    background: url(../images/img-hero-deco.png) 50% 50% no-repeat;
-    mix-blend-mode: multiply;
-  }
   .mp .main .hero .container {
+    padding: 0;
     position: relative;
     z-index: 1;
   }
-  .mp .main .hero .container h2.mainTitle {
+  .mp .main .hero .container .info {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: calc((100% - 1440px) / 2 + 110px);
+    transform: translateY(-50%);
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .mp .main .hero .container .info h2.mainTitle {
     color: #262626;
     text-align: left;
     font-size: 3rem;
     letter-spacing: 2px;
     margin-bottom: 12px;
   }
-  .mp .main .hero .container h2.mainTitle b {
+  .mp .main .hero .container .info h2.mainTitle b {
     color: #008C38;
   }
-  .mp .main .hero .container p {
+  .mp .main .hero .container .info p {
     font-size: 1.65rem;
     color: #262626;
     font-weight: bold;
@@ -6658,38 +6653,53 @@ img {
     color: #00732e;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
+  .mp .main .hero .container picture img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  @media (max-width: 1440px) {
+    .mp .main .hero .container .info {
+      left: 110px;
+    }
+  }
   @media (max-width: 992px) {
-    .mp .main .hero {
-      display: flex !important;
-      align-items: flex-end;
+    .mp .main .hero .container .info {
+      width: 100%;
+      top: auto;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
     }
-    .mp .main .hero:after {
-      transform: scale(0.75);
-      transform-origin: top right;
-      right: -200px;
-      top: -60px;
+    .mp .main .hero .container .info h2.mainTitle {
+      font-size: 2.5rem;
+      text-align: center;
     }
-    .mp .main .hero .container h2.mainTitle {
-      font-size: 2rem;
-    }
-    .mp .main .hero .container p {
+    .mp .main .hero .container .info p {
       font-size: 1.25rem;
+    }
+    .mp .main .hero .container picture img {
+      height: 620px;
     }
   }
   .mp .main .discountInfo {
     display: flex;
+    justify-content: center;
     margin: 5em 0;
   }
   .mp .main .discountInfo .col {
-    flex: 1 1 25%;
+    flex: 0 1 25%;
     text-align: center;
+    padding: 0 1em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
   .mp .main .discountInfo h4 {
-    margin: 1em 0;
+    margin: 1em 0 0;
     font-size: 1.125rem;
   }
   .mp .main .discountInfo b {
@@ -6863,6 +6873,11 @@ img {
     top: -120%;
     left: 30%;
   }
+  @media (max-width: 992px) {
+    .mp .main .pushAd .container {
+      max-width: 100%;
+    }
+  }
   .mp .main .cardInfo {
     display: flex;
     padding: 3em;
@@ -6896,6 +6911,12 @@ img {
   .mp .main .cardInfo .col:first-child h4 {
     font-size: 1.5rem;
     margin: 1em 0;
+    display: flex;
+    align-items: center;
+  }
+  .mp .main .cardInfo .col:first-child h4 img {
+    height: 32px;
+    padding-right: 16px;
   }
   .mp .main .cardInfo .col:last-child {
     flex: 0 1 40%;
@@ -6951,6 +6972,10 @@ img {
   .mp .main .mixDeco {
     position: relative;
   }
+  .mp .main .mixDeco2 {
+    background: url(../images/bg-mp-deco-3-L1.png) right 50% no-repeat;
+    background-attachment: fixed;
+  }
   .mp .main .deco {
     position: absolute;
     z-index: -1;
@@ -6969,6 +6994,141 @@ img {
   .mp .main .deco._3_L1, .mp .main .deco._3_L2 {
     left: auto;
     right: 0;
+  }
+  .mp .main .hero2 {
+    height: 670px;
+  }
+  .mp .main .hero2 .container {
+    padding: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .mp .main .hero2 .container .info {
+    position: absolute;
+    z-index: 1;
+    bottom: 42px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .mp .main .hero2 .container .info h2.mainTitle {
+    font-size: 3rem;
+    color: #262626;
+  }
+  .mp .main .hero2 .container picture img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .mp .main .hero2 .container .decoArrow {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    background: #008C38;
+    border-radius: 50%;
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @media (max-width: 992px) {
+    .mp .main .hero2 .container .info {
+      width: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .mp .main .hero2 .container .info h2.mainTitle {
+      font-size: 2.5rem;
+    }
+    .mp .main .hero2 .container picture img {
+      height: 620px;
+    }
+  }
+  .mp .main .decobox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4em;
+  }
+  .mp .main .tab .pushAd {
+    margin-top: 0;
+  }
+  .mp .main .tabTitle {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+  }
+  .mp .main .tabTitle a {
+    color: #222;
+    background: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 40px;
+    padding: 16px 48px;
+    margin: 0 2px;
+    transition: 0.3s;
+  }
+  .mp .main .tabTitle a:hover {
+    background: #eee;
+  }
+  .mp .main .tabTitle a.act {
+    color: #fff;
+    background: #008C38;
+  }
+  @media (max-width: 992px) {
+    .mp .main .tabTitle a {
+      padding: 12px 36px;
+    }
+  }
+  .mp .main .tabItems section {
+    display: none;
+  }
+  .mp .main .tabItems section.show {
+    display: flex;
+  }
+  .mp .main .pointInfo {
+    margin-top: 5em;
+  }
+  .mp .main .pointInfo .discountInfo {
+    margin-bottom: 0;
+  }
+  @media (max-width: 992px) {
+    .mp .main .pointInfo {
+      margin-top: 16em;
+    }
+  }
+  .mp .main .thumbInfo .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4em 0;
+  }
+  .mp .main .thumbInfo .item .col:last-child {
+    padding-left: 2em;
+  }
+  .mp .main .thumbInfo .item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .mp .main .thumbInfo .item .imgContainer {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .mp .main .thumbInfo .item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .mp .main .thumbInfo .item:nth-child(even) .col:last-child {
+    padding-left: 0;
+    padding-right: 2em;
+  }
+  @media (max-width: 992px) {
+    .mp .main .thumbInfo .item {
+      margin: 2em 0;
+      flex-direction: column;
+    }
+    .mp .main .thumbInfo .item:nth-child(even) {
+      flex-direction: column;
+    }
+    .mp .main .thumbInfo .item .col:last-child {
+      padding-right: 0 !important;
+    }
   }
   .mp .main .terms h3 {
     margin: 1.5em 0 1em;
@@ -7000,7 +7160,8 @@ img {
       flex-wrap: wrap;
     }
     .mp .main .discountInfo .col {
-      flex: 1 1 50%;
+      flex: 1 1 100%;
+      padding: 1em 0;
     }
     .mp .main .downloadApp .container {
       flex-direction: column;
@@ -7023,6 +7184,22 @@ img {
     .mp .main .pushAd .container .col {
       flex: 1 1 100%;
       max-width: 100%;
+      min-width: 90%;
+    }
+    .mp .main .pushAd .container .col:first-child {
+      text-align: center;
+    }
+    .mp .main .pushAd .container .col:first-child h3.mainTitle {
+      text-align: center;
+    }
+    .mp .main .pushAd .container .col:first-child ul.step {
+      margin-top: 1em;
+    }
+    .mp .main .pushAd ul.step li {
+      display: none;
+    }
+    .mp .main .pushAd ul.step li.act {
+      display: block;
     }
     .mp .main .cardInfo {
       flex-direction: column;

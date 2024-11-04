@@ -178,30 +178,30 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
     });
 
     //大圖輪播
-    let mpSliderItem = document.querySelectorAll('.mpSlider .swiper-slide');
-    let mpSliderPagination = [];
-    mpSliderItem.forEach((item, index) => {
-        mpSliderPagination.push(item.dataset.title);
-    });
-    const mpSlider = new Swiper('.mpSlider .swiper', {
-        slidesPerView: 1,
-        loop: false,
-        // 切換點
-        pagination: {
-            el: '.mpSlider .swiperDots',
-            bulletElement: 'button',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return `<button class="${className} noFonts" aria-label="${mpSliderPagination[index]}">${mpSliderPagination[index]}</button>`;
-            },
-        },
-        // 切換箭頭
-        navigation: {
-            nextEl: '.mpSlider .nextSlider', //自行設定樣式
-            prevEl: '.mpSlider .prevSlider', //自行設定樣式
-            disabledClass: 'swiperArrow-disabled', //不可點選樣式
-        },
-    });
+    // let mpSliderItem = document.querySelectorAll('.mpSlider .swiper-slide');
+    // let mpSliderPagination = [];
+    // mpSliderItem.forEach((item, index) => {
+    //     mpSliderPagination.push(item.dataset.title);
+    // });
+    // const mpSlider = new Swiper('.mpSlider .swiper', {
+    //     slidesPerView: 1,
+    //     loop: false,
+    //     // 切換點
+    //     pagination: {
+    //         el: '.mpSlider .swiperDots',
+    //         bulletElement: 'button',
+    //         clickable: true,
+    //         renderBullet: function (index, className) {
+    //             return `<button class="${className} noFonts" aria-label="${mpSliderPagination[index]}">${mpSliderPagination[index]}</button>`;
+    //         },
+    //     },
+    //     // 切換箭頭
+    //     navigation: {
+    //         nextEl: '.mpSlider .nextSlider', //自行設定樣式
+    //         prevEl: '.mpSlider .prevSlider', //自行設定樣式
+    //         disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    //     },
+    // });
 
     //跑馬燈
     const marqueeSwiper = new Swiper('.marquee .swiper', {
@@ -259,30 +259,104 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
 
     // m1 郵你生活圈，就差你一員！
     // 初始化 Swiper
-    const swiper = new Swiper(".swiper", {
-        navigation: {
-            nextEl: ".nextSlider",
-            prevEl: ".prevSlider"
-        },
-        on: {
-            init: function () {
-            // 初始化時對應的第一個 li 加入 .act
-            document.querySelectorAll("ul.step li")[0].classList.add("act");
+    // const swiper = new Swiper(".swiper", {
+    //     navigation: {
+    //         nextEl: ".nextSlider",
+    //         prevEl: ".prevSlider"
+    //     },
+    //     on: {
+    //         init: function () {
+    //         // 初始化時對應的第一個 li 加入 .act
+    //         document.querySelectorAll("ul.step li")[0].classList.add("act");
+    //         },
+    //         slideChange: function () {
+    //         // 取得所有的 li
+    //         const steps = document.querySelectorAll("ul.step li");
+
+    //         // 清除所有 li 上的 .act
+    //         steps.forEach((li) => li.classList.remove("act"));
+
+    //         // 根據 Swiper 的 activeIndex 加入 .act
+    //         const activeIndex = this.activeIndex;
+    //         if (steps[activeIndex]) {
+    //             steps[activeIndex].classList.add("act");
+    //         }
+    //         }
+    //     }
+    // });
+    document.addEventListener("DOMContentLoaded", function () {
+        // 遍歷每個 .mpSlider 元素
+        document.querySelectorAll(".mpSlider").forEach(function (sliderContainer) {
+            const slides = sliderContainer.querySelectorAll(".swiper-slide");
+            const paginationTitles = Array.from(slides, slide => slide.dataset.title);
+
+            // 初始化 Swiper
+            const swiper = new Swiper(sliderContainer.querySelector(".swiper"), {
+            slidesPerView: 1,
+            loop: false,
+            pagination: {
+                el: sliderContainer.querySelector(".swiperDots"),
+                bulletElement: "button",
+                clickable: true,
+                renderBullet: function (index, className) {
+                return `<button class="${className} noFonts" aria-label="${paginationTitles[index]}">${paginationTitles[index]}</button>`;
+                },
             },
-            slideChange: function () {
-            // 取得所有的 li
-            const steps = document.querySelectorAll("ul.step li");
+            navigation: {
+                nextEl: sliderContainer.querySelector(".nextSlider"),
+                prevEl: sliderContainer.querySelector(".prevSlider"),
+                disabledClass: "swiperArrow-disabled",
+            },
+            on: {
+                init: function () {
+                // 初始化時對應的第一個 li 加入 .act
+                const steps = sliderContainer.closest(".container").querySelectorAll("ul.step li");
+                steps[0].classList.add("act");
+                },
+                slideChange: function () {
+                const steps = sliderContainer.closest(".container").querySelectorAll("ul.step li");
 
-            // 清除所有 li 上的 .act
-            steps.forEach((li) => li.classList.remove("act"));
+                // 清除所有步驟的 .act 樣式
+                steps.forEach(li => li.classList.remove("act"));
 
-            // 根據 Swiper 的 activeIndex 加入 .act
-            const activeIndex = this.activeIndex;
-            if (steps[activeIndex]) {
-                steps[activeIndex].classList.add("act");
+                // 根據當前 slide 索引為對應的步驟添加 .act 樣式
+                const activeIndex = this.activeIndex;
+                if (steps[activeIndex]) {
+                    steps[activeIndex].classList.add("act");
+                }
+                }
             }
-            }
-        }
+            });
+        });
+    });
+
+
+    // m2
+    document.addEventListener("DOMContentLoaded", function () {
+    // 選取所有 .tab 父層
+    document.querySelectorAll(".tab").forEach(function (tabContainer) {
+        const tabLinks = tabContainer.querySelectorAll(".tabTitle a");
+        const tabSections = tabContainer.querySelectorAll(".tabItems section");
+
+        // 頁籤初始化 - 設置第一個 .act 和 .show
+        tabLinks[0].classList.add("act");
+        tabSections[0].classList.add("show");
+
+        // 為每個頁籤按鈕添加點擊事件
+        tabLinks.forEach((link, index) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // 清除所有頁籤按鈕的 .act，並為當前點擊的按鈕添加 .act
+            tabLinks.forEach((link) => link.classList.remove("act"));
+            link.classList.add("act");
+
+            // 清除所有 section 的 .show，並顯示對應的 section
+            tabSections.forEach((section) => section.classList.remove("show"));
+            tabSections[index].classList.add("show");
+        });
+        });
+    });
     });
 
     // m4 常見問題
