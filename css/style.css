@@ -4705,27 +4705,26 @@ img {
     }
   }
   *[class^=notice] {
-    padding: 0.4em 2.5em;
+    padding: 1em 3.5em;
     display: block;
     width: 100%;
-    font-size: 0.938em;
+    font-size: 1rem;
     margin: 0.2em 0;
     position: relative;
     color: #666;
     background-color: #f2f2f2;
-    position: relative;
     box-sizing: border-box;
-    border-radius: 4px;
+    border-radius: 8px;
     border: none;
   }
   *[class^=notice]:before {
     position: absolute;
-    top: 0.7em;
+    top: 50%;
     left: 0.8em;
+    transform: translateY(-50%);
     display: block;
-    vertical-align: middle;
-    width: 15px;
-    height: 15px;
+    width: 32px;
+    height: 32px;
     content: "";
   }
   *[class^=notice]:before img {
@@ -4733,10 +4732,11 @@ img {
   }
   *[class^=notice] a.close {
     position: absolute;
-    width: 12px;
-    height: 12px;
-    top: 0.8em;
+    width: 32px;
+    height: 32px;
+    top: 50%;
     right: 1em;
+    transform: translateY(-50%);
     display: block;
     opacity: 0.5;
   }
@@ -4745,41 +4745,17 @@ img {
   }
   *[class^=notice] a.close img {
     display: block;
-    width: 12px;
-    height: 12px;
-    margin: 0;
-  }
-  *[class*=noticeInfo] {
-    color: #00529b;
-    background-color: #ceecfa;
-  }
-  *[class*=noticeInfo]:before {
-    background: url(../images/basic/icon_info.svg) no-repeat center center;
-    background-size: 15px;
-  }
-  *[class*=noticeSuccess] {
-    color: #3b7600;
-    background-color: #dff2bf;
-  }
-  *[class*=noticeSuccess]:before {
-    background: url(../images/basic/icon_success.svg) no-repeat center center;
-    background-size: 15px;
+    width: 18px;
+    height: 18px;
+    margin: 7px auto;
   }
   *[class*=noticeWarning] {
-    color: #c23e00;
-    background-color: #feefb3;
+    color: #EA3349;
+    background-color: rgba(234, 51, 73, 0.05);
   }
   *[class*=noticeWarning]:before {
     background: url(../images/basic/icon_warning.svg) no-repeat center center;
-    background-size: 15px;
-  }
-  *[class*=noticeError] {
-    color: #c40000;
-    background-color: #ffd2d2;
-  }
-  *[class*=noticeError]:before {
-    background: url(../images/basic/icon_error.svg) no-repeat center center;
-    background-size: 15px;
+    background-size: 32px;
   }
   .accordion ul {
     list-style: none;
@@ -6256,8 +6232,212 @@ img {
     font-weight: bold;
     color: #333;
   }
+  .main .centerLimit .info._user a {
+    margin: -2em -1em;
+  }
+  .main .centerLimit .info._user a h4, .main .centerLimit .info._user a p {
+    text-align: left;
+    margin: 0;
+    color: #333;
+  }
+  .main .centerLimit .info._user a h4 {
+    font-size: 1.75rem;
+    font-weight: bold;
+  }
+  .main .centerLimit .info._user a p {
+    font-size: 1rem;
+  }
   .main .centerLimit .functions {
     margin: 2em 0;
+  }
+  .main .userPoints,
+  .main a.userPoints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 2em;
+    background: #F6F7EE;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .main .userPoints h3, .main .userPoints p,
+  .main a.userPoints h3,
+  .main a.userPoints p {
+    margin: 0;
+  }
+  .main .userPoints h3,
+  .main a.userPoints h3 {
+    font-size: 1.75rem;
+    line-height: 1.6;
+    padding-left: 1.3em;
+    position: relative;
+  }
+  .main .userPoints h3:before,
+  .main a.userPoints h3:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 0;
+    top: 8px;
+    border: 2px solid #666;
+    border-radius: 50%;
+  }
+  .main a.userPoints {
+    display: block;
+    background: url(../images/basic/icon_arrow_right.svg) right 16px top 50% no-repeat #F6F7EE;
+    background-size: 24px;
+    transition: 0.3s;
+  }
+  .main a.userPoints h3, .main a.userPoints p {
+    text-align: left;
+  }
+  .main a.userPoints:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .main .userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+  }
+  .main .userInfo h3 {
+    margin: 0;
+  }
+  .main .userInfo a {
+    border: 1px solid #008C38;
+    background: #fff;
+    color: #008C38;
+    padding: 0.5em 1.25em;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  .main .userInfo a:hover {
+    background: #008C38;
+    color: #fff;
+  }
+  .main .actCards {
+    margin: 2em 0;
+  }
+  .main .actCards h3 {
+    text-align: left;
+    margin: 1em 0;
+  }
+  .main .actCards a {
+    display: block;
+    margin: 1em 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+  }
+  .main .actCards a .imgContainer {
+    overflow: hidden;
+    position: relative;
+  }
+  .main .actCards a .imgContainer img {
+    width: 100%;
+    aspect-ratio: 3/1;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .main .actCards a .imgContainer img {
+    display: block;
+  }
+  .main .actCards a:hover {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  }
+  .main .setBox {
+    margin: 2em 0;
+  }
+  .main .setBox h3 {
+    text-align: left;
+    margin: 1em 0;
+  }
+  .main .setBox ._linkItems {
+    border: 1px solid #BDBDBD;
+    border-radius: 8px;
+    overflow: auto;
+  }
+  .main .setBox ._linkItems a {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25em 1.75em;
+    border-bottom: 1px solid #BDBDBD;
+    font-size: 1.125rem;
+    color: #222;
+  }
+  .main .setBox ._linkItems a span._state {
+    color: #666;
+    font-size: 1rem;
+  }
+  .main .setBox ._linkItems a span._state img {
+    width: 24px;
+    height: 24px;
+  }
+  .main .setBox ._linkItems a span._state._undo {
+    color: rgb(186, 0, 0);
+  }
+  .main .setBox ._linkItems a:last-child {
+    border-bottom: none;
+  }
+  .main .setBox ._linkItems a:hover {
+    background: #eee;
+  }
+  .main .setBox ._linkItems + ._linkItems {
+    margin-top: 1em;
+  }
+  .main .noteList {
+    padding: 2em 3em;
+    margin: 2em 0 1em;
+    background: #F9F9F9;
+    border-radius: 8px;
+  }
+  .main .noteList h3 {
+    margin: 0.65em 0;
+    font-size: 1.25rem;
+  }
+  .main .noteList ol li a, .main .noteList ul li a {
+    padding: 4px 8px;
+  }
+  .main .infoSetBox .wrap {
+    padding: 3em;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+    border-radius: 8px;
+  }
+  .main .infoSetBox .wrap .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1em 0;
+    border-bottom: 1px solid #666;
+  }
+  .main .infoSetBox .wrap .item:last-child {
+    border-bottom: none;
+  }
+  .main .infoSetBox .wrap .item span.tag {
+    color: #666;
+  }
+  .main .infoSetBox .wrap .item p {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #222;
+    font-weight: bold;
+  }
+  .main .infoSetBox .wrap .item p span {
+    font-weight: normal;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    margin: 0 8px;
+  }
+  .main .infoSetBox .wrap .item .btn {
+    padding: 6px 12px;
+    margin: 0;
   }
   @media (max-width: 992px) {
     .main {
@@ -6487,6 +6667,51 @@ img {
       flex: 1 1 100%;
       max-width: 100%;
     }
+  }
+  .logInfo select {
+    padding-right: 3em;
+  }
+  .logInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em 0;
+  }
+  .logInfo ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    padding: 16px 0;
+    margin: 0 !important;
+  }
+  .logInfo ul li:last-child {
+    border-bottom: none;
+  }
+  .logInfo ul li > div > div {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 6px;
+  }
+  .logInfo ul li > div > div span {
+    flex: 0 0 auto;
+    background: #eee;
+    padding: 0.25em 1em;
+    margin-right: 1em;
+  }
+  .logInfo ul li > div > div p {
+    margin: 0 !important;
+    line-height: 2;
+    color: #222 !important;
+  }
+  .logInfo ul li b {
+    flex: 0 0 auto;
+    background: #222;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
   }
   ul.infoType {
     list-style: none;
