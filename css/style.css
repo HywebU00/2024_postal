@@ -5644,6 +5644,7 @@ img {
   form select {
     width: 100%;
     margin: 6px 0;
+    box-sizing: border-box;
   }
   form .formGrp {
     padding: 0.5em 0;
@@ -6443,6 +6444,9 @@ img {
     .main {
       padding-top: calc(60px + 2em);
     }
+    .main .container {
+      margin: auto 2em;
+    }
   }
   .QA_flex {
     display: flex;
@@ -6746,6 +6750,9 @@ img {
     background: #008C38;
     bottom: -3px;
     left: 0;
+  }
+  ul.infoType + ul.list {
+    box-shadow: none !important;
   }
   .mp .main {
     padding-top: 150px;
@@ -7171,7 +7178,7 @@ img {
   .mp .main ul.list {
     list-style: none;
     padding: 3em 5em;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
