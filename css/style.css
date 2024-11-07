@@ -5776,6 +5776,12 @@ img {
     padding-right: 24px;
     word-break: keep-all;
   }
+  @media (max-width: 992px) {
+    .radioGrp > label,
+    .checkGrp > label {
+      flex-wrap: wrap;
+    }
+  }
   .checkGrp a {
     text-decoration: underline;
     text-underline-offset: 4px;
