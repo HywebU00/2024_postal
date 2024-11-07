@@ -5792,7 +5792,7 @@ img {
   }
   .necessary {
     color: red;
-    padding: 4px;
+    padding: 0 4px;
     text-decoration: none;
   }
   .forgetPassword {
