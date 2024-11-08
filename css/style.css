@@ -5837,6 +5837,7 @@ img {
     border-radius: 8px;
     padding: 2em;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    box-sizing: border-box;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -5899,6 +5900,12 @@ img {
   #mask_below .btnClose:hover {
     background: url(../images/icon-close.svg) 50% 50% no-repeat #eee;
     background-size: 18px 18px;
+  }
+  @media (max-width: 576px) {
+    #mask .container,
+    #mask_below .container {
+      width: calc(100% - 1em);
+    }
   }
   #mask_below {
     z-index: 10000;
