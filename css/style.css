@@ -5507,6 +5507,21 @@ img {
     color: #00732e;
     text-decoration: none;
   }
+  a.prev {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #222;
+    font-size: 0;
+    background: url(../images/icon-arrow-left.svg) 48% 50% no-repeat;
+    background-size: 32px;
+    opacity: 0.45;
+    transition: 0.3s;
+  }
+  a.prev:hover {
+    opacity: 1;
+  }
   h3 {
     font-size: 1.5rem;
     color: #333;
