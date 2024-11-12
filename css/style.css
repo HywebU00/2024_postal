@@ -92,9 +92,6 @@ img {
   a:active, a:hover {
     outline: 0;
   }
-  abbr[title] {
-    border-bottom: 1px dotted;
-  }
   b,
   strong {
     font-weight: bold;
@@ -5740,17 +5737,26 @@ img {
     background: #008C38;
     color: #fff;
   }
+  form .formGrp.error input,
+  form .formGrp.error select {
+    border: 1px solid #EA3349;
+    box-shadow: 0 0 0 1px #EA3349;
+  }
+  form .formGrp.error .errorInfo {
+    color: #EA3349;
+  }
   input,
   select {
     padding: 12px 24px;
     border: solid 1px #bdbdbd;
     border-radius: 4px;
+    transition: 0.3s;
   }
   input:hover, input:focus-visible,
   select:hover,
   select:focus-visible {
-    border: 1px solid #3399ff;
-    box-shadow: 0 0 0 2px #3399ff;
+    border: 1px solid #008C38;
+    box-shadow: 0 0 0 2px #008C38;
     outline: none;
   }
   select {
@@ -5771,9 +5777,11 @@ img {
     background: #eee;
     color: #666;
   }
-  input[readonly]:hover,
+  input[readonly]:hover, input[readonly]:focus-visible,
   input[disable]:hover,
-  input[type=checkbox] disabled:hover {
+  input[disable]:focus-visible,
+  input[type=checkbox] disabled:hover,
+  input[type=checkbox] disabled:focus-visible {
     border-color: #bdbdbd;
     box-shadow: none;
     cursor: not-allowed;
