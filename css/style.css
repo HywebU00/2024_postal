@@ -5964,6 +5964,10 @@ img {
     display: flex;
     align-items: center;
   }
+  .listCard .itemName .col .innerwrap {
+    flex: 1 1 100%;
+    min-width: 140px;
+  }
   .listCard .itemName .col .innerwrap > div {
     display: flex;
     align-items: center;
@@ -5975,6 +5979,9 @@ img {
   .listCard .itemName .col .innerwrap > div:last-child {
     margin-bottom: 0;
   }
+  .listCard .itemName .col .innerwrap + p {
+    padding: 0;
+  }
   .listCard .itemName img {
     display: block;
     width: 48px;
@@ -5983,7 +5990,7 @@ img {
   .listCard .itemName h3 {
     word-break: keep-all;
     margin: 0;
-    padding-left: 1em;
+    padding-left: 0.5em;
     color: #222;
     font-size: 1.25em;
     letter-spacing: 1px;
@@ -6010,6 +6017,11 @@ img {
   }
   .listCard input[type=checkbox] {
     margin: 6px 0;
+  }
+  @media (max-width: 992px) {
+    .listCard {
+      padding: 1em 1.25em;
+    }
   }
   header {
     position: fixed;
@@ -6242,8 +6254,8 @@ img {
     margin-bottom: 1em;
   }
   .main .centerLimit .info ol, .main .centerLimit .info ul {
-    margin-left: 32px;
     list-style: none;
+    padding: 0 2em;
   }
   .main .centerLimit .info ol li, .main .centerLimit .info ul li {
     padding-left: 32px;
@@ -6284,6 +6296,11 @@ img {
   }
   .main .centerLimit .info._user a p {
     font-size: 1rem;
+  }
+  @media (max-width: 992px) {
+    .main .centerLimit .info ol, .main .centerLimit .info ul {
+      padding: 0 1em;
+    }
   }
   .main .centerLimit .functions {
     margin: 2em 0;
@@ -6402,6 +6419,7 @@ img {
   .main .setBox ._linkItems a {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.25em 1.75em;
     border-bottom: 1px solid #BDBDBD;
     font-size: 1.125rem;
@@ -6410,10 +6428,12 @@ img {
   .main .setBox ._linkItems a span._state {
     color: #666;
     font-size: 1rem;
+    display: flex;
   }
   .main .setBox ._linkItems a span._state img {
     width: 24px;
     height: 24px;
+    margin-left: 12px;
   }
   .main .setBox ._linkItems a span._state._undo {
     color: rgb(186, 0, 0);
@@ -6424,8 +6444,30 @@ img {
   .main .setBox ._linkItems a:hover {
     background: #eee;
   }
+  .main .setBox ._linkItems a.readonly {
+    opacity: 1;
+    cursor: not-allowed;
+  }
+  .main .setBox ._linkItems a.readonly:hover {
+    background: #fff;
+  }
   .main .setBox ._linkItems + ._linkItems {
     margin-top: 1em;
+  }
+  .main .setBox ._linkItems div h3 {
+    margin: 0;
+    font-size: 0.9em;
+    color: #858585;
+  }
+  .main .setBox ._linkItems div p {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+  }
+  .main .setBox ._linkItems div p.unfill {
+    font-size: 1em;
+    font-weight: normal;
   }
   .main .noteList {
     padding: 2em 3em;
@@ -6483,6 +6525,7 @@ img {
     }
     .main .container {
       margin: auto 2em;
+      min-height: 60vh;
     }
   }
   .QA_flex {
@@ -7293,7 +7336,7 @@ img {
     position: absolute;
     width: 72px;
     height: 72px;
-    background: #008C38;
+    background: url(../images/icon-arrow-down.svg) 50% 50% no-repeat #008C38;
     border-radius: 50%;
     bottom: -36px;
     left: 50%;
@@ -7476,6 +7519,7 @@ img {
     .mp .main .cardInfo .col:last-child {
       flex: 1 1 100%;
       max-width: 100%;
+      display: none;
     }
     .mp .main ul.list {
       padding: 2em;
