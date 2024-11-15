@@ -5745,6 +5745,12 @@ img {
   form .formGrp.error .errorInfo {
     color: #EA3349;
   }
+  form .formGrp._inline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1em 0;
+  }
   input,
   select {
     padding: 12px 24px;
@@ -5824,6 +5830,64 @@ img {
   }
   .forgetPassword:hover {
     color: #008C38;
+  }
+  .checkSwitch {
+    box-sizing: content-box;
+    display: inline-block;
+    cursor: pointer;
+    height: 1.55rem;
+    width: 2.79rem;
+    position: relative;
+  }
+  .checkSwitch input {
+    position: absolute;
+    display: none;
+  }
+  .checkSwitch input:hover, .checkSwitch input:focus {
+    cursor: pointer;
+  }
+  .checkSwitch_switch {
+    position: absolute;
+    top: 2px;
+    width: 51px;
+    height: 31px;
+    left: 0;
+    border-radius: 10rem;
+    background: #ccc;
+    box-shadow: 0px 0px 0px 2px #ccc inset;
+  }
+  .checkSwitch_switch:before {
+    content: "";
+    position: absolute;
+    background: #FFF;
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+    top: 2px;
+    left: 2px;
+    z-index: 9;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: 200ms;
+  }
+  input:checked + .checkSwitch_switch {
+    background: #008C38;
+    box-shadow: 0px 0px 0px 2px #008C38 inset;
+  }
+  input:checked + .checkSwitch_switch:before {
+    transform: translate(75%, 0);
+    box-shadow: none;
+  }
+  .checkSwitch + span {
+    margin-left: 0.25em;
+    padding: 0 !important;
+    border-right: 0 !important;
+    font-weight: normal !important;
+  }
+  @media (max-width: 576px) {
+    .checkSwitch + span {
+      display: block;
+      margin-left: 0;
+    }
   }
   body {
     overflow-y: auto;
@@ -6197,6 +6261,7 @@ img {
     padding: 2em;
     border-radius: 10px;
     box-sizing: border-box;
+    min-height: 60vh;
   }
   .main .centerLimit {
     max-width: 480px;
@@ -6475,12 +6540,24 @@ img {
     background: #F9F9F9;
     border-radius: 8px;
   }
+  .main .noteList h3, .main .noteList p, .main .noteList li {
+    text-align: left !important;
+  }
   .main .noteList h3 {
     margin: 0.65em 0;
     font-size: 1.25rem;
   }
   .main .noteList ol li a, .main .noteList ul li a {
     padding: 4px 8px;
+  }
+  .main .noteList._simple {
+    background: transparent;
+    padding: 2em 0;
+    border-top: 1px solid #666;
+    border-radius: 0;
+  }
+  .main .noteList._simple h3, .main .noteList._simple p, .main .noteList._simple li {
+    color: #777;
   }
   .main .infoSetBox .wrap {
     padding: 3em;
@@ -6525,7 +6602,6 @@ img {
     }
     .main .container {
       margin: auto 2em;
-      min-height: 60vh;
     }
   }
   .QA_flex {

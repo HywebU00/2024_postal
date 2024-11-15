@@ -55,7 +55,7 @@
       <section class="mixDeco">
         <!-- 單一帳號暢遊生活圈服務 -->
         <div class="container gsap-outer">
-          <div class="pin">
+          <div class="">
             <h3 class="mainTitle">單一帳號暢遊生活圈服務</h3>
             <p>使用手機即可串連各類郵政服務，生活大小事一點通</p>
             <div class="steps">
@@ -67,6 +67,7 @@
               </ul>
             </div>
           </div>
+          <div class="pin"></div>
           <!-- 視差滾動 -->
           <section class="">
             <div class="cardInfo">
@@ -516,7 +517,7 @@
           trigger: outer, // 觸發點為 .outer
           pin: pin,       // 固定 pinBox
           pinSpacing: false, // 不留間距
-          start: "top top+=60",  // 開始位置
+          start: "top top-=200",  // 開始位置
           end: () => `${outer.scrollHeight - pin.scrollHeight - boxes[boxes.length - 1].scrollHeight}px`,
         }
       });
@@ -559,7 +560,6 @@
           });
         }
       }
-
     </script>
   </body>
 </html>
