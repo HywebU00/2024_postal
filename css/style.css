@@ -5742,14 +5742,17 @@ img {
     border: 1px solid #EA3349;
     box-shadow: 0 0 0 1px #EA3349;
   }
-  form .formGrp.error .errorInfo {
-    color: #EA3349;
-  }
   form .formGrp._inline {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 1em 0;
+  }
+  .normalInfo {
+    color: #222;
+  }
+  .errorInfo {
+    color: #EA3349;
   }
   input,
   select {
@@ -6121,7 +6124,7 @@ img {
     padding-right: 4em;
   }
   header h1 {
-    background: url(../images/logo.png) left 50% no-repeat;
+    background: url(../images/logo.svg) left 50% no-repeat;
     background-size: contain;
     width: 340px;
     height: 88px;
@@ -6169,8 +6172,6 @@ img {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
-    background: url(../images/bg_M_deco-1.png) right 64px bottom 30px no-repeat;
-    background-size: 34px;
   }
   header nav a.lang {
     display: inline-block;
@@ -6201,10 +6202,24 @@ img {
     padding: 22px 36px;
     border-radius: 4px 4px 0 0;
     transition: 0.3s;
+    position: relative;
   }
-  header nav .menu a:hover {
-    color: #fff;
-    background: #008C38;
+  header nav .menu a:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #aef35c;
+    left: calc(50% + 18px);
+    bottom: 46%;
+    transform-origin: bottom left;
+    transition: 0.2s;
+  }
+  header nav .menu a:hover:after {
+    width: 32px;
+    height: 32px;
   }
   @media (max-width: 992px) {
     header .container, header h1, header nav {
@@ -6792,6 +6807,9 @@ img {
     -o-object-position: 50% 50%;
        object-position: 50% 50%;
   }
+  .actInfo .card .imgContainer img {
+    transition: 0.3s;
+  }
   .actInfo .card time {
     display: block;
     color: #030303 !important;
@@ -6820,7 +6838,9 @@ img {
   }
   .actInfo .card:hover {
     background: #fff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+  .actInfo .card:hover .imgContainer img {
+    transform: scale(1.1);
   }
   @media (max-width: 992px) {
     .actInfo .card {
@@ -7344,18 +7364,26 @@ img {
   }
   .mp .main ul.list a {
     display: block;
-    padding: 10px 0;
+    padding: 10px 80px 10px 0;
     color: #222;
+    background: url(../images/icon-arrow-right-2.svg) right 50% no-repeat;
+    background-size: 24px;
     font-size: 1.125rem;
     font-weight: bold;
+    transition: 0.3s;
   }
   .mp .main ul.list a time {
     display: block;
     color: #008C38;
     font-size: 90%;
   }
+  .mp .main ul.list a:hover, .mp .main ul.list a:focus-visible {
+    padding: 10px 80px 10px 30px;
+  }
   .mp .main ul.list a.tag {
     margin: 0;
+    background: url(../images/icon-arrow-right-2.svg) right 50% no-repeat, url(../images/icon-tag.svg) right 40px top 50% no-repeat;
+    background-size: 24px;
   }
   .mp .main .mixDeco {
     position: relative;
