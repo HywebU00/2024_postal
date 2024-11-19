@@ -5483,11 +5483,11 @@ img {
        object-fit: contain;
   }
   body {
-    background: url(../images/bg-mp-deco-3-L1.png) right bottom no-repeat #F5F5F5;
+    background: url(../images/bg-mp-deco-3-L2.png) right bottom no-repeat #F5F5F5;
     background-attachment: fixed;
   }
   body.mp {
-    background: url(../images/bg-mp-deco-3-L1.png) right bottom no-repeat #fff;
+    background: url(../images/bg-mp-deco-3-L2.png) right bottom no-repeat #fff;
     background-attachment: fixed;
   }
   body.mp._noDeco {
