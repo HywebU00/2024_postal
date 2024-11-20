@@ -6617,7 +6617,8 @@ img {
       padding-top: calc(60px + 2em);
     }
     .main .container {
-      margin: auto 2em;
+      margin: auto 1em;
+      padding: 2em 1.25em;
     }
   }
   .QA_flex {
