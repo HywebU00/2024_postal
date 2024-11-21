@@ -46,11 +46,14 @@
           </ul>
           <!-- 累積紀錄 -->
           <div class="logInfo">
-            <select name="" id="fake-legend">
-              <option value="">近三個月</option>
-              <option value="">近六個月</option>
-              <option value="">...</option>
-            </select>
+            <div class="filterDate">
+              <select name="" id="fake-legend">
+                <option value="">近三個月</option>
+                <option value="">近六個月</option>
+                <option value="">...</option>
+              </select>
+              <input type="text" id="fake-legend" value="2024/10/10 ~ 2024/12/31" placeholder="日期元件" readonly>
+            </div>
             <!-- 列表 -->
             <ul>
               <li>

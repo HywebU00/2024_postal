@@ -6851,8 +6851,28 @@ img {
       max-width: 100%;
     }
   }
+  .logInfo .filterDate {
+    display: flex;
+    align-items: center;
+  }
   .logInfo select {
     padding-right: 3em;
+  }
+  .logInfo input,
+  .logInfo input[readonly] {
+    margin-left: 12px;
+    line-height: 1.5;
+    min-width: 200px;
+    opacity: 1;
+    background: url(../images/icon-calendar.svg) right 12px top 50% no-repeat #fff;
+    background-size: 22px;
+    padding-right: 40px;
+  }
+  .logInfo input:hover, .logInfo input:focus-visible,
+  .logInfo input[readonly]:hover,
+  .logInfo input[readonly]:focus-visible {
+    border: solid 1px #bdbdbd;
+    box-shadow: none;
   }
   .logInfo ul {
     list-style: none;
@@ -6895,6 +6915,17 @@ img {
     border-radius: 50%;
     text-align: center;
     line-height: 60px;
+  }
+  @media (max-width: 768px) {
+    .logInfo .filterDate {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .logInfo .filterDate input,
+    .logInfo .filterDate input[readonly] {
+      margin-left: 0;
+      margin-top: 6px;
+    }
   }
   ul.infoType {
     list-style: none;
