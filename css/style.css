@@ -4595,6 +4595,9 @@ img {
     margin: 2px;
     list-style: none;
     box-sizing: border-box;
+    min-width: 40px;
+    height: 40px;
+    line-height: 32px;
   }
   .pagination .page li a {
     min-width: 40px;
@@ -4633,7 +4636,7 @@ img {
     position: relative;
   }
   .pagination .page li.first a:hover:before, .pagination .page li.first a:hover:after, .pagination .page li.first a:focus-visible:before, .pagination .page li.first a:focus-visible:after, .pagination .page li.prev a:hover:before, .pagination .page li.prev a:hover:after, .pagination .page li.prev a:focus-visible:before, .pagination .page li.prev a:focus-visible:after, .pagination .page li.next a:hover:before, .pagination .page li.next a:hover:after, .pagination .page li.next a:focus-visible:before, .pagination .page li.next a:focus-visible:after, .pagination .page li.last a:hover:before, .pagination .page li.last a:hover:after, .pagination .page li.last a:focus-visible:before, .pagination .page li.last a:focus-visible:after {
-    border: 2px solid #fff;
+    border: 2px solid #000;
     border-left: none;
     border-bottom: none;
   }
