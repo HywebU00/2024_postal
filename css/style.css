@@ -5602,6 +5602,7 @@ img {
     padding: 16px 48px;
     display: flex;
     align-items: center;
+    font-size: 1.125rem;
   }
   .btn._more img {
     width: 26px;
