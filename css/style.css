@@ -7437,6 +7437,9 @@ img {
     border-bottom: 1px solid #ddd;
     margin: 0;
   }
+  .mp .main ul.list li:last-child {
+    border-bottom-color: transparent;
+  }
   .mp .main ul.list a {
     display: block;
     padding: 10px 80px 10px 0;
