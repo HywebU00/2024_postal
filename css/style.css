@@ -4664,6 +4664,11 @@ img {
     margin-left: -9px;
     transform: rotate(45deg);
   }
+  @media (max-width: 768px) {
+    .pagination .page li {
+      min-width: auto;
+    }
+  }
   .pagination .total {
     padding: 0em;
     display: flex;
@@ -6620,6 +6625,13 @@ img {
       margin: auto 0.75em;
       padding: 2em 1em;
     }
+    .main .infoSetBox .wrap {
+      padding: 2em 1.5em;
+    }
+    .main .infoSetBox .wrap .item p span {
+      display: inline-block;
+      margin: 0;
+    }
   }
   .QA_flex {
     display: flex;
@@ -6749,13 +6761,26 @@ img {
     .QA_flex ._QA .item {
       padding: 0.5em 1em;
     }
+    .QA_flex ._QA .item .btn-switch {
+      margin-top: 20px;
+    }
+    .QA_flex ._QA .item .Q {
+      align-items: flex-start;
+    }
+    .QA_flex ._QA .item .Q .num {
+      margin-top: 15px;
+    }
     .QA_flex ._QA .item .Q p {
       padding: 0 1em;
+      text-align: justify;
     }
   }
   .tag ul {
     list-style: none;
     display: flex;
+  }
+  .tag ul li {
+    margin: 6px 0 !important;
   }
   .tag ul li a {
     font-size: 90%;
@@ -6763,7 +6788,7 @@ img {
     background: #eeeeee;
     color: #535353;
     border-radius: 24px;
-    margin-right: 4px;
+    margin: 0 2px;
   }
   .tag ul li a:hover, .tag ul li a.act {
     background: #008C38;
@@ -6831,7 +6856,7 @@ img {
     background: #666;
     color: #fff;
     font-size: 0.813rem;
-    padding: 6px 12px;
+    padding: 4px 12px;
     border-radius: 4px;
     margin-right: 4px;
   }
@@ -6924,6 +6949,12 @@ img {
       margin-left: 0;
       margin-top: 6px;
     }
+    .logInfo ul li > div > div {
+      flex-direction: column;
+    }
+    .logInfo ul li > div > div span {
+      margin-bottom: 10px;
+    }
   }
   ul.infoType {
     list-style: none;
@@ -6961,6 +6992,11 @@ img {
   ul.infoType + ul.list {
     box-shadow: none !important;
   }
+  @media (max-width: 768px) {
+    ul.infoType {
+      justify-content: center;
+    }
+  }
   .mp .main {
     padding-top: 150px;
     padding-bottom: 0;
@@ -6969,6 +7005,7 @@ img {
   .mp .main .container {
     background: transparent;
     border-radius: 0;
+    min-height: auto;
   }
   .mp .main .function {
     max-width: 1440px;
@@ -7094,7 +7131,7 @@ img {
   }
   .mp .main .hero .container picture img {
     width: 100%;
-    height: 100%;
+    height: 600px;
     -o-object-fit: cover;
        object-fit: cover;
   }
@@ -7113,8 +7150,9 @@ img {
       text-align: center;
     }
     .mp .main .hero .container .info h2.mainTitle {
-      font-size: 2.5rem;
+      font-size: 2.125rem;
       text-align: center;
+      padding: 0 1em;
     }
     .mp .main .hero .container .info p {
       font-size: 1.25rem;
@@ -7315,6 +7353,12 @@ img {
     .mp .main .pushAd .container {
       max-width: 100%;
     }
+    .mp .main .pushAd .swiperArrow.prevSlider {
+      left: -20px;
+    }
+    .mp .main .pushAd .swiperArrow.nextSlider {
+      right: -20px;
+    }
   }
   .mp .main .cardInfo {
     display: flex;
@@ -7415,6 +7459,11 @@ img {
     background: url(../images/icon-arrow-right-2.svg) right 50% no-repeat, url(../images/icon-tag.svg) right 40px top 50% no-repeat;
     background-size: 24px;
   }
+  @media (max-width: 768px) {
+    .mp .main ul.list a:hover, .mp .main ul.list a:focus-visible {
+      padding: 10px 80px 10px 0;
+    }
+  }
   .mp .main .mixDeco {
     position: relative;
   }
@@ -7442,7 +7491,7 @@ img {
     right: 0;
   }
   .mp .main .hero2 {
-    height: 670px;
+    max-height: 670px;
   }
   .mp .main .hero2 .container {
     padding: 0;
@@ -7484,6 +7533,7 @@ img {
     }
     .mp .main .hero2 .container .info h2.mainTitle {
       font-size: 2.5rem;
+      padding: 0 1em;
     }
     .mp .main .hero2 .container picture img {
       height: 620px;
@@ -7523,8 +7573,14 @@ img {
     background: #008C38;
   }
   @media (max-width: 992px) {
+    .mp .main .tabTitle {
+      flex-wrap: wrap;
+    }
     .mp .main .tabTitle a {
       padding: 12px 36px;
+      flex: 1 1 100%;
+      text-align: center;
+      margin-bottom: 6px;
     }
   }
   .mp .main .tabItems section {
@@ -7542,6 +7598,9 @@ img {
   @media (max-width: 992px) {
     .mp .main .pointInfo {
       margin-top: 16em;
+    }
+    .mp .main .pointInfo .discountInfo {
+      margin-top: 0;
     }
   }
   .mp .main .thumbInfo .item {
@@ -7576,8 +7635,8 @@ img {
     .mp .main .thumbInfo .item:nth-child(even) {
       flex-direction: column;
     }
-    .mp .main .thumbInfo .item .col:last-child {
-      padding-right: 0 !important;
+    .mp .main .thumbInfo .item .col {
+      padding: 0 1em !important;
     }
   }
   .mp .main .terms h3 {
@@ -7600,7 +7659,7 @@ img {
       padding-top: 60px;
     }
     .mp .main > section .container {
-      margin: 0 auto 2em;
+      margin: 0 auto;
       padding: 2em 1.5em;
     }
     .mp .main .function {
@@ -7619,11 +7678,15 @@ img {
     .mp .main .downloadApp .container .col:last-child {
       padding-left: 0;
     }
+    .mp .main .downloadApp._type2 .container .col:first-child {
+      max-width: 180px;
+    }
     .mp .main .downloadApp._type2 .container .col:last-child {
       padding-left: 0;
     }
     .mp .main .downloadApp._type2 .container .col:last-child h3.mainTitle {
       text-align: center;
+      font-size: 2rem;
     }
     .mp .main .downloadApp._type2 .container .col:last-child .f_icons {
       justify-content: center;
@@ -7643,7 +7706,10 @@ img {
       text-align: center;
     }
     .mp .main .pushAd .container .col:first-child ul.step {
-      margin-top: 1em;
+      margin: 0;
+    }
+    .mp .main .pushAd .container .col:first-child ul.step + .btnGrp {
+      margin-bottom: 2em;
     }
     .mp .main .pushAd ul.step li {
       display: none;
@@ -7680,7 +7746,9 @@ img {
   footer .f_links a {
     color: #fff;
     padding: 6px 20px;
+    border-radius: 2px;
     position: relative;
+    transition: 0.3s;
   }
   footer .f_links a::after {
     content: "";
@@ -7694,6 +7762,9 @@ img {
   }
   footer .f_links a:last-child::after {
     opacity: 0;
+  }
+  footer .f_links a:hover {
+    background: #666;
   }
   footer .f_info {
     display: flex;
