@@ -406,12 +406,23 @@
       // 註冊 GSAP 插件 ScrollTrigger
       gsap.registerPlugin(ScrollTrigger);
 
+      // 獲取 .gsap-outer 和相關元素
       const outer = document.querySelector('.gsap-outer'); // 觸發點元素
       const pin = outer.querySelector('.pin'); // 固定的 pinBox 元素
       const boxes = outer.querySelectorAll('.cardInfo'); // 所有 cardInfo 元素
       const steps = outer.querySelectorAll('.steps ul li'); // 所有步驟的 li 元素
       const target = outer.querySelector('.steps .target'); // 用於顯示當前位置的 target
 
+      // 新增：偵測第一個 .cardInfo 的高度，並應用到所有 .cardInfo
+      const firstCardInfo = document.querySelector('.gsap-outer section .cardInfo');
+      if (firstCardInfo) {
+        const cardInfoHeight = firstCardInfo.offsetHeight; // 獲取高度
+        boxes.forEach(box => {
+          box.style.height = `${cardInfoHeight}px`; // 將高度應用到所有 .cardInfo
+        });
+        console.log(`第一個 .cardInfo 高度為：${cardInfoHeight}px`);
+      }
+      
       // 定義 pinBox 的 ScrollTrigger
       const pinTl = gsap.timeline({
         scrollTrigger: {

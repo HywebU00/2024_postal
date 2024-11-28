@@ -6780,9 +6780,6 @@ img {
     list-style: none;
     display: flex;
   }
-  .tag ul li {
-    margin: 6px 0 !important;
-  }
   .tag ul li a {
     font-size: 90%;
     padding: 8px 24px;
@@ -7368,6 +7365,7 @@ img {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     background: #fff;
     border-radius: 20px;
+    box-sizing: border-box;
   }
   .mp .main .cardInfo .col:first-child {
     flex: 1 1 60%;
@@ -7552,6 +7550,12 @@ img {
     top: -140%;
     left: 12%;
   }
+  @media (max-width: 768px) {
+    .mp .main .decobox + .tab .pushAd .deco {
+      top: -180%;
+      left: 0;
+    }
+  }
   .mp .main .tab .pushAd {
     margin-top: 0;
   }
@@ -7562,6 +7566,7 @@ img {
   }
   .mp .main .tabTitle a {
     color: #222;
+    font-size: 1.125rem;
     background: #fff;
     border: 1px solid #dddddd;
     border-radius: 40px;
@@ -7600,9 +7605,6 @@ img {
     margin-bottom: 0;
   }
   @media (max-width: 992px) {
-    .mp .main .pointInfo {
-      margin-top: 16em;
-    }
     .mp .main .pointInfo .discountInfo {
       margin-top: 0;
     }
@@ -7671,6 +7673,7 @@ img {
     }
     .mp .main .discountInfo {
       flex-wrap: wrap;
+      margin: 1em 0;
     }
     .mp .main .discountInfo .col {
       flex: 1 1 100%;
