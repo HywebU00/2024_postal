@@ -7726,6 +7726,10 @@ img {
     }
     .mp .main .cardInfo {
       flex-direction: column;
+      padding: 3em 2em;
+    }
+    .mp .main .cardInfo .col:first-child h4 img {
+      height: 28px;
     }
     .mp .main .cardInfo .col:last-child {
       flex: 1 1 100%;
