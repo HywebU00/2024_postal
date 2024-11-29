@@ -55,7 +55,8 @@
       <section class="mixDeco">
         <!-- 單一帳號暢遊生活圈服務 -->
         <div class="container gsap-outer">
-          <div class="">
+          <!-- 桌機版的pin -->
+          <div class="pin">
             <h3 class="mainTitle">單一帳號暢遊生活圈服務</h3>
             <p>使用手機即可串連各類郵政服務，生活大小事一點通</p>
             <div class="steps">
@@ -67,7 +68,6 @@
               </ul>
             </div>
           </div>
-          <div class="pin"></div>
           <!-- 視差滾動 -->
           <section class="">
             <div class="cardInfo">
@@ -501,6 +501,7 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
     <script>
       // 註冊 GSAP 插件 ScrollTrigger
       gsap.registerPlugin(ScrollTrigger);
@@ -522,13 +523,110 @@
         console.log(`第一個 .cardInfo 高度為：${cardInfoHeight}px`);
       }
 
+      // 設置不同寬度下 boxes 的開始位置
+      function getStartPosition() {
+        return window.innerWidth > 992 ? "top top+=100" : "top top-=200";
+      }
+      function getBoxStartPosition() {
+        return window.innerWidth > 992 ? `top ${pin.scrollHeight + 150}px`: `top top+=140`;
+      }
+
       // 定義 pinBox 的 ScrollTrigger
       const pinTl = gsap.timeline({
         scrollTrigger: {
           trigger: outer, // 觸發點為 .outer
           pin: pin,       // 固定 pinBox
           pinSpacing: false, // 不留間距
-          start: "top top-=200",  // 開始位置
+          start: getStartPosition(), // 根據寬度設置開始位置
+          end: () => `${outer.scrollHeight - pin.scrollHeight - boxes[boxes.length - 1].scrollHeight}px`,
+        }
+      });
+
+      // 為每個 cardInfo 設置 ScrollTrigger
+      boxes.forEach((box, i) => {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: box, // 為當前的 cardInfo 設置觸發點
+            pin: true,
+            pinSpacing: false,
+            start: getBoxStartPosition, // 動態設定開始位置
+            end: () => window.innerWidth > 992 
+              ? `${(boxes.length - i - 1) * box.scrollHeight - pin.scrollHeight}px` // 大螢幕使用 bottom 偏移
+              : `${(boxes.length - i - 1) * box.scrollHeight + 10}px`, // 小螢幕使用高度計算
+            
+            // start: () => `top ${pin.scrollHeight + 150}px`, // 開始位置為 pinBox 高度加 150px
+            // end: () => `${(boxes.length - i - 1) * box.scrollHeight - pin.scrollHeight}px`, // 根據剩餘 box 設置結束位置
+
+            // 每次滾動到新的 .cardInfo 元素時觸發以下功能
+            onEnter: () => updateStepsAndTarget(i),
+            onEnterBack: () => updateStepsAndTarget(i)
+          }
+        });
+      });
+
+      // 更新 steps 中的 .now 狀態和 target 的 left 位置
+      function updateStepsAndTarget(index) {
+        // 移除所有步驟的 .now 類，並在當前序數加上 .now
+        steps.forEach((step, idx) => step.classList.toggle('now', idx === index));
+
+        // 計算 .target 的 left 位置
+        if (index > 0) {
+          const leftPosition = `calc(${100 / (steps.length - 1) * index}% - 5px)`;
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: leftPosition,
+            ease: "power2.out" // 設置緩動效果
+          });
+        } else {
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: '0', // 將第一個位置的 .target 設為起始位置
+            ease: "power2.out" // 設置緩動效果
+          });
+        }
+      }
+
+      // 偵聽窗口大小變化，動態更新 ScrollTrigger
+      window.addEventListener('resize', () => {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 清除舊的 ScrollTrigger
+        ScrollTrigger.refresh(); // 刷新 ScrollTrigger
+      });
+
+    </script>
+
+    <!-- <script>
+      // 註冊 GSAP 插件 ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
+
+      // 獲取 .gsap-outer 和相關元素
+      const outer = document.querySelector('.gsap-outer'); // 觸發點元素
+      const pin = outer.querySelector('.pin'); // 固定的 pinBox 元素
+      const boxes = outer.querySelectorAll('.cardInfo'); // 所有 cardInfo 元素
+      const steps = outer.querySelectorAll('.steps ul li'); // 所有步驟的 li 元素
+      const target = outer.querySelector('.steps .target'); // 用於顯示當前位置的 target
+
+      // 新增：偵測第一個 .cardInfo 的高度，並應用到所有 .cardInfo
+      const firstCardInfo = document.querySelector('.gsap-outer section .cardInfo');
+      if (firstCardInfo) {
+        const cardInfoHeight = firstCardInfo.offsetHeight; // 獲取高度
+        boxes.forEach(box => {
+          box.style.height = `${cardInfoHeight}px`; // 將高度應用到所有 .cardInfo
+        });
+        console.log(`第一個 .cardInfo 高度為：${cardInfoHeight}px`);
+      }
+
+      // 設置不同寬度下的開始位置
+      function getStartPosition() {
+        return window.innerWidth > 992 ? "top top+=100" : "top top-=200";
+      }
+
+      // 定義 pinBox 的 ScrollTrigger
+      const pinTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: outer, // 觸發點為 .outer
+          pin: pin,       // 固定 pinBox
+          pinSpacing: false, // 不留間距
+          start: getStartPosition(), // 根據寬度設置開始位置
           end: () => `${outer.scrollHeight - pin.scrollHeight - boxes[boxes.length - 1].scrollHeight}px`,
         }
       });
@@ -571,7 +669,89 @@
           });
         }
       }
-    </script>
+
+      // 偵聽窗口大小變化，動態更新 ScrollTrigger
+      window.addEventListener('resize', () => {
+        ScrollTrigger.getAll().forEach(trigger => trigger.kill()); // 清除舊的 ScrollTrigger
+        pinTl.scrollTrigger.start = getStartPosition(); // 更新開始位置
+        ScrollTrigger.refresh(); // 刷新 ScrollTrigger
+      });
+
+    </script> -->
+
+    <!-- <script>
+      // 註冊 GSAP 插件 ScrollTrigger
+      gsap.registerPlugin(ScrollTrigger);
+
+      // 獲取 .gsap-outer 和相關元素
+      const outer = document.querySelector('.gsap-outer'); // 觸發點元素
+      const pin = outer.querySelector('.pin'); // 固定的 pinBox 元素
+      const boxes = outer.querySelectorAll('.cardInfo'); // 所有 cardInfo 元素
+      const steps = outer.querySelectorAll('.steps ul li'); // 所有步驟的 li 元素
+      const target = outer.querySelector('.steps .target'); // 用於顯示當前位置的 target
+
+      // 新增：偵測第一個 .cardInfo 的高度，並應用到所有 .cardInfo
+      const firstCardInfo = document.querySelector('.gsap-outer section .cardInfo');
+      if (firstCardInfo) {
+        const cardInfoHeight = firstCardInfo.offsetHeight; // 獲取高度
+        boxes.forEach(box => {
+          box.style.height = `${cardInfoHeight}px`; // 將高度應用到所有 .cardInfo
+        });
+        console.log(`第一個 .cardInfo 高度為：${cardInfoHeight}px`);
+      }
+
+      // 定義 pinBox 的 ScrollTrigger
+      const pinTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: outer, // 觸發點為 .outer
+          pin: pin,       // 固定 pinBox
+          pinSpacing: false, // 不留間距
+          start: "top top+=100",  // 開始位置
+          end: () => `${outer.scrollHeight - pin.scrollHeight - boxes[boxes.length - 1].scrollHeight}px`,
+        }
+      });
+
+      // 為每個 cardInfo 設置 ScrollTrigger
+      boxes.forEach((box, i) => {
+        const boxTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: box, // 為當前的 cardInfo 設置觸發點
+            pin: true,
+            pinSpacing: false,
+            start: () => `top ${pin.scrollHeight + 150}px`, // 開始位置為 pinBox 高度加 150px
+            end: () => `${(boxes.length - i - 1) * box.scrollHeight - pin.scrollHeight}px`, // 根據剩餘 box 設置結束位置
+
+            // 每次滾動到新的 .cardInfo 元素時觸發以下功能
+            onEnter: () => updateStepsAndTarget(i),
+            onEnterBack: () => updateStepsAndTarget(i)
+          }
+        });
+      });
+
+      // 更新 steps 中的 .now 狀態和 target 的 left 位置
+      function updateStepsAndTarget(index) {
+        // 移除所有步驟的 .now 類，並在當前序數加上 .now
+        steps.forEach((step, idx) => step.classList.toggle('now', idx === index));
+
+        // 計算 .target 的 left 位置
+        if (index > 0) {
+          const leftPosition = `calc(${100 / (steps.length - 1) * index}% - 5px)`;
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: leftPosition,
+            ease: "power2.out" // 設置緩動效果
+          });
+        } else {
+          gsap.to(target, {
+            duration: 0.5, // 設定動畫的持續時間
+            left: '0', // 將第一個位置的 .target 設為起始位置
+            ease: "power2.out" // 設置緩動效果
+          });
+        }
+      }
+    </script> -->
+
+
     <!-- <script>
       // 註冊 GSAP 插件 ScrollTrigger
       gsap.registerPlugin(ScrollTrigger);
