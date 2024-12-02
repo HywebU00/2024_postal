@@ -2783,7 +2783,6 @@ img {
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    white-space: nowrap;
     line-height: normal;
     width: auto;
     padding: 0.5em 1.25em;
@@ -5682,6 +5681,7 @@ img {
   }
   form .formGrp .content._inline > input {
     margin: 6px 4px;
+    padding: 12px;
     text-align: center;
   }
   form .formGrp .content._inline > input:first-child {
@@ -5713,11 +5713,13 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 0;
+    margin: 20px 0;
   }
   form .formGrp .tip p {
     text-align: left;
     color: #333;
+    margin: 0;
+    line-height: 1.2;
   }
   form .formGrp .tip p b {
     color: #EA3349;
@@ -5737,6 +5739,8 @@ img {
     border: 1px solid #008C38;
     padding: 6px 12px;
     border-radius: 4px;
+    flex-basis: 110px;
+    margin-left: 12px;
   }
   form .formGrp .tip button:hover {
     background: #008C38;
