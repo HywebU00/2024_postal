@@ -6555,6 +6555,7 @@ img {
   .main .setBox ._linkItems div p.unfill {
     font-size: 1em;
     font-weight: normal;
+    text-align: left;
   }
   .main .noteList {
     padding: 2em 3em;
