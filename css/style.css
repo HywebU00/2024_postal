@@ -5524,7 +5524,7 @@ img {
     background-size: 32px;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: #333;
     margin: 2em 0 1em;
   }
@@ -5675,6 +5675,7 @@ img {
     font-weight: bold;
     font-size: 1.25em;
     line-height: 2.2;
+    margin-top: 4px;
   }
   form .formGrp .content._inline {
     display: flex;
@@ -6283,7 +6284,6 @@ img {
     padding-bottom: 2em;
   }
   .main .container {
-    background: rgba(255, 255, 255, 0.9);
     padding: 2em;
     border-radius: 10px;
     box-sizing: border-box;
@@ -6292,6 +6292,13 @@ img {
   .main .centerLimit {
     max-width: 480px;
     margin: auto;
+    background: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 2em 5em;
+    border-radius: 12px;
+  }
+  .main .centerLimit h3 {
+    line-height: 1.6;
   }
   .main .centerLimit h3, .main .centerLimit p {
     text-align: center;
@@ -6366,12 +6373,16 @@ img {
     font-weight: normal;
   }
   .main .centerLimit .info._user h4:first-child {
-    margin-top: 0;
+    margin-top: 0.5em;
   }
   .main .centerLimit .info._user p {
     font-size: 1.45em;
     font-weight: bold;
     color: #333;
+    margin: 12px auto 36px;
+  }
+  .main .centerLimit .info._user p:last-child {
+    margin-bottom: 0;
   }
   .main .centerLimit .info._user a {
     margin: -2em -1em;
@@ -6395,6 +6406,11 @@ img {
   }
   .main .centerLimit .functions {
     margin: 2em 0;
+  }
+  @media (max-width: 992px) {
+    .main .centerLimit {
+      padding: 2em 1.25em;
+    }
   }
   .main .userPoints,
   .main a.userPoints {
@@ -6629,7 +6645,7 @@ img {
     }
     .main .container {
       margin: auto 0.75em;
-      padding: 2em 1em;
+      padding: 2em 0;
     }
     .main .infoSetBox .wrap {
       padding: 2em 1.5em;
