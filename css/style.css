@@ -5665,6 +5665,7 @@ img {
   }
   form .formGrp {
     padding: 0.5em 0;
+    position: relative;
   }
   form .formGrp .title {
     font-size: 1.125rem;
@@ -5757,6 +5758,11 @@ img {
     align-items: center;
     justify-content: space-between;
     margin: 1em 0;
+  }
+  form .formGrp a.forgetPassword {
+    position: absolute;
+    right: 0;
+    top: 0.5em;
   }
   .normalInfo {
     color: #222;
