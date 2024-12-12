@@ -6010,6 +6010,14 @@ img {
     background: url(../images/icon-close.svg) 50% 50% no-repeat #eee;
     background-size: 18px 18px;
   }
+  #mask .loading,
+  #mask_below .loading {
+    margin: auto;
+    height: 100vh;
+    color: #fff;
+    font-size: 1.125em;
+    letter-spacing: 2px;
+  }
   @media (max-width: 576px) {
     #mask .container,
     #mask_below .container {
@@ -6617,7 +6625,7 @@ img {
   .main .infoSetBox .wrap .item {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 1em 0;
     border-bottom: 1px solid #666;
   }
@@ -6658,7 +6666,6 @@ img {
     }
     .main .infoSetBox .wrap .item p span {
       display: inline-block;
-      margin: 0;
     }
   }
   .QA_flex {
@@ -7020,6 +7027,62 @@ img {
   @media (max-width: 768px) {
     ul.infoType {
       justify-content: center;
+    }
+  }
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loading svg {
+    margin: 40px;
+    display: inline-block;
+  }
+  .spinner {
+    animation: rotator 1.4s linear infinite;
+  }
+  @keyframes rotator {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(270deg);
+    }
+  }
+  .path {
+    stroke-dasharray: 187;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+  }
+  @keyframes colors {
+    0% {
+      stroke: #4285f4;
+    }
+    25% {
+      stroke: #de3e35;
+    }
+    50% {
+      stroke: #f7c223;
+    }
+    75% {
+      stroke: #1b9a59;
+    }
+    100% {
+      stroke: #4285f4;
+    }
+  }
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 187;
+    }
+    50% {
+      stroke-dashoffset: 46.75;
+      transform: rotate(135deg);
+    }
+    100% {
+      stroke-dashoffset: 187;
+      transform: rotate(450deg);
     }
   }
   .mp .main {
