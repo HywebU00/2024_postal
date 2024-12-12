@@ -6012,6 +6012,7 @@ img {
   }
   #mask .loading,
   #mask_below .loading {
+    flex-direction: column;
     margin: auto;
     height: 100vh;
     color: #fff;
