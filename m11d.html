@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>4.6.5 搜尋商品流程</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body class="mp _page">
+    <!-- mask 2 -->
+    <section id="mask_below" class="_hide">
+      <!-- 功能 -->
+      <div class="container">
+        <!-- 2、radio、checkbox -->
+        <form action="">
+          <!-- 篩選 -->
+          <div class="formGrp">
+            <label for="" class="title">篩選項目</label>
+            <div class="formContent" id="fake-legend4">
+              <div class="checkGrp _column">
+                <label><input type="checkbox" name="" value="" title="電子票券" checked="" />電子票券</label>
+                <label><input type="checkbox" name="" value="" title="實體商品" />實體商品</label>
+                <label><input type="checkbox" name="" value="" title="篩選條件" />篩選條件</label>
+                <label><input type="checkbox" name="" value="" title="篩選條件2" />篩選條件2</label>
+              </div>
+            </div>
+          </div>
+          <div class="btnGrp">
+            <button class="btn _default">清除全部</button>
+            <button class="btn _primary">確定</button>
+          </div>
+          <!-- 時間排序 -->
+          <div class="formGrp">
+            <label for="" class="title">時間排序</label>
+            <div class="formContent" id="fake-legend2">
+              <div class="radioGrp _column">
+                <label><input type="radio" name="sampleRadio2" value="" title="" checked />上架時間由新至舊</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />上架時間由舊至新</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />點數由高至低</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />點數由低至高</label>
+              </div>
+            </div>
+          </div>
+          <div class="btnGrp">
+            <button class="btn _primary">確定</button>
+          </div>
+        </form>
+        <!-- 關閉按鈕 -->
+        <button class="btnClose">關閉</button>
+      </div>
+    </section>
+    <header>
+      <div class="container">
+        <a href="#"><h1>中華郵政會員資訊網</h1></a>
+        <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
+        <nav>
+          <a href="#" class="lang">English</a>
+          <div class="menu">
+            <a href="#">郵政會員</a>
+            <a href="#">最新消息</a>
+            <a href="#">常見問題</a>
+            <a href="#">下載行動郵局</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- 內容 -->
+    <div class="main">
+      <!-- 內容頁 -->
+      <section>
+        <div class="container">
+          <a href="#" class="prev">回上頁</a>
+          <!-- search bar -->
+          <div class="searchBar">
+            <input type="search" id="site-search" name="" placeholder="placeholder" />
+            <button class="btn _remove">清除輸入文字</button>
+          </div>
+          <!-- 歷史搜尋紀錄 -->
+          <section class="historyList">
+            <h3>歷史搜尋紀錄</h3>
+            <button class="btn _clear">清除全部</button>
+            <ul>
+              <li>
+                <a href="m11d2.html">萬聖節</a><button class="btn _remove">刪除</button>
+              </li>
+              <li>
+                <a href="m11d2.html">萬聖節</a><button class="btn _remove">刪除</button>
+              </li>
+              <li>
+                <a href="m11d2.html">萬聖節</a><button class="btn _remove">刪除</button>
+              </li>
+              <li>
+                <a href="m11d2.html">萬聖節</a><button class="btn _remove">刪除</button>
+              </li>
+            </ul>
+          </section>
+          <!-- 大家都在搜 -->
+          <section class="historyList">
+            <h3>大家都在搜</h3>
+            <ul>
+              <li><a href="#">咖啡</a></li>
+              <li><a href="#">咖啡</a></li>
+              <li><a href="#">咖啡</a></li>
+              <li><a href="#">咖啡</a></li>
+            </ul>
+          </section>
+        </div>
+      </section>
+      <!-- 行銷 Banner slider -->
+      <section class="bannerSlider">
+        <div class="container">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <a class="item imgContainer swiper-slide" data-title="圖說1">
+                <img src="images/demo/01.jpg" alt="" class="cover" />
+              </a>
+              <a class="item imgContainer swiper-slide" data-title="圖說2">
+                <img src="images/demo/02.jpg" alt="" class="cover" />
+              </a>
+              <a class="item imgContainer swiper-slide" data-title="圖說3">
+                <img src="images/demo/03.jpg" alt="" class="cover" />
+              </a>
+              <a class="item imgContainer swiper-slide" data-title="圖說4">
+                <img src="images/demo/04.jpg" alt="" class="cover" />
+              </a>
+            </div>
+          </div>
+          <!--前一筆-->
+          <!-- <button class="prevSlider swiperArrow"></button> -->
+          <!--下一筆-->
+          <!-- <button class="nextSlider swiperArrow"></button> -->
+          <!-- swiper 點切換-->
+          <div class="swiperDots"></div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="flex">
+          <div class="f_links">
+            <a href="#">中華郵政全球資訊網</a>
+            <a href="#">常見問題</a>
+            <a href="#">隱私權與各項條款</a>
+          </div>
+          <section class="f_info">
+            <div class="col">
+              <h3 class="f_logo"><img src="images/logo-footer.png" alt=""></h3>
+              <p>地址：臺北市大安區金山南路2段55號<br>客服電話：(02) 2321-4311、(02)2392-1310</p>
+            </div>
+            <div class="col">
+              <h3>下載行動郵局 App</h3>
+              <div class="f_icons">
+                <img src="images/QRcode.jpg" alt="QRcode">
+                <div>
+                  <a href="#"><img src="images/img-AppStore.png" alt="AppStore"></a>
+                  <a href="#"><img src="images/img-GooglePlay.png" alt="GooglePlay"></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <p class="Copyright">中華郵政 版權所有 © 2013 Chunghwa Post All Rights Reserved.　</p>
+      </div>
+    </footer>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- js -->
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="js/customize.js"></script>
+  </body>
+</html>

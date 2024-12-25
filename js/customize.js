@@ -203,6 +203,66 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
     //     },
     // });
 
+    // banner輪播
+    // let bannerSliderItem = document.querySelectorAll('.bannerSlider .swiper-slide');
+    // let bannerSliderPagination = [];
+    // bannerSliderItem.forEach((item, index) => {
+    //     bannerSliderPagination.push(item.dataset.title);
+    // });
+    // const bannerSlider = new Swiper('.bannerSlider .swiper', {
+    //     slidesPerView: 1.3, // 每次顯示 1.3 張，確保左右各露出 1/3
+    //     spaceBetween: 30,   // 幻燈片之間的距離，可根據需求調整
+    //     centeredSlides: true, // 啟用居中顯示
+    //     loop: false,          // 關閉循環播放，避免左右滑動無限循環
+    //     // 切換點
+    //     pagination: {
+    //         el: '.bannerSlider .swiperDots',
+    //         bulletElement: 'button',
+    //         clickable: true,
+    //         renderBullet: function (index, className) {
+    //             return `<button class="${className} noFonts" aria-label="${bannerSliderPagination[index]}">${bannerSliderPagination[index]}</button>`;
+    //         },
+    //     },
+    //     // 切換箭頭
+    //     // navigation: {
+    //     //     nextEl: '.bannerSlider .nextSlider', //自行設定樣式
+    //     //     prevEl: '.bannerSlider .prevSlider', //自行設定樣式
+    //     //     disabledClass: 'swiperArrow-disabled', //不可點選樣式
+    //     // },
+    // });
+
+    // banner輪播
+    let bannerSliderItem = document.querySelectorAll('.bannerSlider .swiper-slide');
+    let bannerSliderPagination = [];
+
+    // 收集圖片標題，用於輪播點的 aria-label
+    bannerSliderItem.forEach((item) => {
+        bannerSliderPagination.push(item.dataset.title);
+    });
+
+    // 將第一張幻燈片移動到第二順位
+    const swiperWrapper = document.querySelector('.bannerSlider .swiper-wrapper');
+    const firstSlide = swiperWrapper.firstElementChild; // 獲取第一張幻燈片
+    swiperWrapper.insertBefore(firstSlide, swiperWrapper.children[1]); // 移動到第二順位
+
+    // 初始化 Swiper
+    const bannerSlider = new Swiper('.bannerSlider .swiper', {
+        slidesPerView: 1.3,     // 每次顯示 1.3 張，確保左右各露出 1/3
+        spaceBetween: 20,       // 幻燈片之間的距離
+        centeredSlides: true,   // 啟用居中顯示
+        loop: true,             // 啟用循環播放
+        pagination: {
+            el: '.bannerSlider .swiperDots',
+            bulletElement: 'button',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return `<button class="${className} noFonts" aria-label="${bannerSliderPagination[index]}">${bannerSliderPagination[index]}</button>`;
+            },
+        },
+    });
+
+
+
     //跑馬燈
     const marqueeSwiper = new Swiper('.marquee .swiper', {
         direction: 'vertical',
@@ -258,32 +318,6 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
     });
 
     // m1 郵你生活圈，就差你一員！
-    // 初始化 Swiper
-    // const swiper = new Swiper(".swiper", {
-    //     navigation: {
-    //         nextEl: ".nextSlider",
-    //         prevEl: ".prevSlider"
-    //     },
-    //     on: {
-    //         init: function () {
-    //         // 初始化時對應的第一個 li 加入 .act
-    //         document.querySelectorAll("ul.step li")[0].classList.add("act");
-    //         },
-    //         slideChange: function () {
-    //         // 取得所有的 li
-    //         const steps = document.querySelectorAll("ul.step li");
-
-    //         // 清除所有 li 上的 .act
-    //         steps.forEach((li) => li.classList.remove("act"));
-
-    //         // 根據 Swiper 的 activeIndex 加入 .act
-    //         const activeIndex = this.activeIndex;
-    //         if (steps[activeIndex]) {
-    //             steps[activeIndex].classList.add("act");
-    //         }
-    //         }
-    //     }
-    // });
     document.addEventListener("DOMContentLoaded", function () {
         // 遍歷每個 .mpSlider 元素
         document.querySelectorAll(".mpSlider").forEach(function (sliderContainer) {
@@ -329,7 +363,6 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
             });
         });
     });
-
 
     // m2
     document.addEventListener("DOMContentLoaded", function () {

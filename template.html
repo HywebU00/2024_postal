@@ -31,8 +31,10 @@
     </section> -->
     <!-- mask 2 -->
     <section id="mask_below" class="_hide">
+      <!-- 功能 -->
       <div class="container">
-        <h3>標題</h3>
+        <!-- 1、條款  -->
+        <!-- <h3>標題</h3>
         <p>請閱讀完條款內容，方可點擊同意按鈕</p>
         <div class="scrollCover">
           <div class="content">
@@ -66,13 +68,48 @@
         </div>
         <div class="btnGrp _full">
           <button class="btn _primary _openMask _disable">同意條款</button>
-        </div>
+        </div> -->
+        <!-- 2、radio、checkbox -->
+        <form action="">
+          <!-- 篩選 -->
+          <div class="formGrp">
+            <label for="" class="title">篩選項目</label>
+            <div class="formContent" id="fake-legend4">
+              <div class="checkGrp _column">
+                <label><input type="checkbox" name="" value="" title="電子票券" checked="" />電子票券</label>
+                <label><input type="checkbox" name="" value="" title="實體商品" />實體商品</label>
+                <label><input type="checkbox" name="" value="" title="篩選條件" />篩選條件</label>
+                <label><input type="checkbox" name="" value="" title="篩選條件2" />篩選條件2</label>
+              </div>
+            </div>
+          </div>
+          <div class="btnGrp">
+            <button class="btn _default">清除全部</button>
+            <button class="btn _primary">確定</button>
+          </div>
+          <!-- 時間排序 -->
+          <div class="formGrp">
+            <label for="" class="title">時間排序</label>
+            <div class="formContent" id="fake-legend2">
+              <div class="radioGrp _column">
+                <label><input type="radio" name="sampleRadio2" value="" title="" checked />上架時間由新至舊</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />上架時間由舊至新</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />點數由高至低</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />點數由低至高</label>
+              </div>
+            </div>
+          </div>
+          <div class="btnGrp">
+            <button class="btn _primary">確定</button>
+          </div>
+        </form>
+        <!-- 關閉按鈕 -->
         <button class="btnClose">關閉</button>
       </div>
     </section>
     <header>
       <!-- 版本 1 -->
-      <div class="container">
+      <!-- <div class="container">
         <a href="#"><h1>中華郵政會員資訊網</h1></a>
         <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
         <nav>
@@ -84,7 +121,7 @@
             <a href="#">下載行動郵局</a>
           </div>
         </nav>
-      </div>
+      </div> -->
       <!-- 版本 2 -->
       <div class="container">
         <a href="#"><h1>中華郵政會員資訊網</h1></a>
@@ -95,7 +132,7 @@
       <div class="container">
         <div class="centerLimit">
           <div class="imgBox">
-            <img src="images/01.jpg" alt="" class="cover">
+            <img src="images/img-default.jpg" alt="" class="cover">
           </div>
           <h3>輸入您的手機號碼</h3>
           <p>此組手機號碼將成為您未來的會員帳號</p>
@@ -350,6 +387,174 @@
               </div>
             </div>
           </section>
+          <!-- 兌換券 -->
+          <div class="listCard">
+            <div class="coupon _link">
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-default.jpg" class="cover" alt="圖說1">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>兌換券名稱</h3>
+                  <time datetime="">到期日：2024/12/31</time>
+                  <span>剩餘數量：10</span>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="listCard">
+            <div class="coupon _link">
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-commodity.jpg" class="cover" alt="商品">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>兌換券名稱</h3>
+                  <time datetime="">到期日：2024/12/31</time>
+                  <span>剩餘數量：10</span>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="listCard">
+            <div class="coupon">
+              <section class="state">
+                <b>已使用</b>
+                <span>使用日：2024/11/14</span>
+              </section>
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-commodity.jpg" class="cover" alt="商品">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>兌換券名稱</h3>
+                  <span>數量：1 個</span>
+                </div>
+              </section>
+            </div>
+          </div>
+          <div class="listCard">
+            <div class="coupon">
+              <section class="state _overdue">
+                <b>已逾期</b>
+                <span>逾期日：2024/10/31</span>
+              </section>
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-commodity.jpg" class="cover" alt="商品">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>兌換券名稱</h3>
+                  <span>數量：1 個</span>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!-- 掃描兌換券 -->
+          <div class="ticket">
+            <section class="couponItem">
+              <div class="col">
+                <div class="imgContainer">
+                  <img src="images/img-commodity.jpg" class="cover" alt="商品">
+                </div>
+              </div>
+              <div class="col">
+                <h3>兌換券名稱</h3>
+              </div>
+            </section>
+            <img src="images/barcode.jpg" alt="">
+          </div>
+          <!-- 注意事項 -->
+          <div class="info _list">
+            <h4>票券使用方式與注意事項</h4>
+            <ul>
+              <li>請於實體店家出示條碼兌換，兌換數量以店家實際刷讀數量為主</li>
+              <li>電子票券皆需要在購買後 90 天內使用，經刷讀兌換後即無法使用，無法退 / 換貨</li>
+            </ul>
+          </div>
+          <!-- 商品卡 header -->
+          <div class="cardFunction">
+            <a href="#" class="urPoints">10,000</a>
+            <a href="#" class="btnSearch">搜尋</a>
+          </div>
+          <div class="cardFunction">
+            <h3>特選咖啡</h3>
+            <a href="#" class="urPoints">10,000</a>
+          </div>
+          <div class="cardFunction _flex">
+            <div class="col">共 100 個商品</div>
+            <div class="col">
+              <button class="btn _filter _openMask">篩選</button>
+              <button class="btn _filter _openMask">篩選<span>1</span></button>
+              <button class="btn _second _sort _openMask">由新到舊</button>
+            </div>
+          </div>
+          <!-- 商品卡 -->
+          <div class="giftCard">
+            <a class="card">
+              <div class="imgContainer">
+                <!-- <div class="mask"><span>已全數兌換完畢</span></div> -->
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">商品分類</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點<span>60點</span></p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <div class="mask"><span><img src="images/icon-timer.svg" alt="">2024-12-31<br>即將上架</span></div>
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coffee.svg" alt="特選咖啡">特選咖啡</span>
+                  <h3>【全家】大杯單大杯單品美式大杯單品美式大杯單品美式大杯單品美式美式（冷熱不限）</h3>
+                </div>
+                <p class="points">10點<span>60點</span></p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <div class="mask"><span>已全數兌換完畢</span></div>
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-delivery.svg" alt="配送商品">配送商品</span>
+                  <h3>【全家】大杯單品美式（冷熱不限）</h3>
+                </div>
+                <p class="points">10點<span>60點</span></p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <!-- <div class="mask"><span>已全數兌換完畢</span></div> -->
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">商品分類</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點<span>60點</span></p>
+              </div>
+            </a>
+          </div>
+          <div class="btnGrp _full">
+            <button class="btn _second">載入更多</button>
+          </div>
           <!-- 一組的 -->
           <section class="setBox">
             <h3>設定</h3>
@@ -526,6 +731,51 @@
               </div>
               <div class="tip">
                 <p>收不到簡訊驗證碼？<a href="#">使用手機簡訊驗證</a></p>
+              </div>
+            </div>
+            <!-- radio、checkbox -->
+            <div class="formGrp">
+              <label for="" class="title">radio：</label>
+              <div class="formContent" id="fake-legend">
+                <div class="radioGrp">
+                  <label><input type="radio" name="sampleRadio" value="" title="" checked />上架時間由新至舊</label>
+                  <label><input type="radio" name="sampleRadio" value="" title="" />上架時間由舊至新</label>
+                  <label><input type="radio" name="sampleRadio" value="" title="" />點數由高至低</label>
+                  <label><input type="radio" name="sampleRadio" value="" title="" />點數由低至高</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="" class="title">radio：</label>
+              <div class="formContent" id="fake-legend2">
+                <div class="radioGrp _column">
+                  <label><input type="radio" name="sampleRadio2" value="" title="" checked />上架時間由新至舊</label>
+                  <label><input type="radio" name="sampleRadio2" value="" title="" />上架時間由舊至新</label>
+                  <label><input type="radio" name="sampleRadio2" value="" title="" />點數由高至低</label>
+                  <label><input type="radio" name="sampleRadio2" value="" title="" />點數由低至高</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend">
+              <label for="" class="title">checkbo：</label>
+              <div class="formContent" id="fake-legend3">
+                <div class="checkGrp">
+                  <label><input type="checkbox" name="" value="" title="電子票券" checked="" />電子票券</label>
+                  <label><input type="checkbox" name="" value="" title="實體商品" />實體商品</label>
+                  <label><input type="checkbox" name="" value="" title="篩選條件" />篩選條件</label>
+                  <label><input type="checkbox" name="" value="" title="篩選條件2" />篩選條件2</label>
+                </div>
+              </div>
+            </div>
+            <div class="formGrp" role="group" aria-labelledby="fake-legend">
+              <label for="" class="title">checkbo：</label>
+              <div class="formContent" id="fake-legend4">
+                <div class="checkGrp _column">
+                  <label><input type="checkbox" name="" value="" title="電子票券" checked="" />電子票券</label>
+                  <label><input type="checkbox" name="" value="" title="實體商品" />實體商品</label>
+                  <label><input type="checkbox" name="" value="" title="篩選條件" />篩選條件</label>
+                  <label><input type="checkbox" name="" value="" title="篩選條件2" />篩選條件2</label>
+                </div>
               </div>
             </div>
           </form>

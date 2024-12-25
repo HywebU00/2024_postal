@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>4.6.1 商品卡片、排序、篩選</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body class="mp _page">
+    <!-- mask 2 -->
+    <section id="mask_below" class="_hide">
+      <!-- 功能 -->
+      <div class="container">
+        <!-- 2、radio、checkbox -->
+        <form action="">
+          <!-- 篩選 -->
+          <div class="formGrp">
+            <label for="" class="title">篩選項目</label>
+            <div class="formContent" id="fake-legend4">
+              <div class="checkGrp _column">
+                <label><input type="checkbox" name="" value="" title="電子票券" checked="" />電子票券</label>
+                <label><input type="checkbox" name="" value="" title="實體商品" />實體商品</label>
+                <label><input type="checkbox" name="" value="" title="篩選條件" />篩選條件</label>
+                <label><input type="checkbox" name="" value="" title="篩選條件2" />篩選條件2</label>
+              </div>
+            </div>
+          </div>
+          <div class="btnGrp">
+            <button class="btn _default">清除全部</button>
+            <button class="btn _primary">確定</button>
+          </div>
+          <!-- 時間排序 -->
+          <div class="formGrp">
+            <label for="" class="title">時間排序</label>
+            <div class="formContent" id="fake-legend2">
+              <div class="radioGrp _column">
+                <label><input type="radio" name="sampleRadio2" value="" title="" checked />上架時間由新至舊</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />上架時間由舊至新</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />點數由高至低</label>
+                <label><input type="radio" name="sampleRadio2" value="" title="" />點數由低至高</label>
+              </div>
+            </div>
+          </div>
+          <div class="btnGrp">
+            <button class="btn _primary">確定</button>
+          </div>
+        </form>
+        <!-- 關閉按鈕 -->
+        <button class="btnClose">關閉</button>
+      </div>
+    </section>
+    <header>
+      <div class="container">
+        <a href="#"><h1>中華郵政會員資訊網</h1></a>
+        <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
+        <nav>
+          <a href="#" class="lang">English</a>
+          <div class="menu">
+            <a href="#">郵政會員</a>
+            <a href="#">最新消息</a>
+            <a href="#">常見問題</a>
+            <a href="#">下載行動郵局</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- 內容 -->
+    <div class="main">
+      <!-- 內容頁 -->
+      <section>
+        <div class="container">
+          <a href="#" class="prev">回上頁</a>
+          <h2 class="subTitle _abs">頁面標題</h2>
+          <div class="cardFunction _flex">
+            <div class="col">共 100 個商品</div>
+            <div class="col">
+              <button class="btn _filter _openMask">篩選<span>1</span></button>
+              <button class="btn _second _sort _openMask">由新到舊</button>
+            </div>
+          </div>
+          <!-- 商品卡 -->
+          <div class="giftCard">
+            <a class="card">
+              <div class="imgContainer">
+                <!-- <div class="mask"><span>已全數兌換完畢</span></div> -->
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">商品分類</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <div class="mask"><span><img src="images/icon-timer.svg" alt="">2024-12-31<br>即將上架</span></div>
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coffee.svg" alt="特選咖啡">特選咖啡</span>
+                  <h3>【全家】大杯單大杯單品美式大杯單品美式大杯單品美式大杯單品美式美式（冷熱不限）</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <div class="mask"><span>已全數兌換完畢</span></div>
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-delivery.svg" alt="配送商品">配送商品</span>
+                  <h3>【全家】大杯單品美式（冷熱不限）</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <!-- <div class="mask"><span>已全數兌換完畢</span></div> -->
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">商品分類</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+          </div>
+          <div class="btnGrp _full">
+            <button class="btn _second">載入更多</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="flex">
+          <div class="f_links">
+            <a href="#">中華郵政全球資訊網</a>
+            <a href="#">常見問題</a>
+            <a href="#">隱私權與各項條款</a>
+          </div>
+          <section class="f_info">
+            <div class="col">
+              <h3 class="f_logo"><img src="images/logo-footer.png" alt=""></h3>
+              <p>地址：臺北市大安區金山南路2段55號<br>客服電話：(02) 2321-4311、(02)2392-1310</p>
+            </div>
+            <div class="col">
+              <h3>下載行動郵局 App</h3>
+              <div class="f_icons">
+                <img src="images/QRcode.jpg" alt="QRcode">
+                <div>
+                  <a href="#"><img src="images/img-AppStore.png" alt="AppStore"></a>
+                  <a href="#"><img src="images/img-GooglePlay.png" alt="GooglePlay"></a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <p class="Copyright">中華郵政 版權所有 © 2013 Chunghwa Post All Rights Reserved.　</p>
+      </div>
+    </footer>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- js -->
+    <!-- lazyload -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- fancybox -->
+    <script src="vendor/fancybox/fancybox.umd.js"></script>
+    <script src="vendor/fancybox/l10n/zh_TW.umd.js"></script>
+    <!-- swiper -->
+    <script src="vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="js/customize.js"></script>
+  </body>
+</html>

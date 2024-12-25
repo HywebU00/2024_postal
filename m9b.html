@@ -5,7 +5,7 @@
     <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>m7</title>
+    <title>m9b</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
@@ -34,54 +34,61 @@
       <section>
         <div class="container">
           <a href="#" class="prev">回上頁</a>
-          <h2 class="subTitle">編輯會員資料</h2>
-          <!-- 基本資料設定 -->
-          <section class="infoSetBox">
-            <h3>基本資料設定</h3>
-            <div class="wrap">
-              <div class="item">
-                <div class="col">
-                  <span class="tag">生日</span>
-                  <p>2000/01/01</p>
-                </div>
-                <a href="#" class="btn _second">編輯</a>
-              </div>
-              <div class="item">
-                <div class="col">
-                  <span class="tag">手機號碼</span>
-                  <p>0900-000000</p>
-                </div>
-                <a href="#" class="btn _second">編輯</a>
-              </div>
-              <div class="item">
-                <div class="col">
-                  <span class="tag">Email</span>
-                  <p>user@email.com<span>未認證</span></p>
-                </div>
-                <a href="#" class="btn _second">編輯</a>
-              </div>
+          <h2 class="subTitle">我的兌換券</h2>
+          <!-- 消息類型 -->
+          <ul class="infoType">
+            <li><a href="m9.html">可使用</a></li>
+            <li><a href="m9b.html" class="act">使用紀錄</a></li>
+          </ul>
+          <div class="logInfo">
+            <div class="filterDate">
+              <select name="" id="fake-legend">
+                <option value="">全部</option>
+                <option value="">已使用</option>
+                <option value="">已逾期</option>
+              </select>
             </div>
-          </section>
-          <!-- 帳號設定 -->
-          <section class="infoSetBox">
-            <h3>帳號設定</h3>
-            <div class="wrap">
-              <div class="item">
-                <div class="col">
-                  <!-- <span class="tag">生日</span> -->
-                  <p>會員密碼</p>
+            <section class="functions">
+              <div class="listCard">
+                <div class="coupon">
+                  <section class="state">
+                    <b>已使用</b>
+                    <span>使用日：2024/11/14</span>
+                  </section>
+                  <section class="couponItem">
+                    <div class="col">
+                      <div class="imgContainer">
+                        <img src="images/img-commodity.jpg" class="cover" alt="商品">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <h3>兌換券名稱</h3>
+                      <span>數量：1 個</span>
+                    </div>
+                  </section>
                 </div>
-                <a href="#" class="btn _second">變更</a>
               </div>
-              <div class="item">
-                <div class="col">
-                  <!-- <span class="tag">手機號碼</span> -->
-                  <p>已連結郵寄便</p>
+              <div class="listCard">
+                <div class="coupon">
+                  <section class="state _overdue">
+                    <b>已逾期</b>
+                    <span>逾期日：2024/10/31</span>
+                  </section>
+                  <section class="couponItem">
+                    <div class="col">
+                      <div class="imgContainer">
+                        <img src="images/img-commodity.jpg" class="cover" alt="商品">
+                      </div>
+                    </div>
+                    <div class="col">
+                      <h3>兌換券名稱</h3>
+                      <span>數量：1 個</span>
+                    </div>
+                  </section>
                 </div>
-                <a href="#" class="btn _second">取消連結</a>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
       </section>
     </div>
