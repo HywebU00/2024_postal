@@ -5519,6 +5519,7 @@ img {
     display: inline-block;
     width: 60px;
     height: 60px;
+    margin-left: 5px;
     border-radius: 50%;
     font-size: 0;
     background: url(../images/icon-arrow-left.svg) 48% 50% no-repeat;
@@ -5531,19 +5532,9 @@ img {
     background: url(../images/icon-arrow-left.svg) 48% 50% no-repeat #efefef;
     background-size: 32px;
   }
-  a.prev + ._abs {
+  a.prev._abs {
     position: absolute;
-    width: 100%;
-    font-size: 1.65em;
-    top: 170px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-  }
-  @media (max-width: 992px) {
-    a.prev + ._abs {
-      top: 80px;
-    }
+    top: 79px;
   }
   h3 {
     font-size: 1.65rem;
@@ -6399,10 +6390,15 @@ img {
   .giftCard .card .cardInfo .up {
     min-height: 111px;
   }
+  .functionWrap {
+    margin-bottom: 1.25em;
+  }
+  .functionWrap .container {
+    padding: 0 1.5em !important;
+  }
   .cardFunction {
     position: relative;
     text-align: center;
-    padding: 1em 0;
   }
   .cardFunction h3 {
     margin: 0 0 6px;
@@ -6440,6 +6436,9 @@ img {
   .cardFunction a.btnSearch:hover, .cardFunction a.btnSearch:focus-visible {
     border-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  .cardFunction + .cardFunction {
+    margin-top: 1em;
   }
   .cardFunction._flex {
     display: flex;
@@ -6509,10 +6508,13 @@ img {
   .itemSort a:hover, .itemSort a:focus-visible {
     background: #eee;
   }
-  .bgWhite {
-    background: #fff;
+  .secBox {
+    background: rgba(255, 255, 255, 0.75);
     margin-top: 1em;
-    padding: 2em 0;
+    padding: 0 0 2em;
+  }
+  .secBox .infoType {
+    margin-top: 0;
   }
   .bannerSlider {
     margin: 0 -1.5em 2em;
@@ -6552,7 +6554,6 @@ img {
   .searchBar {
     width: 100%;
     background: #eee;
-    margin: 1em 0;
     position: relative;
   }
   .searchBar input {
@@ -6941,7 +6942,7 @@ img {
   .main .centerLimit._coupon {
     background: #F6F7EE;
     box-shadow: none;
-    margin: 2em 0;
+    margin: 0 0 2em;
   }
   @media (max-width: 992px) {
     .main .centerLimit {
@@ -8291,6 +8292,9 @@ img {
   .mp._page .main > section .container {
     padding: 1em 1.5em;
   }
+  .mp._page .main > section .container .functionWrap .container {
+    padding: 0 !important;
+  }
   @media (max-width: 992px) {
     .mp .main {
       padding-top: 60px;
@@ -8380,6 +8384,7 @@ img {
     text-align: center;
     font-size: 1.8rem;
     letter-spacing: 1px;
+    margin-top: 6px;
   }
   footer {
     background: #3a3737;
