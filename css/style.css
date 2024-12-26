@@ -8398,6 +8398,9 @@ img {
     letter-spacing: 1px;
     margin-top: 6px;
   }
+  .subTitle + .functionWrap {
+    margin-bottom: 2.25em;
+  }
   footer {
     background: #3a3737;
     border-radius: 100px 100px 0 0;
