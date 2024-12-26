@@ -5532,10 +5532,6 @@ img {
     background: url(../images/icon-arrow-left.svg) 48% 50% no-repeat #efefef;
     background-size: 32px;
   }
-  a.prev._abs {
-    position: absolute;
-    top: 79px;
-  }
   h3 {
     font-size: 1.65rem;
     color: #333;
@@ -5548,6 +5544,19 @@ img {
   hr {
     margin: 2em 0;
     opacity: 0.2;
+  }
+  .ctlWrap {
+    padding: 0 1.5em;
+    max-width: 1440px;
+    margin: auto;
+  }
+  .ctlWrap._abs {
+    position: absolute;
+  }
+  @media (max-width: 992px) {
+    .ctlWrap {
+      padding: 0;
+    }
   }
   .btnGrp {
     display: flex;
@@ -6574,6 +6583,9 @@ img {
     background: url(../images/icon-close.svg) 50% 50% no-repeat #fff;
     background-size: 10px;
   }
+  .searchBar + .cardFunction {
+    margin: 1em 0;
+  }
   .historyList {
     margin: 2em 0;
     position: relative;
@@ -6942,7 +6954,7 @@ img {
   .main .centerLimit._coupon {
     background: #F6F7EE;
     box-shadow: none;
-    margin: 0 0 2em;
+    margin: 0 auto 2em;
   }
   @media (max-width: 992px) {
     .main .centerLimit {
