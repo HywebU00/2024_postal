@@ -4753,13 +4753,41 @@ img {
   }
   *[class^=notice] a.close img {
     display: block;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     margin: 7px auto;
+  }
+  *[class*=noticeNormal] {
+    color: #008C38;
+    background-color: #fff;
+    margin: 0.75em 0;
+    transition: 0.3s;
+  }
+  *[class*=noticeNormal]:before {
+    background: url(../images/icon-coupon.svg) no-repeat center center;
+    background-size: 32px;
+  }
+  *[class*=noticeNormal]:after {
+    content: "";
+    background: url(../images/icon-arrow-right.svg) no-repeat center center;
+    background-size: 32px;
+    position: absolute;
+    top: 50%;
+    right: 0.8em;
+    transform: translateY(-50%);
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+  *[class*=noticeNormal]:after img {
+    width: 100%;
+  }
+  *[class*=noticeNormal]:hover, *[class*=noticeNormal]:focus-visible {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
   *[class*=noticeWarning] {
     color: #EA3349;
-    background-color: rgba(234, 51, 73, 0.05);
+    background-color: rgba(234, 51, 73, 0.1);
   }
   *[class*=noticeWarning]:before {
     background: url(../images/basic/icon_warning.svg) no-repeat center center;
@@ -7033,6 +7061,7 @@ img {
   }
   header {
     position: fixed;
+    top: 0;
     z-index: 1000;
     width: 100%;
     background: #fff;
@@ -7457,7 +7486,7 @@ img {
   .main .actCards a {
     display: block;
     margin: 1em 0;
-    border-radius: 20px;
+    border-radius: 8px;
     overflow: hidden;
     transition: 0.3s;
   }
@@ -7614,6 +7643,28 @@ img {
     padding: 6px 12px;
     margin: 0;
   }
+  .main._userSep2 {
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .main._userSep2 .container {
+    padding: 0;
+  }
+  .main._userSep2 .centerLimit {
+    max-width: none;
+    background: #fff;
+    box-shadow: none;
+    padding-top: 2em;
+  }
+  @media (max-width: 992px) {
+    .main._userSep2 {
+      left: 0;
+      transform: translateX(0);
+    }
+  }
   @media (max-width: 992px) {
     .main {
       padding-top: calc(60px + 2em);
@@ -7628,6 +7679,127 @@ img {
     .main .infoSetBox .wrap .item p span {
       display: inline-block;
     }
+  }
+  .fixedZone {
+    background: rgba(163, 177, 106, 0.12);
+    position: fixed;
+    top: 150px;
+    padding: 1em 1.5em 2em;
+    width: calc(100% - 3em);
+  }
+  .fixedZone .userInfo h3 {
+    font-size: 1.125rem;
+  }
+  .fixedZone .userPoints,
+  .fixedZone a.userPoints {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 1.5em;
+    background: #F6F7EE;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .fixedZone .userPoints h3, .fixedZone .userPoints p,
+  .fixedZone a.userPoints h3,
+  .fixedZone a.userPoints p {
+    margin: 0;
+  }
+  .fixedZone .userPoints h3,
+  .fixedZone a.userPoints h3 {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding-left: 1.3em;
+    position: relative;
+  }
+  .fixedZone .userPoints h3:before,
+  .fixedZone a.userPoints h3:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    left: 0;
+    top: 8px;
+    background: url(../images/icon-boCoin.svg) left 50% no-repeat;
+    background-size: 26px;
+  }
+  .fixedZone a.userPoints {
+    display: block;
+    background: url(../images/basic/icon_arrow_right.svg) right 16px top 50% no-repeat #fff;
+    background-size: 24px;
+    transition: 0.3s;
+  }
+  .fixedZone a.userPoints h3, .fixedZone a.userPoints p {
+    text-align: left;
+  }
+  .fixedZone a.userPoints:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  .fixedZone .userInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+  }
+  .fixedZone .userInfo h3 {
+    margin: 0;
+  }
+  .fixedZone .userInfo a {
+    border: 1px solid #008C38;
+    background: #fff;
+    color: #008C38;
+    padding: 0.5em 1.25em;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  .fixedZone .userInfo a:hover {
+    background: #008C38;
+    color: #fff;
+  }
+  @media (max-width: 992px) {
+    .fixedZone {
+      top: 60px;
+    }
+  }
+  .scrollZone {
+    background: #fff;
+    margin: 0 -1.5em;
+    padding: 2em 1.5em;
+  }
+  .marketLink {
+    background: #F1F3ED;
+    padding: 3em 1em 1em;
+    border-radius: 8px;
+    text-align: right;
+    position: relative;
+    margin-top: 2em;
+  }
+  .marketLink h3, .marketLink p {
+    text-align: left !important;
+    margin: 0;
+  }
+  .marketLink h3 {
+    font-size: 1.125rem;
+  }
+  .marketLink p {
+    font-size: 90%;
+  }
+  .marketLink a {
+    display: inline-block;
+    background: url(../images/icon-arrow-right.svg) right 50% no-repeat;
+    margin-top: 32px;
+    padding: 4px 24px 4px 12px;
+  }
+  .marketLink::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url(../images/img-bird.png) 50% 50% no-repeat #F1F3ED;
+    border: 4px solid #fff;
+    top: -36px;
+    left: 32px;
+    border-radius: 50%;
   }
   .QA_flex {
     display: flex;
