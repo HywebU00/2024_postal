@@ -7651,13 +7651,16 @@ img {
     width: 100%;
   }
   .main._userSep2 .container {
-    padding: 0;
+    padding: 30px 0 0;
+    margin-top: -30px;
   }
   .main._userSep2 .centerLimit {
     max-width: none;
     background: #fff;
     box-shadow: none;
     padding-top: 2em;
+    border-radius: 20px 20px 0 0;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
   }
   @media (max-width: 992px) {
     .main._userSep2 {
