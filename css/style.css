@@ -7684,11 +7684,19 @@ img {
     }
   }
   .fixedZone {
-    background: rgba(163, 177, 106, 0.12);
     position: fixed;
     top: 150px;
     padding: 1em 1.5em 2em;
     width: calc(100% - 3em);
+  }
+  .fixedZone::after {
+    content: "";
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(163, 177, 106, 0.12);
+    left: 0;
+    top: 0;
   }
   .fixedZone .userInfo h3 {
     font-size: 1.125rem;
