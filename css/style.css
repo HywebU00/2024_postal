@@ -7692,6 +7692,7 @@ img {
   .fixedZone::after {
     content: "";
     position: absolute;
+    z-index: -1;
     width: 100vw;
     height: 100vh;
     background: rgba(163, 177, 106, 0.12);
