@@ -5605,6 +5605,14 @@ img {
     .btnGrp._full {
       flex-direction: column;
     }
+    .btnGrp._stable {
+      flex-wrap: nowrap;
+      flex-direction: row;
+    }
+    .btnGrp._stable .btn {
+      margin: 0 4px;
+      padding: 16px 4px;
+    }
   }
   .btn {
     color: #fff;
@@ -5662,6 +5670,20 @@ img {
     background: url(../images/icon-close-w.svg) 50% 50% no-repeat #b1b1b1;
     background-size: 12px;
   }
+  .btn._discount {
+    color: #86954D;
+    background: url(../images/icon-info.svg) right 12px top 50% no-repeat #fff;
+    background-size: 14px;
+    font-size: 0.8em;
+    border: 1px solid #86954D;
+    padding: 3px 32px 3px 8px;
+  }
+  .btn._discount:hover, .btn._discount:focus-visible {
+    background: url(../images/icon-info.svg) right 12px top 50% no-repeat #e3e9b8;
+    background-size: 14px;
+    color: #778444;
+    border-color: #778444;
+  }
   .btn:hover, .btn:focus-visible {
     background: #00732e;
     color: #fff;
@@ -5701,6 +5723,44 @@ img {
   }
   .btn.filter:hover, .btn.filter:focus-visible {
     background-position: left bottom;
+  }
+  .btnSwitch {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border-radius: 50%;
+    right: 24px;
+    top: 32px;
+    border: none;
+  }
+  .btnSwitch::before, .btnSwitch::after {
+    content: "";
+    position: absolute;
+    background: #222;
+  }
+  .btnSwitch::before {
+    width: 18px;
+    height: 2px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btnSwitch::after {
+    width: 2px;
+    height: 18px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .btnSwitch + .content {
+    display: none;
+  }
+  .btnSwitch._close::after {
+    transform: translate(-50%, -50%) rotateX(90deg);
+  }
+  .btnSwitch._close + .content {
+    display: block;
   }
   form {
     max-width: 800px;
@@ -5773,7 +5833,7 @@ img {
     line-height: 1.2;
   }
   form .formGrp .tip p b {
-    color: #EA3349;
+    color: #ba0000;
     margin: 0 4px;
   }
   form .formGrp .tip p a {
@@ -5799,8 +5859,8 @@ img {
   }
   form .formGrp.error input,
   form .formGrp.error select {
-    border: 1px solid #EA3349;
-    box-shadow: 0 0 0 1px #EA3349;
+    border: 1px solid #ba0000;
+    box-shadow: 0 0 0 1px #ba0000;
   }
   form .formGrp._inline {
     display: flex;
@@ -5817,7 +5877,7 @@ img {
     color: #222;
   }
   .errorInfo {
-    color: #EA3349;
+    color: #ba0000;
   }
   input,
   select {
@@ -5895,7 +5955,7 @@ img {
     text-decoration: none;
   }
   .necessary {
-    color: red;
+    color: #ba0000;
     padding: 0 4px;
     text-decoration: none;
   }
@@ -5997,7 +6057,7 @@ img {
     width: 480px;
     background: #fff;
     border-radius: 8px;
-    padding: 2em;
+    padding: 2em 1.25em;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     box-sizing: border-box;
     position: absolute;
@@ -6072,6 +6132,10 @@ img {
     font-size: 1.125em;
     letter-spacing: 2px;
   }
+  #mask._hide,
+  #mask_below._hide {
+    display: none;
+  }
   @media (max-width: 576px) {
     #mask .container,
     #mask_below .container {
@@ -6095,8 +6159,125 @@ img {
   #mask_below .container p {
     margin: 2em 0 1em;
   }
-  #mask_below._hide {
-    display: none;
+  #mask_below .mainTitle {
+    text-align: left;
+    font-size: 1.25em;
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 18px;
+  }
+  #mask_below .subTitle {
+    margin: 8px 0;
+    font-size: 1.125em;
+    text-align: left;
+    font-weight: bold;
+  }
+  #mask_below .maskSecBox {
+    margin: 2em 0;
+  }
+  #mask_below .userAccount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #mask_below .userAccount .itemAccount {
+    flex: 0 1 auto;
+    width: 46%;
+    border-radius: 4px;
+    background: #F1F3ED;
+    box-sizing: border-box;
+    padding: 0.5em;
+    margin: 6px;
+    line-height: 1.2;
+  }
+  #mask_below .userAccount .itemAccount p {
+    margin: 0;
+    color: #222;
+  }
+  #mask_below .userAccount .itemAccount span {
+    font-size: 0.6em;
+    color: #777;
+  }
+  #mask_below .userAccount .itemAccount.act {
+    box-shadow: 0 0 0 3px #008C38;
+  }
+  #mask_below .ctlPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1em 0;
+  }
+  #mask_below .ctlPanel p.points {
+    margin: 0;
+  }
+  #mask_below .ctlPanel p.points span {
+    color: #222;
+    margin-left: 4px;
+  }
+  #mask_below .ctlPanel p.points b {
+    padding-left: 24px;
+    background: url(../images/icon-boCoin.svg) left 50% no-repeat;
+    background-size: 20px;
+    margin: 0 4px;
+  }
+  #mask_below .ctlPanel .ctlBtn {
+    display: flex;
+  }
+  #mask_below .ctlPanel .ctlBtn button {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 0;
+    border: none;
+  }
+  #mask_below .ctlPanel .ctlBtn b {
+    width: 42px;
+    height: 32px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 32px;
+  }
+  #mask_below .scroll-y {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+  #mask_below .errorInfo {
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  .subBtn,
+  .addBtn {
+    background: #fff;
+    border: 1px solid #008C38 !important;
+    position: relative;
+  }
+  .subBtn::before,
+  .addBtn::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 2px;
+    background: #008C38;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .subBtn._disable,
+  .addBtn._disable {
+    border-color: #d1d1d1 !important;
+  }
+  .subBtn._disable::before,
+  .addBtn._disable::before {
+    background: #d1d1d1;
+  }
+  .addBtn::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    background: #008C38;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .listCard {
     display: flex;
@@ -6241,6 +6422,31 @@ img {
   }
   .listCard input[type=checkbox] {
     margin: 6px 0;
+  }
+  .listCard._infoCard {
+    border-radius: 0;
+    border: none;
+    padding: 0.5em 1.5em;
+  }
+  .listCard._infoCard h4 {
+    margin: 0 0 6px;
+  }
+  .listCard._infoCard .couponItem {
+    border-bottom: 1px solid #BDBDBC;
+    padding: 1em 0;
+  }
+  .listCard._infoCard p.points {
+    text-align: right;
+  }
+  .listCard._infoCard p.points span {
+    color: #222;
+    margin-left: 4px;
+  }
+  .listCard._infoCard p.points b {
+    padding-left: 24px;
+    background: url(../images/icon-boCoin.svg) left 50% no-repeat;
+    background-size: 20px;
+    margin: 0 4px;
   }
   @media (max-width: 992px) {
     .listCard {
@@ -6519,11 +6725,221 @@ img {
   }
   .secBox {
     background: rgba(255, 255, 255, 0.75);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     margin-top: 1em;
-    padding: 0 0 2em;
+    padding: 1.25em 0;
+    position: relative;
   }
   .secBox .infoType {
     margin-top: 0;
+  }
+  .secBox._full .container {
+    padding: 0 !important;
+  }
+  .secBox .giftDisplay {
+    margin-top: -20px;
+  }
+  .secBox h2 {
+    margin: 0;
+  }
+  .secBox h2 + .giftCard {
+    margin-top: 2em;
+  }
+  .giftDisplay {
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 1.5em;
+  }
+  .giftDisplay .imgContainer {
+    overflow: hidden;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .giftDisplay .imgContainer img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .giftDisplay p {
+    color: #333 !important;
+  }
+  .giftInfo {
+    padding: 0 1.5em !important;
+  }
+  .giftInfo h2 {
+    margin: 1.5em 0 0;
+  }
+  .giftInfo > div {
+    margin: 16px 0;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #BDBDBC;
+  }
+  .giftInfo > div:last-child {
+    border-bottom: none;
+  }
+  .giftInfo > div h3 {
+    margin: 0;
+    font-size: 0.9em;
+    color: #858585;
+  }
+  .giftInfo > div p {
+    margin: 6px 0 0 !important;
+    font-size: 1.25rem;
+    color: #333 !important;
+    font-weight: bold;
+  }
+  .giftInfo > div p.points span {
+    color: #222;
+    margin-left: 4px;
+  }
+  .giftInfo > div p.points b {
+    padding-left: 24px;
+    background: url(../images/icon-boCoin.svg) left 50% no-repeat;
+    background-size: 20px;
+    margin: 0 4px;
+  }
+  .focusCard {
+    background: transparent;
+    overflow: hidden;
+  }
+  .focusCard .imgContainer {
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid #d7d7d7;
+  }
+  .focusCard .imgContainer img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .focusCard .cardInfo {
+    background: transparent !important;
+    padding: 1em 1.5em;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box;
+    flex-direction: column;
+  }
+  .focusCard .cardInfo span.category {
+    display: flex;
+    align-items: stretch;
+    color: #008C38;
+    font-size: 0.9em;
+    margin: 0.5em 0;
+  }
+  .focusCard .cardInfo span.category b {
+    margin-right: 10px;
+    position: relative;
+  }
+  .focusCard .cardInfo span.category b::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #008C38;
+    border-radius: 50%;
+    right: -6px;
+    top: 50%;
+  }
+  .focusCard .cardInfo span.category b:last-child::before {
+    display: none;
+  }
+  .focusCard .cardInfo h3, .focusCard .cardInfo p {
+    text-align: left !important;
+  }
+  .focusCard .cardInfo h3 {
+    font-size: 1.25em;
+    margin: 10px 0 20px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .focusCard .cardInfo .points {
+    font-weight: bold;
+    font-size: 1.125em;
+    margin: 0;
+  }
+  .focusCard .cardInfo .points span {
+    display: block;
+    font-size: 90%;
+    font-weight: normal;
+    color: #777;
+    text-decoration: line-through;
+    background: url(../images/icon-boCoin.svg) left 50% no-repeat;
+    background-size: 22px;
+    padding-left: 26px;
+    margin-bottom: 6px;
+  }
+  .focusCard .cardInfo .points p {
+    font-size: 1.25em;
+    color: #222;
+    margin: 0;
+    padding-left: 36px;
+    background: url(../images/icon-boCoin.svg) left 50% no-repeat;
+    background-size: 28px;
+    display: flex;
+    align-items: center;
+  }
+  .focusCard .cardInfo .points p a {
+    margin-left: 8px;
+    font-size: 65%;
+  }
+  .focusCard .cardInfo ul {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0;
+    color: #777;
+  }
+  .focusCard .cardInfo ul li {
+    margin: 8px 0;
+  }
+  @media (max-width: 992px) {
+    .focusCard .cardInfo {
+      padding: 1em 1.5em !important;
+    }
+  }
+  .recipient {
+    padding: 1em;
+    margin: 0.5em 0;
+    background: #F9F9F9;
+    border-radius: 6px;
+    display: block;
+  }
+  .recipient p {
+    margin: 0 !important;
+    color: #222 !important;
+  }
+  .recipient p.user {
+    margin-top: 12px !important;
+  }
+  .recipient.act {
+    background: #F1F3ED;
+    box-shadow: 0 0 0 3px #008C38;
+  }
+  ._fixed {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    padding: 0 1.5em;
+    z-index: 100;
   }
   .bannerSlider {
     margin: 0 -1.5em 2em;
@@ -7154,6 +7570,12 @@ img {
   }
   .main .noteList._simple h3, .main .noteList._simple p, .main .noteList._simple li {
     color: #777;
+  }
+  .main .infoSetBox {
+    margin-bottom: 3em;
+  }
+  .main .infoSetBox h3 {
+    font-size: 1.5rem !important;
   }
   .main .infoSetBox .wrap {
     padding: 3em;

@@ -59,6 +59,13 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         }
     });
 
+    // 展開popup
+    addEventToAllIfExists('._openAlert', 'click', function() {
+        var maskPopup = document.getElementById('mask');
+        if (maskPopup) {
+            maskPopup.classList.remove('_hide');
+        }
+    });
     // 展開下方跳窗
     addEventToAllIfExists('._openMask', 'click', function() {
         var maskBelow = document.getElementById('mask_below');
