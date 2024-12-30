@@ -7928,8 +7928,26 @@ img {
       display: flex;
       overflow-x: scroll;
       margin-right: -1.5em;
+      margin-bottom: 12px;
+    }
+    .QA_flex ._sticky ul::-webkit-scrollbar {
+      -webkit-appearance: none;
+    }
+    .QA_flex ._sticky ul::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    .QA_flex ._sticky ul::-webkit-scrollbar-thumb {
+      border-radius: 8px;
+      border: 2px solid #fff;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    .QA_flex ._sticky ul li {
+      height: 48px;
+      margin: 0;
     }
     .QA_flex ._sticky ul li a {
+      word-break: keep-all;
       display: ruby-text;
     }
     .QA_flex ._QA .item {
