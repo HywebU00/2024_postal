@@ -8677,6 +8677,17 @@ img {
     border-radius: 20px;
     overflow: hidden;
     z-index: 1;
+    overflow: hidden;
+    position: relative;
+  }
+  .mp .main .cardInfo .imgContainer img {
+    width: 100%;
+    aspect-ratio: 8/5;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
   }
   .mp .main .cardInfo:nth-child(even) .col:last-child:after {
     transform: translate(-50%, -50%) rotate(12deg);
@@ -9008,6 +9019,11 @@ img {
     .mp .main ul.list {
       padding: 2em;
     }
+  }
+  time.VersionNum {
+    display: block;
+    text-align: right;
+    margin-bottom: 1.5em;
   }
   .subTitle {
     text-align: center;
