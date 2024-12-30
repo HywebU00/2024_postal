@@ -6051,24 +6051,6 @@ img {
       margin-left: 0;
     }
   }
-  body {
-    overflow-y: auto;
-    scrollbar-color: #b10000 rgba(0, 0, 0, 0.2);
-    scrollbar-width: thin;
-  }
-  body::-webkit-scrollbar {
-    -webkit-appearance: none;
-  }
-  body::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: #000;
-  }
-  body::-webkit-scrollbar-track {
-    border-radius: 0;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
-    background: rgba(0, 0, 0, 0.1);
-  }
   #mask,
   #mask_below {
     position: fixed;
