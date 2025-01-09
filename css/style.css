@@ -8285,11 +8285,15 @@ img {
     margin: 0 auto;
     padding: 3em 5em;
   }
-  .mp .main p, .mp .main li, .mp .main time {
+  .mp .main p, .mp .main li, .mp .main time, .mp .main span {
     color: #777;
   }
   .mp .main p, .mp .main li {
     margin: 10px 0;
+  }
+  .mp .main p > span {
+    display: block;
+    text-align: center;
   }
   .mp .main h2.mainTitle {
     text-align: center;
