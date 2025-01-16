@@ -7878,7 +7878,7 @@ img {
   .QA_flex ._QA .item .btn-switch:hover:before, .QA_flex ._QA .item .btn-switch:hover::after, .QA_flex ._QA .item .btn-switch.act:before, .QA_flex ._QA .item .btn-switch.act::after {
     background: #fff;
   }
-  .QA_flex ._QA .item .btn-switch:focus-visible {
+  .QA_flex ._QA .item .btn-switch:active {
     background: pink;
   }
   .QA_flex ._QA .item .btn-switch.act:before, .QA_flex ._QA .item .btn-switch.act::after {
