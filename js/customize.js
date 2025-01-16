@@ -399,21 +399,21 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
     });
     });
 
-    // m4 常見問題
-    document.querySelectorAll('._QA .item').forEach((item, index) => {
-        const btnSwitch = item.querySelector('.btn-switch');
-        const answerSection = item.querySelector('.A');
+    // // m4 常見問題
+    // document.querySelectorAll('._QA .item').forEach((item, index) => {
+    //     const btnSwitch = item.querySelector('.btn-switch');
+    //     const answerSection = item.querySelector('.A');
 
-        btnSwitch.addEventListener('click', function() {
-            // 判斷 btn-switch 是否有 .act 類
-            if (btnSwitch.classList.contains('act')) {
-                btnSwitch.classList.remove('act');  // 移除 .act
-                answerSection.classList.remove('show');  // 隱藏 .A
-            } else {
-                btnSwitch.classList.add('act');  // 添加 .act
-                answerSection.classList.add('show');  // 顯示 .A
-            }
-        });
-    });
+    //     btnSwitch.addEventListener('click', function() {
+    //         // 判斷 btn-switch 是否有 .act 類
+    //         if (btnSwitch.classList.contains('act')) {
+    //             btnSwitch.classList.remove('act');  // 移除 .act
+    //             answerSection.classList.remove('show');  // 隱藏 .A
+    //         } else {
+    //             btnSwitch.classList.add('act');  // 添加 .act
+    //             answerSection.classList.add('show');  // 顯示 .A
+    //         }
+    //     });
+    // });
 })();
 
