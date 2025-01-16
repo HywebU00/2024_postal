@@ -7858,6 +7858,7 @@ img {
     border-radius: 50%;
     background: none;
     border: none;
+    transition: 0.3s;
   }
   .QA_flex ._QA .item .btn-switch:before, .QA_flex ._QA .item .btn-switch::after {
     content: "";
@@ -7871,10 +7872,10 @@ img {
   .QA_flex ._QA .item .btn-switch::after {
     transform: translateX(-50%) rotate(90deg);
   }
-  .QA_flex ._QA .item .btn-switch:hover, .QA_flex ._QA .item .btn-switch:focus-visible, .QA_flex ._QA .item .btn-switch.act {
+  .QA_flex ._QA .item .btn-switch:hover, .QA_flex ._QA .item .btn-switch.act {
     background: #333;
   }
-  .QA_flex ._QA .item .btn-switch:hover:before, .QA_flex ._QA .item .btn-switch:hover::after, .QA_flex ._QA .item .btn-switch:focus-visible:before, .QA_flex ._QA .item .btn-switch:focus-visible::after, .QA_flex ._QA .item .btn-switch.act:before, .QA_flex ._QA .item .btn-switch.act::after {
+  .QA_flex ._QA .item .btn-switch:hover:before, .QA_flex ._QA .item .btn-switch:hover::after, .QA_flex ._QA .item .btn-switch.act:before, .QA_flex ._QA .item .btn-switch.act::after {
     background: #fff;
   }
   .QA_flex ._QA .item .btn-switch.act:before, .QA_flex ._QA .item .btn-switch.act::after {
