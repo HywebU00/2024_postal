@@ -26,6 +26,98 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         }
     }
 
+    // m1 郵你生活圈，就差你一員！
+    document.addEventListener("DOMContentLoaded", function () {
+        // 遍歷每個 .mpSlider 元素
+        document.querySelectorAll(".mpSlider").forEach(function (sliderContainer) {
+            const slides = sliderContainer.querySelectorAll(".swiper-slide");
+            const paginationTitles = Array.from(slides, slide => slide.dataset.title);
+
+            // 初始化 Swiper
+            const swiper = new Swiper(sliderContainer.querySelector(".swiper"), {
+            slidesPerView: 1,
+            loop: false,
+            pagination: {
+                el: sliderContainer.querySelector(".swiperDots"),
+                bulletElement: "button",
+                clickable: true,
+                renderBullet: function (index, className) {
+                return `<button class="${className} noFonts" aria-label="${paginationTitles[index]}">${paginationTitles[index]}</button>`;
+                },
+            },
+            navigation: {
+                nextEl: sliderContainer.querySelector(".nextSlider"),
+                prevEl: sliderContainer.querySelector(".prevSlider"),
+                disabledClass: "swiperArrow-disabled",
+            },
+            on: {
+                init: function () {
+                // 初始化時對應的第一個 li 加入 .act
+                const steps = sliderContainer.closest(".container").querySelectorAll("ul.step li");
+                steps[0].classList.add("act");
+                },
+                slideChange: function () {
+                const steps = sliderContainer.closest(".container").querySelectorAll("ul.step li");
+
+                // 清除所有步驟的 .act 樣式
+                steps.forEach(li => li.classList.remove("act"));
+
+                // 根據當前 slide 索引為對應的步驟添加 .act 樣式
+                const activeIndex = this.activeIndex;
+                if (steps[activeIndex]) {
+                    steps[activeIndex].classList.add("act");
+                }
+                }
+            }
+            });
+        });
+    });
+
+    // m2
+    document.addEventListener("DOMContentLoaded", function () {
+    // 選取所有 .tab 父層
+    document.querySelectorAll(".tab").forEach(function (tabContainer) {
+        const tabLinks = tabContainer.querySelectorAll(".tabTitle a");
+        const tabSections = tabContainer.querySelectorAll(".tabItems section");
+
+        // 頁籤初始化 - 設置第一個 .act 和 .show
+        tabLinks[0].classList.add("act");
+        tabSections[0].classList.add("show");
+
+        // 為每個頁籤按鈕添加點擊事件
+        tabLinks.forEach((link, index) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            // 清除所有頁籤按鈕的 .act，並為當前點擊的按鈕添加 .act
+            tabLinks.forEach((link) => link.classList.remove("act"));
+            link.classList.add("act");
+
+            // 清除所有 section 的 .show，並顯示對應的 section
+            tabSections.forEach((section) => section.classList.remove("show"));
+            tabSections[index].classList.add("show");
+        });
+        });
+    });
+    });
+
+    // // m4 常見問題
+    // document.querySelectorAll('._QA .item').forEach((item, index) => {
+    //     const btnSwitch = item.querySelector('.btn-switch');
+    //     const answerSection = item.querySelector('.A');
+
+    //     btnSwitch.addEventListener('click', function() {
+    //         // 判斷 btn-switch 是否有 .act 類
+    //         if (btnSwitch.classList.contains('act')) {
+    //             btnSwitch.classList.remove('act');  // 移除 .act
+    //             answerSection.classList.remove('show');  // 隱藏 .A
+    //         } else {
+    //             btnSwitch.classList.add('act');  // 添加 .act
+    //             answerSection.classList.add('show');  // 顯示 .A
+    //         }
+    //     });
+    // });
+
     // nav 功能
     addEventIfExists('.sidebarCtrl', 'click', function() {
         var sidebarCtrl = document.querySelector('.sidebarCtrl');
@@ -268,8 +360,6 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         },
     });
 
-
-
     //跑馬燈
     const marqueeSwiper = new Swiper('.marquee .swiper', {
         direction: 'vertical',
@@ -323,97 +413,5 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
         },
     });
-
-    // m1 郵你生活圈，就差你一員！
-    document.addEventListener("DOMContentLoaded", function () {
-        // 遍歷每個 .mpSlider 元素
-        document.querySelectorAll(".mpSlider").forEach(function (sliderContainer) {
-            const slides = sliderContainer.querySelectorAll(".swiper-slide");
-            const paginationTitles = Array.from(slides, slide => slide.dataset.title);
-
-            // 初始化 Swiper
-            const swiper = new Swiper(sliderContainer.querySelector(".swiper"), {
-            slidesPerView: 1,
-            loop: false,
-            pagination: {
-                el: sliderContainer.querySelector(".swiperDots"),
-                bulletElement: "button",
-                clickable: true,
-                renderBullet: function (index, className) {
-                return `<button class="${className} noFonts" aria-label="${paginationTitles[index]}">${paginationTitles[index]}</button>`;
-                },
-            },
-            navigation: {
-                nextEl: sliderContainer.querySelector(".nextSlider"),
-                prevEl: sliderContainer.querySelector(".prevSlider"),
-                disabledClass: "swiperArrow-disabled",
-            },
-            on: {
-                init: function () {
-                // 初始化時對應的第一個 li 加入 .act
-                const steps = sliderContainer.closest(".container").querySelectorAll("ul.step li");
-                steps[0].classList.add("act");
-                },
-                slideChange: function () {
-                const steps = sliderContainer.closest(".container").querySelectorAll("ul.step li");
-
-                // 清除所有步驟的 .act 樣式
-                steps.forEach(li => li.classList.remove("act"));
-
-                // 根據當前 slide 索引為對應的步驟添加 .act 樣式
-                const activeIndex = this.activeIndex;
-                if (steps[activeIndex]) {
-                    steps[activeIndex].classList.add("act");
-                }
-                }
-            }
-            });
-        });
-    });
-
-    // m2
-    document.addEventListener("DOMContentLoaded", function () {
-    // 選取所有 .tab 父層
-    document.querySelectorAll(".tab").forEach(function (tabContainer) {
-        const tabLinks = tabContainer.querySelectorAll(".tabTitle a");
-        const tabSections = tabContainer.querySelectorAll(".tabItems section");
-
-        // 頁籤初始化 - 設置第一個 .act 和 .show
-        tabLinks[0].classList.add("act");
-        tabSections[0].classList.add("show");
-
-        // 為每個頁籤按鈕添加點擊事件
-        tabLinks.forEach((link, index) => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            // 清除所有頁籤按鈕的 .act，並為當前點擊的按鈕添加 .act
-            tabLinks.forEach((link) => link.classList.remove("act"));
-            link.classList.add("act");
-
-            // 清除所有 section 的 .show，並顯示對應的 section
-            tabSections.forEach((section) => section.classList.remove("show"));
-            tabSections[index].classList.add("show");
-        });
-        });
-    });
-    });
-
-    // // m4 常見問題
-    // document.querySelectorAll('._QA .item').forEach((item, index) => {
-    //     const btnSwitch = item.querySelector('.btn-switch');
-    //     const answerSection = item.querySelector('.A');
-
-    //     btnSwitch.addEventListener('click', function() {
-    //         // 判斷 btn-switch 是否有 .act 類
-    //         if (btnSwitch.classList.contains('act')) {
-    //             btnSwitch.classList.remove('act');  // 移除 .act
-    //             answerSection.classList.remove('show');  // 隱藏 .A
-    //         } else {
-    //             btnSwitch.classList.add('act');  // 添加 .act
-    //             answerSection.classList.add('show');  // 顯示 .A
-    //         }
-    //     });
-    // });
 })();
 
