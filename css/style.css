@@ -8841,7 +8841,7 @@ img {
     }
   }
   .mp .main .tab .pushAd {
-    margin-top: 0;
+    margin: 0 -1.5em auto;
   }
   .mp .main .tabTitle {
     display: flex;
