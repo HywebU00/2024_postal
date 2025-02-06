@@ -6462,6 +6462,7 @@ img {
   .listCard._infoCard p.points span {
     color: #222;
     margin-left: 4px;
+    display: inline-block;
   }
   .listCard._infoCard p.points b {
     padding-left: 24px;
@@ -6699,7 +6700,7 @@ img {
     width: 24px;
     height: 24px;
     background: #333;
-    color: #fff;
+    color: #fff !important;
     border-radius: 50%;
     margin-left: 4px;
     font-size: 0.9em;
@@ -7522,11 +7523,15 @@ img {
     border-bottom: 1px solid #BDBDBD;
     font-size: 1.125rem;
     color: #222;
+    word-break: break-word;
   }
   .main .setBox ._linkItems a span._state {
+    flex: 0 0 auto;
     color: #666;
     font-size: 1rem;
     display: flex;
+    justify-content: flex-end;
+    padding-left: 10px;
   }
   .main .setBox ._linkItems a span._state img {
     width: 24px;
@@ -7562,6 +7567,7 @@ img {
     font-size: 1.25rem;
     color: #333;
     font-weight: bold;
+    text-align: left;
   }
   .main .setBox ._linkItems div p.unfill {
     font-size: 1em;
@@ -7620,17 +7626,20 @@ img {
   }
   .main .infoSetBox .wrap .item p {
     margin: 0;
+    padding-right: 4px;
     font-size: 1.25rem;
     color: #222;
     font-weight: bold;
+    word-break: break-word;
   }
   .main .infoSetBox .wrap .item p span {
+    display: inline-block;
     font-weight: normal;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1rem;
     padding: 0.25em 1em;
-    margin: 0 8px;
+    margin: 4px 8px;
   }
   .main .infoSetBox .wrap .item .btn {
     padding: 6px 12px;
