@@ -5,14 +5,14 @@
     <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>m9b</title>
+    <title>m8a</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
     <!-- favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon">
   </head>
-  <body class="mp _page">
+  <body class="mp">
     <header>
       <div class="container">
         <a href="#"><h1>中華郵政會員資訊網</h1></a>
@@ -31,66 +31,28 @@
     <!-- 內容 -->
     <div class="main">
       <!-- 內容頁 -->
-      <section class="ctlWrap">
-        <a href="#" class="prev">回上頁</a>
-      </section>
       <section>
         <div class="container">
-          <h2 class="subTitle">我的兌換券</h2>
-          <!-- 消息類型 -->
-          <ul class="infoType">
-            <li><a href="m9.html">可使用</a></li>
-            <li><a href="m9b.html" class="act">使用紀錄</a></li>
-          </ul>
-          <div class="logInfo">
-            <div class="filterDate">
-              <select name="" id="fake-legend">
-                <option value="">全部</option>
-                <option value="">已使用</option>
-                <option value="">已逾期</option>
-              </select>
+          <h2 class="subTitle">轉贈點數</h2>
+          <form action="">
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">對方手機號碼：</label>
+              <div class="content">
+                <input type="tel" id="fake-legend" placeholder="0912-000000">
+              </div>
             </div>
-            <section class="functions">
-              <div class="listCard">
-                <div class="coupon">
-                  <section class="state">
-                    <b>已使用</b>
-                    <span>使用日：2024/11/14</span>
-                  </section>
-                  <section class="couponItem">
-                    <div class="col">
-                      <div class="imgContainer">
-                        <img src="images/img-commodity.jpg" class="cover" alt="商品">
-                      </div>
-                    </div>
-                    <div class="col">
-                      <h3>兌換券名稱</h3>
-                      <span>數量：1 個</span>
-                    </div>
-                  </section>
-                </div>
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">轉贈點數：</label>
+              <div class="content">
+                <input type="text" id="fake-legend" placeholder="請輸入點數">
+                <div class="normalInfo">剩餘 100 點</div>
               </div>
-              <div class="listCard">
-                <div class="coupon">
-                  <section class="state _overdue">
-                    <b>已逾期</b>
-                    <span>逾期日：2024/10/31</span>
-                  </section>
-                  <section class="couponItem">
-                    <div class="col">
-                      <div class="imgContainer">
-                        <img src="images/img-commodity.jpg" class="cover" alt="商品">
-                      </div>
-                    </div>
-                    <div class="col">
-                      <h3>兌換券名稱</h3>
-                      <span>數量：1 個</span>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </section>
-          </div>
+            </div>
+            <div class="btnGrp _full">
+              <button class="btn _primary">轉贈點數</button>
+              <button class="btn _second">取消</button>
+            </div>
+          </form>
         </div>
       </section>
     </div>

@@ -103,6 +103,7 @@
             <button class="btn _primary">確定</button>
           </div>
         </form>
+        <!-- 3、選擇縣市 -->
         <!-- 關閉按鈕 -->
         <button class="btnClose">關閉</button>
       </div>
@@ -167,9 +168,51 @@
             <p>1,000 點</p>
           </div>
           <!-- 功能卡 -->
+          <div class="recipient">
+            <div>
+              <p class="unit">i 郵箱據點名稱</p>
+              <p class="address">據點地址</p>
+            </div>
+            <a href="#">重新選取</a>
+          </div>
           <section class="functions">
             <!-- 樣式一 -->
             <!-- 單一 -->
+            <div class="listCard _mix">
+              <div class="itemName">
+                <h3>i 郵箱（iBox）</h3>
+                <p>至各地 i 郵箱據點取貨</p>
+              </div>
+              <div class="state">
+                <!-- 狀態1、Unselected -->
+                <input type="radio" name="sampleRadio3">
+              </div>
+              <div class="recipient">
+                <div>
+                  <p class="unit">i 郵箱據點名稱</p>
+                  <p class="address">據點地址</p>
+                  <p class="user">收件人：周杰倫（****-**0000）</p>
+                </div>
+                <a href="#">編輯</a>
+              </div>
+            </div>
+            <div class="listCard _mix">
+              <div class="itemName">
+                <h3>郵寄到府</h3>
+                <p>透過掛號包裹方式寄送至指定地址</p>
+              </div>
+              <div class="state">
+                <!-- 狀態1、Unselected -->
+                <input type="radio" name="sampleRadio3">
+              </div>
+              <div class="recipient">
+                <div>
+                  <p class="address">臺北市松江路 158 號 11F-1</p>
+                  <p class="user">收件人：周杰倫（****-**0000）</p>
+                </div>
+                <a href="#">編輯</a>
+              </div>
+            </div>
             <div class="listCard">
               <div class="itemName">
                 <div class="col">
@@ -387,6 +430,52 @@
               </div>
             </div>
           </section>
+          <!-- 角色 -->
+          <a class="listCard">
+            <div class="coupon _role">
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-portrait1.jpg" class="cover" alt="圖說1">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>波波鴿</h3>
+                  <span>i 郵購當紅炸子雞，小農產品直送專員</span>
+                </div>
+              </section>
+            </div>
+          </a>
+          <a class="listCard">
+            <div class="coupon _role">
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-portrait2.jpg" class="cover" alt="圖說1">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>波鴿</h3>
+                  <span>行動郵局掌門人</span>
+                </div>
+              </section>
+            </div>
+          </a>
+          <a class="listCard">
+            <div class="coupon _role">
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-commodity3.jpg" class="cover" alt="圖說1">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>帥鴿</h3>
+                  <span>敘述文字</span>
+                </div>
+              </section>
+            </div>
+          </a>
           <!-- 兌換券 -->
           <div class="listCard">
             <div class="coupon _link">
@@ -418,6 +507,28 @@
                   <span>剩餘數量：10</span>
                 </div>
               </section>
+            </div>
+          </div>
+          <div class="listCard">
+            <div class="coupon">
+              <section class="couponItem">
+                <div class="col">
+                  <div class="imgContainer">
+                    <img src="images/img-default.jpg" class="cover" alt="圖說1">
+                  </div>
+                </div>
+                <div class="col">
+                  <h3>兌換券名稱</h3>
+                  <span>剩餘數量：10</span>
+                  <div class="points">
+                    <p>300啵幣</p>
+                  </div>
+                </div>
+              </section>
+              <a class="orderCode">
+                <span>訂單編號：00366840926</span>
+                <span>郵件號碼：71948530281647329560</span>
+              </a>
             </div>
           </div>
           <div class="listCard">
@@ -709,6 +820,7 @@
               <label for="fake-legend" class="title" aria-required="true">input<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
               <div class="content">
                 <input type="text" id="fake-legend" value="" placeholder="placeholder">
+                <div class="normalInfo">normal message</div>
               </div>
             </div>
             <div class="formGrp error">
@@ -741,6 +853,42 @@
                   <option value="">新竹市</option>
                   <option value="">...</option>
                 </select>
+              </div>
+            </div>
+            <!-- 地址 -->
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">收件地址<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
+              <div class="content _address">
+                <select name="" id="fake-legend">
+                  <option value="">台北市</option>
+                  <option value="">新北市</option>
+                  <option value="">桃園市</option>
+                  <option value="">新竹市</option>
+                  <option value="">...</option>
+                </select>
+                <select name="" id="fake-legend2">
+                  <option value="">中正區</option>
+                  <option value="">...</option>
+                </select>
+                <input type="text" id="fake-legend" value="" placeholder="輸入地址">
+              </div>
+            </div>
+            <div class="formGrp">
+              <label for="fake-legend" class="title" aria-required="true">收件地址<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>：</label>
+              <div class="content _address">
+                <select name="" id="fake-legend">
+                  <option value="">台北市</option>
+                  <option value="">新北市</option>
+                  <option value="">桃園市</option>
+                  <option value="">新竹市</option>
+                  <option value="">...</option>
+                </select>
+                <select name="" id="fake-legend2" class="error">
+                  <option value="">中正區</option>
+                  <option value="">...</option>
+                </select>
+                <input type="text" id="fake-legend" value="" placeholder="輸入地址">
+                <div class="errorInfo">error message</div>
               </div>
             </div>
             <!-- 密碼 -->
@@ -834,6 +982,7 @@
               </div>
             </div>
           </form>
+          <hr class="hr-text" data-content="or">
           <div class="noteList _simple">
             <h3>注意事項</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis facilis dignissimos doloremque adipisci hic dolore, quisquam iste, praesentium placeat architecto sit esse quam quod odio maiores, obcaecati officiis ducimus! Molestias!</p>
@@ -915,5 +1064,29 @@
     <a href="javascript:;" class="scrollToTop">回頁首</a>
     <!-- js -->
     <script src="js/customize.js"></script>
+    <!-- <script>
+      // .listCard._mix 的radio操作
+      document.addEventListener("DOMContentLoaded", function () {
+        // 取得所有 .listCard._mix 內的 radio 按鈕
+        const radios = document.querySelectorAll(".listCard._mix input[type='radio']");
+        radios.forEach(radio => {
+          radio.addEventListener("change", function () {
+            // 先移除所有 .recipient 的 .Show
+            document.querySelectorAll(".listCard._mix .recipient").forEach(recipient => {
+              recipient.classList.remove("Show");
+            });
+
+            // 為當前選中的 radio 所在的 .recipient 添加 .Show
+            const parentCard = this.closest(".listCard._mix");
+            if (parentCard) {
+              const recipient = parentCard.querySelector(".recipient");
+              if (recipient) {
+                recipient.classList.add("Show");
+              }
+            }
+          });
+        });
+      });
+    </script> -->
   </body>
 </html>
