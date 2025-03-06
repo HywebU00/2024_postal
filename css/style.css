@@ -8924,6 +8924,21 @@ img {
     justify-content: flex-start;
     align-items: center;
   }
+  .mp .main .discountInfo .col .imgContainer {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+  }
+  .mp .main .discountInfo .col .imgContainer img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
   .mp .main .discountInfo h4 {
     margin: 1em 0 0;
     font-size: 1.125rem;
@@ -9265,9 +9280,11 @@ img {
   .mp .main .hero2 .container .info {
     position: absolute;
     z-index: 1;
-    bottom: 42px;
+    top: 45%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
+    width: -moz-max-content;
+    width: max-content;
   }
   .mp .main .hero2 .container .info h2.mainTitle {
     font-size: 3rem;
@@ -9285,19 +9302,19 @@ img {
     height: 72px;
     background: url(../images/icon-arrow-down.svg) 50% 50% no-repeat #008C38;
     border-radius: 50%;
-    bottom: -36px;
+    top: calc(50% + 60px);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
   }
   @media (max-width: 992px) {
     .mp .main .hero2 .container .info {
       width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
+      top: 42%;
     }
     .mp .main .hero2 .container .info h2.mainTitle {
       font-size: 2.5rem;
       padding: 0 1em;
+      line-height: 1.4;
     }
     .mp .main .hero2 .container picture img {
       height: 620px;
@@ -9377,8 +9394,12 @@ img {
     align-items: center;
     margin: 4em 0;
   }
+  .mp .main .thumbInfo .item .col:first-child {
+    flex: 0 1 480px;
+  }
   .mp .main .thumbInfo .item .col:last-child {
     padding-left: 2em;
+    flex: 0 1 400px;
   }
   .mp .main .thumbInfo .item h4 {
     font-size: 1.5rem;
@@ -9387,6 +9408,18 @@ img {
   .mp .main .thumbInfo .item .imgContainer {
     border-radius: 20px;
     overflow: hidden;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+  }
+  .mp .main .thumbInfo .item .imgContainer img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    display: block;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
   }
   .mp .main .thumbInfo .item:nth-child(even) {
     flex-direction: row-reverse;
@@ -9394,6 +9427,10 @@ img {
   .mp .main .thumbInfo .item:nth-child(even) .col:last-child {
     padding-left: 0;
     padding-right: 2em;
+  }
+  .mp .main .thumbInfo .item a.btn {
+    display: inline-block;
+    margin-top: 1.5em;
   }
   @media (max-width: 992px) {
     .mp .main .thumbInfo .item {
@@ -9405,6 +9442,9 @@ img {
     }
     .mp .main .thumbInfo .item .col {
       padding: 0 1em !important;
+    }
+    .mp .main .thumbInfo .item .col:last-child {
+      flex: 1 1 auto;
     }
   }
   .mp .main .terms h3 {
