@@ -1,7 +1,13 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
 @import '../vendor/swiper/swiper-bundle.min.css';
 @import '../vendor/fancybox/fancybox.css';
+@font-face {
+  font-family: "Noto Sans TC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../font/NotoSansTC-Regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
 .breadcrumb ul li + li:before {
   content: " / ";
   display: inline-block;
