@@ -6894,11 +6894,17 @@ img {
     border: 1px solid #BDBDBD;
     border-radius: 14px;
     padding: 0.35em 1em 0.35em 2.75em;
-    transition: 0.3s;
   }
   .cardFunction a.urPoints:hover, .cardFunction a.urPoints:focus-visible {
     border-color: #fff;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  .cardFunction a.urPoints._locked {
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 75px;
+    transform: translateX(-50%);
   }
   .cardFunction a.btnSearch {
     position: absolute;

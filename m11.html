@@ -279,5 +279,33 @@
     <!-- swiper -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="js/customize.js"></script>
+    <script>
+      let lastScrollY = window.scrollY;
+      let ticking = false;
+
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            let scrollTop = window.scrollY; // 取得滾動距離
+            let urPoints = document.querySelector('.urPoints');
+            if (!urPoints) return; // 防止找不到元素時報錯
+            
+            let isLocked = urPoints.classList.contains('_locked'); // 是否已經有 _locked class
+
+            // 滾動超過 72px 時，添加 _locked
+            if (scrollTop > 72 && !isLocked) {
+              urPoints.classList.add('_locked');
+            } 
+            // 滾動少於 72px 時，移除 _locked
+            else if (scrollTop <= 72 && isLocked) {
+              urPoints.classList.remove('_locked');
+            }
+            ticking = false; // 允許下一次 requestAnimationFrame 執行
+          });
+
+          ticking = true; // 避免重複觸發
+        }
+      });
+    </script>
   </body>
 </html>
