@@ -5247,7 +5247,6 @@ img {
   .imgContainer {
     width: 100%;
     position: relative;
-    background: #f1f1f1;
   }
   .imgContainer .fill {
     -o-object-fit: fill !important;
@@ -7594,7 +7593,6 @@ img {
     width: 200px;
     height: 200px;
     border-radius: 4px;
-    background: #eee;
     overflow: hidden;
     margin: 2em auto auto;
   }
