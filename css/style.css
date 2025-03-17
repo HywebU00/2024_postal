@@ -6943,7 +6943,7 @@ img {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1em;
+    margin: 0.5em 0;
   }
   .filter .col {
     flex: 0 0 auto;
