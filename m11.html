@@ -13,7 +13,7 @@
     <link href="images/favicon.ico" rel="icon" type="image/x-icon">
   </head>
   <body class="mp _page">
-    <header>
+    <!-- <header>
       <div class="container">
         <a href="#"><h1>中華郵政會員資訊網</h1></a>
         <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
@@ -27,9 +27,9 @@
           </div>
         </nav>
       </div>
-    </header>
+    </header> -->
     <!-- 內容 -->
-    <div class="main">
+    <div class="main" style="padding-top: 0;">
       <!-- 內容頁 -->
       <section class="ctlWrap">
         <a href="#" class="prev">回上頁</a>
@@ -237,6 +237,102 @@
                 <p class="points">10點</p>
               </div>
             </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-commodity2.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
+            <a class="card">
+              <div class="imgContainer">
+                <img src="images/img-default.jpg" class="cover" alt="商品">
+              </div>
+              <div class="cardInfo">
+                <div class="up">
+                  <span class="category"><img src="images/icon-coupon.svg" alt="優惠票券">電子票券</span>
+                  <h3>【全家】大杯單品美式</h3>
+                </div>
+                <p class="points">10點</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
@@ -280,6 +376,33 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="js/customize.js"></script>
     <script>
+      let ticking = false;
+      window.addEventListener('scroll', function () {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            let scrollTop = window.scrollY; // 取得滾動距離
+            let ctlWrap = document.querySelector('.ctlWrap');
+            let functionWrap = document.querySelector('.functionWrap');
+            
+            if (ctlWrap && functionWrap) {
+                if (scrollTop > 1) {
+                    ctlWrap.classList.add('_locked');
+                    functionWrap.classList.add('_locked');
+                }
+                if (scrollTop < 121) {
+                    ctlWrap.classList.remove('_locked');
+                    functionWrap.classList.remove('_locked');
+                }
+            }
+            
+            ticking = false; // 允許下一次 requestAnimationFrame 執行
+          });
+          
+          ticking = true; // 避免重複觸發
+        }
+      });
+    </script>
+    <!-- <script>
       let lastScrollY = window.scrollY;
       let ticking = false;
 
@@ -306,6 +429,6 @@
           ticking = true; // 避免重複觸發
         }
       });
-    </script>
+    </script> -->
   </body>
 </html>
