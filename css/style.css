@@ -8724,6 +8724,7 @@ img {
     line-height: 1.6;
     max-width: 1920px;
     margin: auto;
+    min-height: 80vh;
   }
   .mp .main:has(._fixed) {
     padding-bottom: 104px;
@@ -9077,6 +9078,7 @@ img {
   }
   .mp .main .pushAd .container {
     max-width: 1200px;
+    width: 100%;
     display: flex;
     align-items: center;
   }
