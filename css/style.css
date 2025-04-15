@@ -8428,6 +8428,9 @@ img {
       text-align: justify;
       margin-top: 26px;
     }
+    .QA_flex ._QA .item .A {
+      margin-bottom: 20px;
+    }
   }
   .tag ul {
     list-style: none;
