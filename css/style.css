@@ -8421,10 +8421,12 @@ img {
     }
     .QA_flex ._QA .item .Q .num {
       margin-top: 15px;
+      margin-bottom: 15px;
     }
     .QA_flex ._QA .item .Q p {
       padding: 0 1em;
       text-align: justify;
+      margin-top: 26px;
     }
   }
   .tag ul {
