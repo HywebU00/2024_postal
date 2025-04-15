@@ -8364,6 +8364,7 @@ img {
   @media (max-width: 992px) {
     .QA_flex {
       flex-direction: column;
+      display: block;
     }
     .QA_flex ._sticky {
       flex: 1 1 100%;
@@ -8801,6 +8802,7 @@ img {
   }
   .mp .main p, .mp .main li, .mp .main time, .mp .main span {
     color: #777;
+    word-break: break-word;
   }
   .mp .main p, .mp .main li {
     margin: 10px 0;
