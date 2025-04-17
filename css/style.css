@@ -2794,7 +2794,6 @@ img {
     width: auto;
     padding: 0.5em 1.25em;
     min-width: 4em;
-    margin: 0.25em 0.1em;
   }
   .btn i {
     margin-right: 0.25em;
@@ -4731,7 +4730,7 @@ img {
     }
   }
   *[class^=notice] {
-    padding: 1em 3.5em;
+    padding: 1em 3.5em 1em 4em;
     display: block;
     width: 100%;
     font-size: 1rem;
@@ -4746,7 +4745,7 @@ img {
   *[class^=notice]:before {
     position: absolute;
     top: 50%;
-    left: 0.8em;
+    left: 1.3em;
     transform: translateY(-50%);
     display: block;
     width: 32px;
@@ -5616,10 +5615,10 @@ img {
     display: flex;
     justify-content: space-between;
     padding: 1.25em 0;
+    gap: 6px;
   }
   .btnGrp .btn {
     flex: 1 1 50%;
-    margin: 0 4px;
   }
   .btnGrp._full {
     flex-wrap: wrap;
@@ -5657,7 +5656,6 @@ img {
       flex-direction: column-reverse;
     }
     .btnGrp .btn {
-      margin: 4px 0;
       flex: 1 1 100%;
     }
     .btnGrp._full {
@@ -5668,7 +5666,6 @@ img {
       flex-direction: row;
     }
     .btnGrp._stable .btn {
-      margin: 0 4px;
       padding: 16px 4px;
     }
     .btnGrp._flow {
@@ -6229,7 +6226,7 @@ img {
     width: 480px;
     background: #fff;
     border-radius: 8px;
-    padding: 2em 1.25em;
+    padding: 2em 1.5em;
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     box-sizing: border-box;
     position: absolute;
@@ -6483,7 +6480,7 @@ img {
     justify-content: space-between;
     border: 1px solid #bdbdbd;
     background: #fff;
-    padding: 1em 2em;
+    padding: 1em 1.5em;
     border-radius: 8px;
     margin: 10px 0;
   }
@@ -7205,7 +7202,7 @@ img {
     }
   }
   .recipient {
-    padding: 1em;
+    padding: 1em 1.5em;
     margin: 0.5em 0;
     background: #F9F9F9;
     border-radius: 6px;
@@ -7936,7 +7933,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25em 1.75em;
+    padding: 1.25em 1.5em;
     border-bottom: 1px solid #BDBDBD;
     font-size: 1.125rem;
     color: #222;
@@ -8166,6 +8163,10 @@ img {
   .fixedZone a.userPoints:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
+  .fixedZone a.userPoints + .btnGrp {
+    padding: 0;
+    margin-top: 0.75em;
+  }
   .fixedZone .userInfo {
     display: flex;
     justify-content: space-between;
@@ -8199,7 +8200,7 @@ img {
   }
   .marketLink {
     background: #F1F3ED;
-    padding: 3em 1em 1em;
+    padding: 3em 1.5em 1em;
     border-radius: 8px;
     text-align: right;
     position: relative;
@@ -8622,9 +8623,11 @@ img {
     margin: 4em 0 2em;
     padding: 0;
     display: flex;
+    justify-content: center;
     border-bottom: 3px solid #e6e6e6;
   }
   ul.infoType li {
+    flex: 1 1 auto;
     margin: 0 !important;
   }
   ul.infoType li a {
@@ -8632,6 +8635,7 @@ img {
     font-size: 1.25rem;
     color: #666;
     font-weight: bold;
+    text-align: center;
     padding: 0.75em 1.8em;
     position: relative;
   }
