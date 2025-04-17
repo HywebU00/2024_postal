@@ -7828,12 +7828,12 @@ img {
   .main a.userPoints h3:before {
     content: "";
     position: absolute;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     left: 0;
     top: 8px;
-    border: 2px solid #666;
-    border-radius: 50%;
+    background: url(../images/icon-boCoin.svg) left 50% no-repeat;
+    background-size: 30px;
   }
   .main .userPoints .btn,
   .main a.userPoints .btn {
@@ -8135,9 +8135,9 @@ img {
   }
   .fixedZone .userPoints h3,
   .fixedZone a.userPoints h3 {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    padding-left: 1.3em;
+    font-size: 1.125rem;
+    line-height: 2.3;
+    padding-left: 1.8em;
     position: relative;
   }
   .fixedZone .userPoints h3:before,
