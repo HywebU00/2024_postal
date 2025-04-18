@@ -5538,7 +5538,7 @@ img {
        object-fit: contain;
   }
   body {
-    background: url(../images/bg-mp-deco-3-L2.png) right bottom no-repeat #F5F5F5;
+    background: url(../images/bg-mp-deco-3-L2.png) right bottom no-repeat #fff;
     background-attachment: fixed;
   }
   body.mp {
@@ -7795,8 +7795,10 @@ img {
   }
   @media (max-width: 992px) {
     .main .centerLimit {
+      max-width: 100%;
       padding: 2em 1.5em;
-      background: rgba(255, 255, 255, 0.9);
+      margin: 0 1em;
+      background: rgb(255, 255, 255);
       -webkit-backdrop-filter: blur(2px);
               backdrop-filter: blur(2px);
       border-radius: 0;
