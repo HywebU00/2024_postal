@@ -3851,7 +3851,7 @@ img {
   .tag._scroll::-webkit-scrollbar-thumb {
     border-radius: 8px;
     border: 2px solid #fff;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.15);
   }
   .tag._scroll ul {
     flex-wrap: nowrap;
@@ -5642,6 +5642,9 @@ img {
     .stickyWrap.act .tag {
       margin-left: 32px;
     }
+  }
+  .stickyWrap + ul.list {
+    box-shadow: none !important;
   }
   .btnGrp {
     display: flex;
@@ -8436,7 +8439,7 @@ img {
     .QA_flex ._sticky ul::-webkit-scrollbar-thumb {
       border-radius: 8px;
       border: 2px solid #fff;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.15);
     }
     .QA_flex ._sticky ul li {
       height: 48px;

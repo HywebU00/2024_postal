@@ -34,11 +34,14 @@
       <section>
         <div class="container">
           <h2 class="subTitle">最新消息</h2>
-          <!-- 消息類型 -->
-          <ul class="infoType">
-            <li><a href="m3.html">優惠活動</a></li>
-            <li><a href="m3b.html" class="act">服務公告</a></li>
-          </ul>
+          <!-- 觸頂要 sticky -->
+          <div class="stickyWrap">
+            <!-- 消息類型 -->
+            <ul class="infoType">
+              <li><a href="m3.html">優惠活動</a></li>
+              <li><a href="m3b.html" class="act">服務公告</a></li>
+            </ul>
+          </div>
           <ul class="list">
             <li>
               <a href="#" class="tag">
@@ -168,5 +171,33 @@
     <!-- swiper -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="js/customize.js"></script>
+    <script>
+        // 滾動處理
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            const subTitle = document.querySelector('h2.subTitle');
+            const stickyWrap = document.querySelector('.stickyWrap');
+            const list = document.querySelector('.list');
+
+            if (header && subTitle && stickyWrap && list) {
+                const headerH = header.offsetHeight;
+                const subTitleH = subTitle.offsetHeight;
+                const stickyWrapH = stickyWrap.offsetHeight;
+
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const triggerPoint = headerH;
+
+                if (scrollTop > triggerPoint) {
+                    stickyWrap.classList.add('act');
+                    stickyWrap.style.top = headerH + 'px';
+                    list.style.paddingTop = headerH + 'px';
+                } else {
+                    stickyWrap.classList.remove('act');
+                    stickyWrap.style.top = '';
+                    list.style.paddingTop = '';
+                }
+            }
+        });
+    </script>
   </body>
 </html>
