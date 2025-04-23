@@ -34,19 +34,27 @@
       <section>
         <div class="container">
           <h2 class="subTitle">最新消息</h2>
-          <!-- 消息類型 -->
-          <ul class="infoType">
-            <li><a href="m3.html" class="act">優惠活動</a></li>
-            <li><a href="m3b.html">服務公告</a></li>
-          </ul>
-          <!-- 標籤 -->
-          <div class="tag _scroll">
-            <ul>
-              <li><a href="#" class="act">所有活動</a></li>
-              <li><a href="#">郵政會員</a></li>
-              <li><a href="#">活動分類A</a></li>
-              <li><a href="#">活動分類B</a></li>
+          <!-- 觸頂要 sticky -->
+          <div class="stickyWrap">
+            <!-- 消息類型 -->
+            <ul class="infoType">
+              <li><a href="m3.html" class="act">優惠活動</a></li>
+              <li><a href="m3b.html">服務公告</a></li>
             </ul>
+            <!-- 標籤 -->
+            <div class="tag _scroll">
+              <ul>
+                <li><a href="#" class="act">所有活動</a></li>
+                <li><a href="#">郵政會員</a></li>
+                <li><a href="#">活動分類A</a></li>
+                <li><a href="#">活動分類B</a></li>
+                <li><a href="#">活動分類C</a></li>
+                <li><a href="#">活動分類D</a></li>
+                <!-- <li><a href="#">活動分類E</a></li>
+                <li><a href="#">活動分類F</a></li>
+                <li><a href="#">活動分類G</a></li> -->
+              </ul>
+            </div>
           </div>
           <!-- 活動卡 -->
           <div class="actInfo">
@@ -173,5 +181,33 @@
     <!-- swiper -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="js/customize.js"></script>
+    <script>
+        // 滾動處理
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            const subTitle = document.querySelector('h2.subTitle');
+            const stickyWrap = document.querySelector('.stickyWrap');
+            const actInfo = document.querySelector('.actInfo');
+
+            if (header && subTitle && stickyWrap && actInfo) {
+                const headerH = header.offsetHeight;
+                const subTitleH = subTitle.offsetHeight;
+                const stickyWrapH = stickyWrap.offsetHeight;
+
+                const scrollTop = window.scrollY || document.documentElement.scrollTop;
+                const triggerPoint = headerH;
+
+                if (scrollTop > triggerPoint) {
+                    stickyWrap.classList.add('act');
+                    stickyWrap.style.top = headerH + 'px';
+                    actInfo.style.paddingTop = headerH + 'px';
+                } else {
+                    stickyWrap.classList.remove('act');
+                    stickyWrap.style.top = '';
+                    actInfo.style.paddingTop = '';
+                }
+            }
+        });
+    </script>
   </body>
 </html>

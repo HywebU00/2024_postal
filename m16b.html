@@ -225,5 +225,43 @@
     <!-- swiper -->
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="js/customize.js"></script>
+    <script>
+      // m16b mask
+      document.addEventListener("DOMContentLoaded", function () {
+          // 1️. 點擊 `._col._openMask`，顯示 `#mask_below` 並禁止滾動
+          document.querySelectorAll("._col._openMask").forEach(button => {
+              button.addEventListener("click", function () {
+                  let maskBelow = document.getElementById("mask_below");
+                  if (maskBelow) {
+                      maskBelow.classList.remove("_hide"); // 顯示遮罩
+                      document.body.style.overflow = "hidden"; // 禁止滾動
+                  }
+              });
+          });
+
+          // 2️. 點擊 `.city ._next`，顯示 `.county` 和 `.btnPrev`
+          document.querySelector(".city ._next").addEventListener("click", function (event) {
+              event.preventDefault(); // 防止按鈕提交表單
+              let countySection = document.querySelector(".county");
+              let btnPrev = document.querySelector("#mask_below .btnPrev");
+              if (countySection) {
+                  countySection.classList.add("_show"); // 顯示縣市選擇區
+              }
+              if (btnPrev) {
+                  btnPrev.classList.remove("_hide"); // 顯示返回按鈕
+              }
+          });
+
+          // 3️. 點擊 `#mask_below .btnPrev`，隱藏 `.county` 並恢復滾動
+          document.querySelector("#mask_below .btnPrev").addEventListener("click", function () {
+              this.classList.add("_hide"); // 隱藏返回按鈕
+              let countySection = document.querySelector(".county");
+              if (countySection) {
+                  countySection.classList.remove("_show"); // 隱藏縣市選擇區
+              }
+              document.body.style.overflow = ""; // 恢復滾動
+          });
+      });
+    </script>
   </body>
 </html>

@@ -199,42 +199,45 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         }
     });
 
-    // m16b mask
-    document.addEventListener("DOMContentLoaded", function () {
-        // 1️. 點擊 `._col._openMask`，顯示 `#mask_below` 並禁止滾動
-        document.querySelectorAll("._col._openMask").forEach(button => {
-            button.addEventListener("click", function () {
-                let maskBelow = document.getElementById("mask_below");
-                if (maskBelow) {
-                    maskBelow.classList.remove("_hide"); // 顯示遮罩
-                    document.body.style.overflow = "hidden"; // 禁止滾動
-                }
-            });
-        });
+    // m3、m4 tab、tag scroll 固定
+    
 
-        // 2️. 點擊 `.city ._next`，顯示 `.county` 和 `.btnPrev`
-        document.querySelector(".city ._next").addEventListener("click", function (event) {
-            event.preventDefault(); // 防止按鈕提交表單
-            let countySection = document.querySelector(".county");
-            let btnPrev = document.querySelector("#mask_below .btnPrev");
-            if (countySection) {
-                countySection.classList.add("_show"); // 顯示縣市選擇區
-            }
-            if (btnPrev) {
-                btnPrev.classList.remove("_hide"); // 顯示返回按鈕
-            }
-        });
+    // // m16b mask
+    // document.addEventListener("DOMContentLoaded", function () {
+    //     // 1️. 點擊 `._col._openMask`，顯示 `#mask_below` 並禁止滾動
+    //     document.querySelectorAll("._col._openMask").forEach(button => {
+    //         button.addEventListener("click", function () {
+    //             let maskBelow = document.getElementById("mask_below");
+    //             if (maskBelow) {
+    //                 maskBelow.classList.remove("_hide"); // 顯示遮罩
+    //                 document.body.style.overflow = "hidden"; // 禁止滾動
+    //             }
+    //         });
+    //     });
 
-        // 3️. 點擊 `#mask_below .btnPrev`，隱藏 `.county` 並恢復滾動
-        document.querySelector("#mask_below .btnPrev").addEventListener("click", function () {
-            this.classList.add("_hide"); // 隱藏返回按鈕
-            let countySection = document.querySelector(".county");
-            if (countySection) {
-                countySection.classList.remove("_show"); // 隱藏縣市選擇區
-            }
-            document.body.style.overflow = ""; // 恢復滾動
-        });
-    });
+    //     // 2️. 點擊 `.city ._next`，顯示 `.county` 和 `.btnPrev`
+    //     document.querySelector(".city ._next").addEventListener("click", function (event) {
+    //         event.preventDefault(); // 防止按鈕提交表單
+    //         let countySection = document.querySelector(".county");
+    //         let btnPrev = document.querySelector("#mask_below .btnPrev");
+    //         if (countySection) {
+    //             countySection.classList.add("_show"); // 顯示縣市選擇區
+    //         }
+    //         if (btnPrev) {
+    //             btnPrev.classList.remove("_hide"); // 顯示返回按鈕
+    //         }
+    //     });
+
+    //     // 3️. 點擊 `#mask_below .btnPrev`，隱藏 `.county` 並恢復滾動
+    //     document.querySelector("#mask_below .btnPrev").addEventListener("click", function () {
+    //         this.classList.add("_hide"); // 隱藏返回按鈕
+    //         let countySection = document.querySelector(".county");
+    //         if (countySection) {
+    //             countySection.classList.remove("_show"); // 隱藏縣市選擇區
+    //         }
+    //         document.body.style.overflow = ""; // 恢復滾動
+    //     });
+    // });
 
     // password_toggle
     addEventToAllIfExists('.content._psssToggle .btn', 'click', function() {
@@ -367,35 +370,35 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
     //     // },
     // });
 
-    // banner輪播
-    let bannerSliderItem = document.querySelectorAll('.bannerSlider .swiper-slide');
-    let bannerSliderPagination = [];
+    // // banner輪播
+    // let bannerSliderItem = document.querySelectorAll('.bannerSlider .swiper-slide');
+    // let bannerSliderPagination = [];
 
-    // 收集圖片標題，用於輪播點的 aria-label
-    bannerSliderItem.forEach((item) => {
-        bannerSliderPagination.push(item.dataset.title);
-    });
+    // // 收集圖片標題，用於輪播點的 aria-label
+    // bannerSliderItem.forEach((item) => {
+    //     bannerSliderPagination.push(item.dataset.title);
+    // });
 
-    // 將第一張幻燈片移動到第二順位
-    const swiperWrapper = document.querySelector('.bannerSlider .swiper-wrapper');
-    const firstSlide = swiperWrapper.firstElementChild; // 獲取第一張幻燈片
-    swiperWrapper.insertBefore(firstSlide, swiperWrapper.children[1]); // 移動到第二順位
+    // // 將第一張幻燈片移動到第二順位
+    // const swiperWrapper = document.querySelector('.bannerSlider .swiper-wrapper');
+    // const firstSlide = swiperWrapper.firstElementChild; // 獲取第一張幻燈片
+    // swiperWrapper.insertBefore(firstSlide, swiperWrapper.children[1]); // 移動到第二順位
 
-    // 初始化 Swiper
-    const bannerSlider = new Swiper('.bannerSlider .swiper', {
-        slidesPerView: 1.3,     // 每次顯示 1.3 張，確保左右各露出 1/3
-        spaceBetween: 20,       // 幻燈片之間的距離
-        centeredSlides: true,   // 啟用居中顯示
-        loop: true,             // 啟用循環播放
-        pagination: {
-            el: '.bannerSlider .swiperDots',
-            bulletElement: 'button',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return `<button class="${className} noFonts" aria-label="${bannerSliderPagination[index]}">${bannerSliderPagination[index]}</button>`;
-            },
-        },
-    });
+    // // 初始化 Swiper
+    // const bannerSlider = new Swiper('.bannerSlider .swiper', {
+    //     slidesPerView: 1.3,     // 每次顯示 1.3 張，確保左右各露出 1/3
+    //     spaceBetween: 20,       // 幻燈片之間的距離
+    //     centeredSlides: true,   // 啟用居中顯示
+    //     loop: true,             // 啟用循環播放
+    //     pagination: {
+    //         el: '.bannerSlider .swiperDots',
+    //         bulletElement: 'button',
+    //         clickable: true,
+    //         renderBullet: function (index, className) {
+    //             return `<button class="${className} noFonts" aria-label="${bannerSliderPagination[index]}">${bannerSliderPagination[index]}</button>`;
+    //         },
+    //     },
+    // });
 
     //跑馬燈
     const marqueeSwiper = new Swiper('.marquee .swiper', {
@@ -450,5 +453,6 @@ if (document.querySelectorAll('[data-fancybox]').length > 0) {
         swiper: navSlider, //設定指向到哪個swiper，使用另一個設定的參數
         },
     });
+
 })();
 

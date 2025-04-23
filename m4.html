@@ -34,7 +34,7 @@
       <section>
         <div class="container">
           <h2 class="subTitle">常見問題</h2>
-          <section class="QA_flex">
+          <section class="QA_flex act">
             <div class="col _sticky">
               <ul>
                 <!-- <li><a href="#">熱門問題</a></li> -->
@@ -191,6 +191,28 @@
                   answerSection.classList.add('show');  // 顯示 .A
               }
           });
+      });
+      // 滾動處理
+      window.addEventListener('scroll', function () {
+          const header = document.querySelector('header');
+          const subTitle = document.querySelector('h2.subTitle');
+          const QA_flex = document.querySelector('.QA_flex');
+          const stickyCol = document.querySelector('.col._sticky');
+
+          if (header && subTitle && QA_flex && stickyCol) {
+              const headerH = header.offsetHeight;
+              const subTitleH = subTitle.offsetHeight;
+              const scrollTop = window.scrollY || document.documentElement.scrollTop;
+              const triggerPoint = headerH + subTitleH;
+
+              if (scrollTop > triggerPoint) {
+                  QA_flex.classList.add('act');
+                  stickyCol.style.top = headerH + 'px';
+              } else {
+                  QA_flex.classList.remove('act');
+                  stickyCol.style.top = '';
+              }
+          }
       });
     </script>
   </body>
