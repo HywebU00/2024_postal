@@ -7841,6 +7841,9 @@ img {
               backdrop-filter: blur(2px);
       border-radius: 0;
     }
+    .main .centerLimit._pure {
+      margin: 0 auto;
+    }
   }
   .main .userPoints,
   .main a.userPoints {
