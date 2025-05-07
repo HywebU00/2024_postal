@@ -8658,9 +8658,7 @@ img {
   .logInfo .noData {
     margin: 2em 0;
     padding: 3em 0;
-    -moz-tab-size: 1.125em;
-      -o-tab-size: 1.125em;
-         tab-size: 1.125em;
+    font-size: 1.125em;
     text-align: center;
   }
   @media (max-width: 768px) {
