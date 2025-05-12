@@ -7626,6 +7626,10 @@ img {
   .main .centerLimit h3 {
     line-height: 1.6;
   }
+  .main .centerLimit h3 span {
+    display: block;
+    word-break: break-all;
+  }
   .main .centerLimit h3, .main .centerLimit p {
     text-align: center;
   }
