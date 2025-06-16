@@ -1,13 +1,6 @@
 @charset "UTF-8";
 @import '../vendor/swiper/swiper-bundle.min.css';
 @import '../vendor/fancybox/fancybox.css';
-@font-face {
-  font-family: "Noto Sans TC";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("../font/NotoSansTC-Regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
 .breadcrumb ul li + li:before {
   content: " / ";
   display: inline-block;
@@ -2113,7 +2106,7 @@ img {
     font-weight: normal;
     color: #222;
     line-height: 1.45em;
-    font-family: "Noto Sans TC", serif;
+    font-family: Lato, "PingFang TC", "Helvetica Neue", Helvetica, "Noto Sans TC", 微軟正黑體, Arial, sans-serif;
     -webkit-text-size-adjust: none;
   }
   body.smallSize {
