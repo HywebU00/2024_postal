@@ -5981,9 +5981,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
-  form .formGrp .content._address select, form .formGrp .content._address ._col {
-    flex: 0 1 49%;
+  form .formGrp .content._address select, form .formGrp .content._address ._col, form .formGrp .content._address .postalCode {
+    flex: 1 1 31%;
   }
   form .formGrp .content._address ._col {
     padding-right: 2.5em;
