@@ -6456,6 +6456,8 @@ img {
   #mask_below .ctlPanel p.points span {
     color: #222;
     margin-left: 4px;
+    display: inline-flex;
+    align-items: center;
   }
   #mask_below .ctlPanel p.points b {
     padding-left: 24px;
@@ -6660,7 +6662,7 @@ img {
     display: block;
   }
   .listCard .coupon .couponItem .col .points p {
-    margin: 12px 0 0;
+    margin: 7px 0 0;
     text-align: left;
     color: #222;
     background: url(../images/icon-boCoin.svg) left 50% no-repeat;
@@ -7002,6 +7004,8 @@ img {
   .filter ._filter,
   .filter ._sort {
     padding: 8px 12px 8px 32px;
+    display: inline-flex;
+    align-items: center;
   }
   .filter ._filter {
     background: url(../images/icon-filter.svg) 10px 50% no-repeat #EBEDDA;
@@ -7009,7 +7013,9 @@ img {
     background-size: 20px;
   }
   .filter ._filter span {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 24px;
     height: 24px;
     background: #333;
@@ -7026,7 +7032,7 @@ img {
   }
   .filter ._filter:hover span, .filter ._filter:focus-visible span {
     background: #fff;
-    color: #00732e;
+    color: #00732e !important;
   }
   .filter ._sort {
     background: url(../images/icon-sorting.svg) 10px 50% no-repeat #EBEDDA;
