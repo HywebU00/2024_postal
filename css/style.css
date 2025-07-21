@@ -6753,7 +6753,8 @@ img {
   .listCard._infoCard p.points span {
     color: #222;
     margin-left: 4px;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
   }
   .listCard._infoCard p.points b {
     padding-left: 24px;
