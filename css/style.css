@@ -227,9 +227,9 @@ img {
   }
   .demoSection2 [class^=col] {
     border: 1px solid #0066cc;
-    background: #66b3ff;
+    background: rgb(102, 178.5, 255);
     min-height: 200px;
-    color: #151515;
+    color: rgb(21.25, 21.25, 21.25);
     text-align: center;
     line-height: 200px;
     font-size: 1.5em;
@@ -1924,7 +1924,7 @@ img {
     }
   }
   a:focus-visible {
-    outline: #1aadfa 2px solid;
+    outline: rgb(25.5, 173.1, 249.6) 2px solid;
   }
   @media screen and (max-width: 767px) {
     a:focus-visible {
@@ -1967,7 +1967,7 @@ img {
     }
   }
   a.goCenter:hover, a.goCenter:focus, a.goCenter:focus-visible {
-    background: #00bf4c;
+    background: rgb(0, 191, 76.4);
     top: 0;
     opacity: 1;
     box-shadow: none;
@@ -1990,7 +1990,7 @@ img {
     color: #008C38;
   }
   .no-js noscript a:hover, .no-js noscript a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
   }
   .no-js .mpSlider .imgContainer {
     display: none;
@@ -2120,11 +2120,11 @@ img {
     color: #00a4f9;
   }
   a:hover, a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   kbd {
     background: #fff;
@@ -2201,7 +2201,7 @@ img {
   .fontSize ul li a:hover,
   .fontSize ul li a:focus,
   .fontSize ul li a.active {
-    background: #0094e0;
+    background: rgb(0, 147.6, 224.1);
     color: #fff;
     box-shadow: none;
   }
@@ -2266,13 +2266,13 @@ img {
     transition: 0.3s ease-out;
   }
   .fontSize.typeB ul li button.active {
-    background: #0094e0;
+    background: rgb(0, 147.6, 224.1);
     color: #fff;
     box-shadow: none;
   }
   .fontSize.typeB ul li button:hover, .fontSize.typeB ul li button:focus-visible {
     background: #008C38;
-    border-inline: #0094e0 2px solid;
+    border-inline: rgb(0, 147.6, 224.1) 2px solid;
   }
   .language {
     font-weight: bold;
@@ -2341,7 +2341,7 @@ img {
   }
   .language ul li a:hover, .language ul li a:focus-visible {
     background: #008C38;
-    border-inline: #0094e0 2px solid;
+    border-inline: rgb(0, 147.6, 224.1) 2px solid;
   }
   @media screen and (min-width: 767px) {
     .language.typeB {
@@ -2497,7 +2497,7 @@ img {
     padding: 0.2em 0.8em;
   }
   .webSearch .formGrp input:focus-visible {
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .webSearch .formGrp button,
   .webSearch .formGrp .btn,
@@ -2554,11 +2554,11 @@ img {
     color: #222;
   }
   .webSearch .keywordHot ul a:hover, .webSearch .keywordHot ul a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   .webSearch .keywordHot ul a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   @media screen and (max-width: 767px) {
     .webSearch {
@@ -2673,7 +2673,7 @@ img {
     border: none;
   }
   .mobileSearch .btnGrp .btn:hover, .mobileSearch .btnGrp .btn:focus-visible {
-    color: #14afff;
+    color: rgb(20.1, 174.813253012, 255);
   }
   .mobileSearch .keywordHot {
     flex: 1 1 100%;
@@ -2696,7 +2696,7 @@ img {
     color: #fff;
   }
   .mobileSearch .keywordHot ul a:hover, .mobileSearch .keywordHot ul a:focus-visible {
-    color: #14afff;
+    color: rgb(20.1, 174.813253012, 255);
   }
   .webSearch.typeB {
     position: absolute;
@@ -2799,22 +2799,22 @@ img {
     text-shadow: none;
   }
   .btn:hover {
-    background: #c7c7c7;
+    background: rgb(198.5, 198.5, 198.5);
     border: 1px solid #adadad;
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btn:focus-visible {
-    background: #c7c7c7;
+    background: rgb(198.5, 198.5, 198.5);
     border: 1px solid #adadad;
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btn.active {
-    background: #ededed;
+    background: rgb(236.75, 236.75, 236.75);
     cursor: pointer;
   }
   .btn:hover, .btn:focus-visible {
@@ -2827,22 +2827,22 @@ img {
     color: #fff;
   }
   .btnGreen:hover {
-    background: #1d601d;
-    border: 1px solid #113911;
+    background: rgb(29.1193181818, 95.8806818182, 29.1193181818);
+    border: 1px solid rgb(17.2386363636, 56.7613636364, 17.2386363636);
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btnGreen:focus-visible {
-    background: #1d601d;
-    border: 1px solid #113911;
+    background: rgb(29.1193181818, 95.8806818182, 29.1193181818);
+    border: 1px solid rgb(17.2386363636, 56.7613636364, 17.2386363636);
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnGreen.active {
-    background: #2f9b2f;
+    background: rgb(46.9403409091, 154.5596590909, 46.9403409091);
     cursor: pointer;
   }
   .btnBlue {
@@ -2851,46 +2851,46 @@ img {
     color: #fff;
   }
   .btnBlue:hover {
-    background: #004d99;
+    background: rgb(0, 76.5, 153);
     border: 1px solid #003366;
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btnBlue:focus-visible {
-    background: #004d99;
+    background: rgb(0, 76.5, 153);
     border: 1px solid #003366;
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnBlue.active {
-    background: #0073e6;
+    background: rgb(0, 114.75, 229.5);
     cursor: pointer;
   }
   .btnYellow {
-    background: #fec61c;
-    border: 1px solid #fec61c;
+    background: rgb(254.1007905138, 198.3498023715, 28.3992094862);
+    border: 1px solid rgb(254.1007905138, 198.3498023715, 28.3992094862);
     color: #333;
   }
   .btnYellow:hover {
-    background: #e7ae01;
-    border: 1px solid #b48801;
+    background: rgb(230.5849802372, 173.8537549407, 0.9150197628);
+    border: 1px solid rgb(179.7865612648, 135.5533596838, 0.7134387352);
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btnYellow:focus-visible {
-    background: #e7ae01;
-    border: 1px solid #b48801;
+    background: rgb(230.5849802372, 173.8537549407, 0.9150197628);
+    border: 1px solid rgb(179.7865612648, 135.5533596838, 0.7134387352);
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnYellow.active {
-    background: #fecd36;
+    background: rgb(254.2015810277, 204.6996047431, 53.7984189723);
     cursor: pointer;
   }
   .btnOrange {
@@ -2899,22 +2899,22 @@ img {
     color: #fff;
   }
   .btnOrange:hover {
-    background: #9d3400;
-    border: 1px solid #6a2300;
+    background: rgb(157, 52.0817307692, 0);
+    border: 1px solid rgb(106, 35.1634615385, 0);
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btnOrange:focus-visible {
-    background: #9d3400;
-    border: 1px solid #6a2300;
+    background: rgb(157, 52.0817307692, 0);
+    border: 1px solid rgb(106, 35.1634615385, 0);
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnOrange.active {
-    background: #ea4d00;
+    background: rgb(233.5, 77.4591346154, 0);
     cursor: pointer;
   }
   .btnRed {
@@ -2935,85 +2935,85 @@ img {
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnRed.active {
-    background: #ed0000;
+    background: rgb(236.5, 0, 0);
     cursor: pointer;
   }
   .btnPurple {
-    background: #8c248d;
-    border: 1px solid #8c248d;
+    background: rgb(140.1315789474, 36.2006578947, 141.2993421053);
+    border: 1px solid rgb(140.1315789474, 36.2006578947, 141.2993421053);
     color: #fff;
   }
   .btnPurple:hover {
-    background: #641a65;
-    border: 1px solid #3c0f3c;
+    background: rgb(99.8684210526, 25.7993421053, 100.7006578947);
+    border: 1px solid rgb(59.6052631579, 15.3980263158, 60.1019736842);
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btnPurple:focus-visible {
-    background: #641a65;
-    border: 1px solid #3c0f3c;
+    background: rgb(99.8684210526, 25.7993421053, 100.7006578947);
+    border: 1px solid rgb(59.6052631579, 15.3980263158, 60.1019736842);
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnPurple.active {
-    background: #a029a2;
+    background: rgb(160.2631578947, 41.4013157895, 161.5986842105);
     cursor: pointer;
   }
   .btnSubmit {
-    background: #00a642;
-    border: 1px solid #00a642;
+    background: rgb(0, 165.5, 66.2);
+    border: 1px solid rgb(0, 165.5, 66.2);
     color: #fff;
   }
   .btnSubmit:hover {
-    background: #00732e;
-    border: 1px solid #004019;
+    background: rgb(0, 114.5, 45.8);
+    border: 1px solid rgb(0, 63.5, 25.4);
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btnSubmit:focus-visible {
-    background: #00732e;
-    border: 1px solid #004019;
+    background: rgb(0, 114.5, 45.8);
+    border: 1px solid rgb(0, 63.5, 25.4);
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnSubmit.active {
-    background: #00bf4c;
+    background: rgb(0, 191, 76.4);
     cursor: pointer;
   }
   .btnReset {
-    color: #484848;
+    color: rgb(72.25, 72.25, 72.25);
   }
   .btnSearch {
-    background: #00a642;
-    border: 1px solid #00a642;
+    background: rgb(0, 165.5, 66.2);
+    border: 1px solid rgb(0, 165.5, 66.2);
     color: #fff;
   }
   .btnSearch:hover {
-    background: #00732e;
-    border: 1px solid #004019;
+    background: rgb(0, 114.5, 45.8);
+    border: 1px solid rgb(0, 63.5, 25.4);
     cursor: pointer;
     color: #fff;
     outline: none;
   }
   .btnSearch:focus-visible {
-    background: #00732e;
-    border: 1px solid #004019;
+    background: rgb(0, 114.5, 45.8);
+    border: 1px solid rgb(0, 63.5, 25.4);
     cursor: pointer;
     color: #fff;
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6);
   }
   .btnSearch.active {
-    background: #00bf4c;
+    background: rgb(0, 191, 76.4);
     cursor: pointer;
   }
   .btnPrimary {
@@ -3022,12 +3022,12 @@ img {
     border: solid 1px #008C38;
   }
   .btnPrimary:hover, .btnPrimary:focus-visible {
-    background: #005924;
+    background: rgb(0, 89, 35.6);
     border: solid 1px #008C38;
   }
   .btnSecondary {
     background: #fff;
-    color: #004019;
+    color: rgb(0, 63.5, 25.4);
     border: solid 1px #008C38;
     text-shadow: none;
   }
@@ -3043,7 +3043,7 @@ img {
     text-shadow: none;
   }
   .btnNormal:hover, .btnNormal:focus-visible {
-    color: #404046;
+    color: rgb(64.3815165877, 64.3815165877, 70.1184834123);
     background: #c3c3c3;
     border: solid 1px #c3c3c3;
   }
@@ -3053,7 +3053,7 @@ img {
     border: 1px solid #ddd;
   }
   .btnBack:hover, .btnBack:focus-visible {
-    background: #005924;
+    background: rgb(0, 89, 35.6);
     border: 1px solid #ddd;
   }
   .disabled,
@@ -3101,11 +3101,11 @@ img {
     color: #222;
   }
   .breadcrumb a:hover, .breadcrumb a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   .breadcrumb a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   .divider,
   .dividerVertical {
@@ -3785,8 +3785,8 @@ img {
   }
   .category a:hover, .category a:focus, .category a.active {
     color: #fff;
-    background: #00a642;
-    border: 1px solid #00a642;
+    background: rgb(0, 165.5, 66.2);
+    border: 1px solid rgb(0, 165.5, 66.2);
     box-shadow: none;
   }
   .category a span {
@@ -3824,11 +3824,11 @@ img {
     padding: 0.2em 0.75em;
   }
   .tag ul li a:hover, .tag ul li a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   .tag ul li a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   .tag._scroll {
     overflow-x: scroll;
@@ -3878,11 +3878,11 @@ img {
     color: #00a4f9;
   }
   em[tooltip]:hover, em[tooltip]:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   em[tooltip]:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   [tooltip]:before,
   [tooltip]:after {
@@ -4303,11 +4303,11 @@ img {
     color: #222;
   }
   .lp table td a:hover, .lp table td a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   .lp table td a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   .lp table td.date {
     text-align: center;
@@ -4354,7 +4354,7 @@ img {
   }
   .lp .list > ul > li > a:hover,
   .lp .list ol > li > a:hover {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
   }
   .lp .list > ul > li > a .num,
   .lp .list ol > li > a .num {
@@ -4426,11 +4426,11 @@ img {
     color: #222;
   }
   .submenu li a:hover, .submenu li a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   .submenu li a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   .submenu li a .num {
     position: absolute;
@@ -4443,8 +4443,8 @@ img {
     content: ".";
   }
   .submenu li a:hover, .submenu li a:focus-visible {
-    border: 1px solid #0094e0;
-    color: #0094e0;
+    border: 1px solid rgb(0, 147.6, 224.1);
+    color: rgb(0, 147.6, 224.1);
   }
   .tabSet {
     margin: 30px auto;
@@ -4468,7 +4468,7 @@ img {
   .tabSet .modeBBtn:focus-visible,
   .tabSet .tabBtn:focus-visible {
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa inset;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6) inset;
   }
   .tabSet .modeBBtn.active,
   .tabSet .tabBtn.active {
@@ -4487,7 +4487,7 @@ img {
   }
   .tabSet .tabContent a:focus {
     outline: none;
-    box-shadow: 0 0px 0px 2px #1aadfa inset;
+    box-shadow: 0 0px 0px 2px rgb(25.5, 173.1, 249.6) inset;
   }
   @media screen and (max-width: 767px) {
     .tabSet .tabContent a:focus {
@@ -4512,7 +4512,7 @@ img {
     display: none;
   }
   .tabSet.modeB .tabContent .content a:focus-visible {
-    outline: #1aadfa 2px solid;
+    outline: rgb(25.5, 173.1, 249.6) 2px solid;
   }
   .tabSet.modeB .modeBBtn {
     display: block;
@@ -4884,7 +4884,7 @@ img {
     width: 300px;
     padding: 3em 0;
     height: 100%;
-    background: #003013;
+    background: rgb(0, 48.2, 19.28);
     overflow: hidden;
     overflow-y: auto;
     z-index: 9999;
@@ -5404,7 +5404,7 @@ img {
   .swiperDots .swiper-pagination-bullet.swiper-pagination-bullet-active {
     opacity: 1;
     /* 點 active 的顏色 */
-    background: #0094e0;
+    background: rgb(0, 147.6, 224.1);
   }
   .swiperDots .swiper-pagination-bullet.swiper-pagination-bullet-active:hover {
     /* 點 active  hover的顏色 */
@@ -5569,7 +5569,7 @@ img {
     max-width: 100%;
   }
   a {
-    color: #00732e;
+    color: rgb(0, 114.5, 45.8);
     text-decoration: none;
   }
   a.prev {
@@ -5763,12 +5763,12 @@ img {
   }
   .btn._clear {
     background: transparent;
-    color: #00732e;
+    color: rgb(0, 114.5, 45.8);
     padding: 4px 12px;
   }
   .btn._clear:hover, .btn._clear:focus-visible {
     color: #fff;
-    background: #00732e;
+    background: rgb(0, 114.5, 45.8);
   }
   .btn._remove {
     background: url(../images/icon-close.svg) 50% 50% no-repeat #fff;
@@ -5795,13 +5795,13 @@ img {
   .btn._discount:hover, .btn._discount:focus-visible {
     background: url(../images/icon-info.svg) right 12px top 50% no-repeat #e3e9b8;
     background-size: 14px;
-    color: #778444;
-    border-color: #778444;
+    color: rgb(118.8805309735, 132.1880530973, 68.3119469027);
+    border-color: rgb(118.8805309735, 132.1880530973, 68.3119469027);
   }
   .btn:hover, .btn:focus-visible {
-    background: #00732e;
+    background: rgb(0, 114.5, 45.8);
     color: #fff;
-    border-color: #00732e;
+    border-color: rgb(0, 114.5, 45.8);
   }
   .btn._share, .btn._store {
     background: none;
@@ -5830,13 +5830,25 @@ img {
     color: #008C38;
     background: url(../images/icon-change.svg) right 10px top 50% no-repeat transparent;
   }
+  .btn._rotate {
+    padding: 0 32px;
+    margin: 4px 0;
+    color: #008C38;
+    background: url(../images/icon-rotate.svg) right 0 top 50% no-repeat transparent;
+    background-size: 30px;
+  }
+  .btn._rotate._disable {
+    background: url(../images/icon-rotate-gry.svg) right 0 top 50% no-repeat transparent;
+    background-size: 30px;
+    opacity: 0.5;
+  }
   .btn._disable {
     background: #ddd;
     color: #666;
     cursor: not-allowed;
   }
   .btn.submit {
-    background: #00732e;
+    background: rgb(0, 114.5, 45.8);
     color: #222;
     padding: 16px 52px;
     border: none;
@@ -5849,7 +5861,7 @@ img {
     background: #434343;
   }
   .btn.normal:hover, .btn.normal:focus-visible {
-    color: #00732e;
+    color: rgb(0, 114.5, 45.8);
     background: transparent;
   }
   .btn.filter {
@@ -6109,7 +6121,7 @@ img {
     width: 24px;
     height: 24px;
     margin-right: 6px;
-    accent-color: #008234;
+    accent-color: rgb(0, 129.8, 51.92);
     box-shadow: none;
   }
   input[readonly],
@@ -7027,13 +7039,13 @@ img {
     font-weight: bold;
   }
   .filter ._filter:hover, .filter ._filter:focus-visible {
-    background: url(../images/icon-filter-w.svg) 10px 50% no-repeat #00732e;
+    background: url(../images/icon-filter-w.svg) 10px 50% no-repeat rgb(0, 114.5, 45.8);
     color: #fff;
     background-size: 20px;
   }
   .filter ._filter:hover span, .filter ._filter:focus-visible span {
     background: #fff;
-    color: #00732e !important;
+    color: rgb(0, 114.5, 45.8) !important;
   }
   .filter ._sort {
     background: url(../images/icon-sorting.svg) 10px 50% no-repeat #EBEDDA;
@@ -7041,7 +7053,7 @@ img {
     background-size: 20px;
   }
   .filter ._sort:hover, .filter ._sort:focus-visible {
-    background: url(../images/icon-sorting-w.svg) 10px 50% no-repeat #00732e;
+    background: url(../images/icon-sorting-w.svg) 10px 50% no-repeat rgb(0, 114.5, 45.8);
     color: #fff;
     background-size: 20px;
   }
@@ -7839,6 +7851,15 @@ img {
   .main .centerLimit .memberCode:has(.gid) .portrait {
     top: calc(50% - 13px);
   }
+  .main .centerLimit .Countdown {
+    padding: 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .centerLimit .Countdown .timer._invalid {
+    color: #EA3349;
+  }
   .main .centerLimit._pure {
     max-width: -moz-min-content;
     max-width: min-content;
@@ -8350,7 +8371,7 @@ img {
     transition: 0.2s;
   }
   .QA_flex ._sticky ul a.act, .QA_flex ._sticky ul a:hover, .QA_flex ._sticky ul a:focus-visible {
-    background: #e2edc5;
+    background: rgb(226.4645669291, 237.1653543307, 197.3346456693);
   }
   .QA_flex ._QA {
     flex: 0 1 auto;
@@ -8530,7 +8551,7 @@ img {
   .tag ul li a:hover, .tag ul li a.act {
     background: #008C38;
     color: #fff;
-    border-color: #007d32;
+    border-color: rgb(0, 124.7, 49.88);
   }
   .hotAct {
     background: #f7f7f7;
@@ -8997,7 +9018,7 @@ img {
   .mp .main .hero .container .btn:hover, .mp .main .hero .container .btn:focus-visible {
     font-weight: bold;
     background: #fff;
-    color: #00732e;
+    color: rgb(0, 114.5, 45.8);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
   .mp .main .hero .container picture img {
@@ -9896,11 +9917,11 @@ img {
     color: #00a4f9;
   }
   .cp a:hover, .cp a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   .cp a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
   .cp .publishInfo {
     font-size: 0.875em;
@@ -10167,61 +10188,61 @@ img {
     background: #275cb7;
   }
   .fileDownload li span.file_doc a:hover, .fileDownload li span.file_doc a:focus-visible, .fileDownload li span.file_docx a:hover, .fileDownload li span.file_docx a:focus-visible, .fileDownload li span.file_odt a:hover, .fileDownload li span.file_odt a:focus-visible {
-    background: #2351a2;
+    background: rgb(34.5202702703, 81.4324324324, 161.9797297297);
   }
   .fileDownload li span.file_xls a, .fileDownload li span.file_xlsx a, .fileDownload li span.file_csv a, .fileDownload li span.file_ods a {
     background: #387947;
   }
   .fileDownload li span.file_xls a:hover, .fileDownload li span.file_xls a:focus-visible, .fileDownload li span.file_xlsx a:hover, .fileDownload li span.file_xlsx a:focus-visible, .fileDownload li span.file_csv a:hover, .fileDownload li span.file_csv a:focus-visible, .fileDownload li span.file_ods a:hover, .fileDownload li span.file_ods a:focus-visible {
-    background: #30683d;
+    background: rgb(47.9322033898, 103.5677966102, 60.7711864407);
   }
   .fileDownload li span.file_ppt a, .fileDownload li span.file_pptx a, .fileDownload li span.file_odp a, .fileDownload li span.file_pdf a {
     background: #c55a3b;
   }
   .fileDownload li span.file_ppt a:hover, .fileDownload li span.file_ppt a:focus-visible, .fileDownload li span.file_pptx a:hover, .fileDownload li span.file_pptx a:focus-visible, .fileDownload li span.file_odp a:hover, .fileDownload li span.file_odp a:focus-visible, .fileDownload li span.file_pdf a:hover, .fileDownload li span.file_pdf a:focus-visible {
-    background: #b25135;
+    background: rgb(177.8661417323, 80.7657480315, 52.6338582677);
   }
   .fileDownload li span.file_pdf a {
     background: #c00;
   }
   .fileDownload li span.file_pdf a:hover, .fileDownload li span.file_pdf a:focus-visible {
-    background: #b30000;
+    background: rgb(178.5, 0, 0);
   }
   .fileDownload li span.file_zip a {
     background: #eb712e;
   }
   .fileDownload li span.file_zip a:hover, .fileDownload li span.file_zip a:focus-visible {
-    background: #e96117;
+    background: rgb(232.7729257642, 97.1877729258, 22.7270742358);
   }
   .fileDownload li span.file_txt a, .fileDownload li span.file_other a {
     background: #555;
   }
   .fileDownload li span.file_txt a:hover, .fileDownload li span.file_txt a:focus-visible, .fileDownload li span.file_other a:hover, .fileDownload li span.file_other a:focus-visible {
-    background: #484848;
+    background: rgb(72.25, 72.25, 72.25);
   }
   .fileDownload li span.file_mov a {
     background: #009999;
   }
   .fileDownload li span.file_mov a:hover, .fileDownload li span.file_mov a:focus-visible {
-    background: teal;
+    background: rgb(0, 127.5, 127.5);
   }
   .fileDownload li span.file_mp3 a, .fileDownload li span.file_mp4 a {
     background: #088ecc;
   }
   .fileDownload li span.file_mp3 a:hover, .fileDownload li span.file_mp3 a:focus-visible, .fileDownload li span.file_mp4 a:hover, .fileDownload li span.file_mp4 a:focus-visible {
-    background: #077db3;
+    background: rgb(7.0377358491, 124.9198113208, 179.4622641509);
   }
   .fileDownload li span.file_jpg a {
     background: #6c29a4;
   }
   .fileDownload li span.file_jpg a:hover, .fileDownload li span.file_jpg a:focus-visible {
-    background: #5f2490;
+    background: rgb(94.5658536585, 35.9, 143.6);
   }
   .fileDownload li span.file_wmv a {
     background: #430a1f;
   }
   .fileDownload li span.file_wmv a:hover, .fileDownload li span.file_wmv a:focus-visible {
-    background: #2d0715;
+    background: rgb(44.8116883117, 6.6883116883, 20.7337662338);
   }
   .webLink {
     margin: 1em 0;
@@ -10262,10 +10283,10 @@ img {
     color: #222;
   }
   .webLink li a:hover, .webLink li a:focus-visible {
-    color: #0094e0;
+    color: rgb(0, 147.6, 224.1);
     cursor: pointer;
   }
   .webLink li a:focus-visible {
-    outline: #0094e0 2px solid;
+    outline: rgb(0, 147.6, 224.1) 2px solid;
   }
 }/*# sourceMappingURL=style.css.map */
