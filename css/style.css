@@ -8094,6 +8094,9 @@ img {
   .main .noteList ol li a, .main .noteList ul li a {
     padding: 4px 8px;
   }
+  .main .noteList b {
+    color: #EA3349;
+  }
   .main .noteList._simple {
     background: transparent;
     padding: 2em 0;
@@ -8102,6 +8105,10 @@ img {
   }
   .main .noteList._simple h3, .main .noteList._simple p, .main .noteList._simple li {
     color: #777;
+  }
+  .main form .noteList._simple {
+    border-top: none;
+    margin: 0;
   }
   .main .infoSetBox {
     margin-bottom: 3em;
