@@ -6453,6 +6453,15 @@ img {
     font-size: 0.6em;
     color: #777;
   }
+  #mask_below .userAccount .itemAccount:hover, #mask_below .userAccount .itemAccount:focus-visible {
+    cursor: pointer;
+  }
+  #mask_below .userAccount .itemAccount.disable p, #mask_below .userAccount .itemAccount.disable span {
+    color: #C5C2C2;
+  }
+  #mask_below .userAccount .itemAccount.disable:hover, #mask_below .userAccount .itemAccount.disable:focus-visible {
+    cursor: not-allowed;
+  }
   #mask_below .userAccount .itemAccount.act {
     box-shadow: 0 0 0 3px #008C38;
   }
