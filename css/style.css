@@ -4795,9 +4795,20 @@ img {
   *[class*=noticeNormal]:hover, *[class*=noticeNormal]:focus-visible {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   }
+  *[class*=noticeNormal]._announce {
+    color: rgb(239.8, 145.7157894737, 0) !important;
+  }
   *[class*=noticeNormal]._announce:before {
     background: url(../images/icon-speaker.svg) no-repeat center center;
-    background-size: 32px;
+    background-size: 30px;
+  }
+  *[class*=noticeNormal]._slotBar:before {
+    background: url(../images/icon-slotBar.svg) no-repeat center center;
+    background-size: 30px;
+  }
+  *[class*=noticeNormal]._gift:before {
+    background: url(../images/icon-gift.svg) no-repeat center center;
+    background-size: 30px;
   }
   *[class*=noticeWarning] {
     color: #EA3349;
@@ -5671,6 +5682,7 @@ img {
     flex: 1 1 100%;
     width: 100%;
     margin: 4px 0;
+    box-sizing: border-box;
   }
   .btnGrp._narrow {
     justify-content: normal;
@@ -5689,6 +5701,68 @@ img {
   }
   .btnGrp._right {
     justify-content: flex-end;
+  }
+  .btnGrp._merge {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background: #fff;
+    border-radius: 8px;
+    position: relative;
+  }
+  .btnGrp._merge .btn {
+    background: transparent;
+    color: #222;
+    padding: 12px 0;
+    border-radius: 0;
+    z-index: 1;
+  }
+  .btnGrp._merge .btn._myCoupon, .btnGrp._merge .btn._myDelivery, .btnGrp._merge .btn._daliySlot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2px;
+    position: relative;
+    transition: none;
+  }
+  .btnGrp._merge .btn._myCoupon:before, .btnGrp._merge .btn._myDelivery:before, .btnGrp._merge .btn._daliySlot:before {
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+  }
+  .btnGrp._merge .btn._myCoupon::after, .btnGrp._merge .btn._myDelivery::after, .btnGrp._merge .btn._daliySlot::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 70%;
+    background: #BDBDBD;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btnGrp._merge .btn._myCoupon:hover, .btnGrp._merge .btn._myCoupon:focus-visible, .btnGrp._merge .btn._myDelivery:hover, .btnGrp._merge .btn._myDelivery:focus-visible, .btnGrp._merge .btn._daliySlot:hover, .btnGrp._merge .btn._daliySlot:focus-visible {
+    color: #008C38;
+  }
+  .btnGrp._merge .btn._myCoupon:before {
+    background: url(../images/icon-coupon-black.svg) 50% no-repeat;
+  }
+  .btnGrp._merge .btn._myCoupon:hover:before, .btnGrp._merge .btn._myCoupon:focus-visible:before {
+    background: url(../images/icon-coupon.svg) 50% no-repeat;
+  }
+  .btnGrp._merge .btn._myDelivery:before {
+    background: url(../images/icon-delivery-black.svg) 50% no-repeat;
+  }
+  .btnGrp._merge .btn._myDelivery:hover:before, .btnGrp._merge .btn._myDelivery:focus-visible:before {
+    background: url(../images/icon-delivery.svg) 50% no-repeat;
+  }
+  .btnGrp._merge .btn._daliySlot:before {
+    background: url(../images/icon-slotBar-black.svg) 50% no-repeat;
+  }
+  .btnGrp._merge .btn._daliySlot:hover:before, .btnGrp._merge .btn._daliySlot:focus-visible:before {
+    background: url(../images/icon-slotBar.svg) 50% no-repeat;
+  }
+  .btnGrp._merge .btn:last-child::after {
+    display: none;
   }
   .btnGrp._flow a._Edit {
     padding: 0 3em;
@@ -8013,6 +8087,18 @@ img {
   .main .actCards a .imgContainer img {
     display: block;
   }
+  .main .actCards a._more {
+    display: flex;
+    justify-content: center;
+    -moz-column-gap: 4px;
+         column-gap: 4px;
+    background: #fff;
+    color: #008C38;
+  }
+  .main .actCards a._more img {
+    width: 20px;
+    height: 20px;
+  }
   .main .actCards a:hover {
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   }
@@ -8022,6 +8108,11 @@ img {
   .main .setBox h3 {
     text-align: left;
     margin: 1em 0;
+  }
+  .main .setBox h4 {
+    font-size: 1.25em;
+    margin: 1.75em 0 0.5em;
+    font-weight: normal;
   }
   .main .setBox ._linkItems {
     border: 1px solid #BDBDBD;
@@ -8067,8 +8158,26 @@ img {
   .main .setBox ._linkItems a.readonly:hover {
     background: #fff;
   }
+  .main .setBox ._linkItems a.userSetting {
+    background-image: url(../images/icon-settings.svg);
+  }
+  .main .setBox ._linkItems a.commonDelivery {
+    background-image: url(../images/icon-delivery-black.svg);
+  }
+  .main .setBox ._linkItems a.memberWebInfo {
+    background-image: url(../images/icon-web.svg);
+  }
+  .main .setBox ._linkItems a.QA {
+    background-image: url(../images/icon-question.svg);
+  }
+  .main .setBox ._linkItems a.userSetting, .main .setBox ._linkItems a.commonDelivery, .main .setBox ._linkItems a.memberWebInfo, .main .setBox ._linkItems a.QA {
+    padding-left: 3.25em;
+    background-position: left 24px top 50%;
+    background-repeat: no-repeat;
+    background-size: 26px;
+  }
   .main .setBox ._linkItems + ._linkItems {
-    margin-top: 1em;
+    margin-top: 1.5em;
   }
   .main .setBox ._linkItems div h3 {
     margin: 0;
@@ -8290,6 +8399,190 @@ img {
   .fixedZone .userInfo a:hover {
     background: #008C38;
     color: #fff;
+  }
+  .fixedZone .userInfo a.btn {
+    color: #fff;
+    background: #999;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  .fixedZone .userInfo a.btn._primary {
+    background: #008C38;
+  }
+  .fixedZone .userInfo a.btn._more {
+    background: #008C38;
+    border-radius: 40px;
+    padding: 16px 48px;
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+  }
+  .fixedZone .userInfo a.btn._more img {
+    width: 26px;
+    height: 26px;
+    display: block;
+    margin-right: 6px;
+  }
+  .fixedZone .userInfo a.btn._second {
+    background: #EBEDDA;
+    color: #333;
+  }
+  .fixedZone .userInfo a.btn._default {
+    background: #fff;
+    color: #333;
+  }
+  .fixedZone .userInfo a.btn._delete {
+    background: #fff;
+    color: #EA3349;
+  }
+  .fixedZone .userInfo a.btn._delete:hover, .fixedZone .userInfo a.btn._delete:focus-visible {
+    color: #fff;
+    background: #ea3349;
+  }
+  .fixedZone .userInfo a.btn._clear {
+    background: transparent;
+    color: rgb(0, 114.5, 45.8);
+    padding: 4px 12px;
+  }
+  .fixedZone .userInfo a.btn._clear:hover, .fixedZone .userInfo a.btn._clear:focus-visible {
+    color: #fff;
+    background: rgb(0, 114.5, 45.8);
+  }
+  .fixedZone .userInfo a.btn._remove {
+    background: url(../images/icon-close.svg) 50% 50% no-repeat #fff;
+    background-size: 12px;
+    border-radius: 50%;
+    color: #222;
+    padding: 4px 12px;
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+  }
+  .fixedZone .userInfo a.btn._remove:hover, .fixedZone .userInfo a.btn._remove:focus-visible {
+    background: url(../images/icon-close-w.svg) 50% 50% no-repeat #b1b1b1;
+    background-size: 12px;
+  }
+  .fixedZone .userInfo a.btn._discount {
+    color: #86954D;
+    background: url(../images/icon-info.svg) right 12px top 50% no-repeat #fff;
+    background-size: 14px;
+    font-size: 0.8em;
+    border: 1px solid #86954D;
+    padding: 3px 32px 3px 8px;
+  }
+  .fixedZone .userInfo a.btn._discount:hover, .fixedZone .userInfo a.btn._discount:focus-visible {
+    background: url(../images/icon-info.svg) right 12px top 50% no-repeat #e3e9b8;
+    background-size: 14px;
+    color: rgb(118.8805309735, 132.1880530973, 68.3119469027);
+    border-color: rgb(118.8805309735, 132.1880530973, 68.3119469027);
+  }
+  .fixedZone .userInfo a.btn:hover, .fixedZone .userInfo a.btn:focus-visible {
+    background: rgb(0, 114.5, 45.8);
+    color: #fff;
+    border-color: rgb(0, 114.5, 45.8);
+  }
+  .fixedZone .userInfo a.btn._share, .fixedZone .userInfo a.btn._store {
+    background: none;
+    color: #222;
+    padding: 0 !important;
+  }
+  .fixedZone .userInfo a.btn._share:before, .fixedZone .userInfo a.btn._store:before {
+    content: "";
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin: auto;
+  }
+  .fixedZone .userInfo a.btn._share:before {
+    background: url(../images/icon-share.svg) 50% 50% no-repeat #fff;
+    background-size: 22px;
+  }
+  .fixedZone .userInfo a.btn._store:before {
+    background: url(../images/icon-store.svg) 50% 50% no-repeat #fff;
+    background-size: 22px;
+  }
+  .fixedZone .userInfo a.btn._change {
+    flex: 0 1 auto;
+    margin: auto;
+    color: #008C38;
+    background: url(../images/icon-change.svg) right 10px top 50% no-repeat transparent;
+  }
+  .fixedZone .userInfo a.btn._rotate {
+    padding: 0 32px;
+    margin: 4px 0;
+    color: #008C38;
+    background: url(../images/icon-rotate.svg) right 0 top 50% no-repeat transparent;
+    background-size: 30px;
+  }
+  .fixedZone .userInfo a.btn._rotate._disable {
+    background: url(../images/icon-rotate-gry.svg) right 0 top 50% no-repeat transparent;
+    background-size: 30px;
+    opacity: 0.5;
+  }
+  .fixedZone .userInfo a.btn._disable {
+    background: #ddd;
+    color: #666;
+    cursor: not-allowed;
+  }
+  .fixedZone .userInfo a.btn.submit {
+    background: rgb(0, 114.5, 45.8);
+    color: #222;
+    padding: 16px 52px;
+    border: none;
+  }
+  .fixedZone .userInfo a.btn.submit:hover, .fixedZone .userInfo a.btn.submit:focus-visible {
+    background: black;
+    color: #000;
+  }
+  .fixedZone .userInfo a.btn.normal {
+    background: #434343;
+  }
+  .fixedZone .userInfo a.btn.normal:hover, .fixedZone .userInfo a.btn.normal:focus-visible {
+    color: rgb(0, 114.5, 45.8);
+    background: transparent;
+  }
+  .fixedZone .userInfo a.btn.filter {
+    border: none;
+    padding: 0;
+    font-size: 0;
+    width: 52px;
+    height: 52px;
+    background: url(../images/icon-array.svg) left top no-repeat;
+    background-size: cover;
+    transition: 0s;
+  }
+  .fixedZone .userInfo a.btn.filter:hover, .fixedZone .userInfo a.btn.filter:focus-visible {
+    background-position: left bottom;
+  }
+  .fixedZone .userInfo .thumbnail {
+    display: flex;
+    align-items: center;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .fixedZone .userInfo .thumbnail .portrait {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .fixedZone .userInfo .thumbnail h3 {
+    margin-bottom: 8px;
+  }
+  .fixedZone .userInfo .userCode {
+    border: 1px solid transparent;
+    background: url(../images/icon-QRcode.svg) right 10px top 50% no-repeat transparent;
+    background-size: 18px;
+    padding: 0.3em 2.25em 0.3em 1em;
+  }
+  .fixedZone .userInfo .userCode:hover {
+    border-color: #008C38;
+    color: #008C38;
+    background: url(../images/icon-QRcode.svg) right 10px top 50% no-repeat transparent;
+    background-size: 18px;
   }
   @media (max-width: 992px) {
     .fixedZone {

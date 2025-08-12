@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="robots" content="noindex" />
+    <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>會員專區（第1.5階段））</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- favicon -->
+    <link href="images/favicon.ico" rel="icon" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="#"><h1>中華郵政會員資訊網</h1></a>
+        <button type="button" class="sidebarCtrl">側欄選單<span></span><span></span><span></span></button>
+        <nav>
+          <a href="#" class="lang">English</a>
+          <div class="menu">
+            <a href="#">郵政會員</a>
+            <a href="#">最新消息</a>
+            <a href="#">常見問題</a>
+            <a href="#">下載行動郵局</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- 內容 -->
+    <section class="fixedZone">
+      <!-- 使用者 -->
+      <section class="userInfo">
+        <h3>會員帳號 0900-000000</h3>
+      </section>
+      <!-- 啵幣 -->
+      <a href="#" class="userPoints">
+        <h3>100 啵幣</h3>
+        <p>2000/01/01 到期 20 p</p>
+      </a>
+      <!-- 按鈕組合 -->
+      <div class="btnGrp _stable">
+        <button class="btn _default">如何獲得啵幣</button>
+        <button class="btn _default">更多常見問題</button>
+      </div>
+      <!-- link -->
+      <a href="#" class="noticeNormal">查看我的兌換券</a>
+      <a href="#" class="noticeNormal _slotBar">每日登入抽好禮，前往抽獎 !</a>
+      <!-- alert -->
+      <div class="noticeWarning">
+        為確保您的權益，請儘速前往驗證 Email
+        <a role="button" href="#" aria-label="關閉" class="close"><img src="images/basic/icon_close.svg" alt=""></a>
+      </div>
+    </section>
+    <div class="main _userSep2">
+      <div class="container">
+        <div class="centerLimit">
+          <!-- 啵幣商城 -->
+          <section class="marketLink">
+            <h3>啵幣這樣用！快來啵幣商城尋覓專屬好禮</h3>
+            <p>郵政特色商品、超商咖啡、日常用品在這通通都找得到</p>
+            <a href="#">探索啵幣商城</a>
+          </section>
+          <!-- 優惠活動 -->
+          <section class="actCards">
+            <h3>優惠活動</h3>
+            <a href="#">
+              <div class="imgContainer">
+                <img src="images/banner1.jpg" class="cover" alt="圖說1">
+              </div>
+            </a>
+            <a href="#">
+              <div class="imgContainer">
+                <img src="images/banner2.jpg" class="cover" alt="圖說1">
+              </div>
+            </a>
+            <div class="btnGrp _full">
+              <button class="btn _primary">更多優惠活動</button>
+            </div>
+          </section>
+          <!-- 設定 -->
+          <section class="setBox">
+            <h3>設定</h3>
+            <div class="_linkItems">
+              <a href="#">編輯會員資料<span class="_state"><img src="images/basic/icon_arrow_right.svg" alt=""></span></a>
+              <a href="#">會員密碼變更</a>
+            </div>
+          </section>
+          <!-- 會員服務 -->
+          <section class="setBox">
+            <h3>會員服務</h3>
+            <div class="_linkItems">
+              <a href="#">儲金帳戶<span class="_state _undo">前往連結</span></a>
+              <a href="#">郵寄便<span class="_state">已連結</span></a>
+            </div>
+            <div class="_linkItems">
+              <a href="#">郵政會員網站<span class="_state"><img src="images/basic/icon_link.svg" alt=""></span></a>
+            </div>
+          </section>
+          <!-- 按鈕組合 -->
+          <div class="btnGrp _full">
+            <button class="btn _primary">登出</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- js -->
+    <script src="js/customize.js"></script>
+    <script>
+      function updateMainPosition() {
+        // 獲取 header 和 .fixedZone 的高度
+        const headerHeight = document.querySelector('header').offsetHeight;
+        const fixedZoneHeight = document.querySelector('.fixedZone').offsetHeight;
+        // 計算總高度
+        const totalHeight = headerHeight + fixedZoneHeight;
+        // 將總高度設定為 .main._userSep2 的 style.top
+        const mainElement = document.querySelector('.main._userSep2');
+        mainElement.style.top = `${totalHeight}px`;
+      }
+      // 初次設定
+      updateMainPosition();
+      // 偵聽瀏覽器尺寸變化
+      window.addEventListener('resize', updateMainPosition);
+    </script>
+  </body>
+</html>
