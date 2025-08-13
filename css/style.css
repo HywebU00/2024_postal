@@ -8706,14 +8706,15 @@ img {
   .QA_flex ._QA .item .btn-switch::before, .QA_flex ._QA .item .btn-switch::after {
     content: "";
     position: absolute;
-    width: 24px;
+    width: 22px;
     height: 2px;
     background: #000;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   .QA_flex ._QA .item .btn-switch::after {
-    transform: translateX(-50%) rotate(90deg);
+    transform: translate(-50%, -50%) rotate(90deg);
   }
   .QA_flex ._QA .item .btn-switch:hover, .QA_flex ._QA .item .btn-switch.act {
     background: #333;
