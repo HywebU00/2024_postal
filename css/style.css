@@ -6374,14 +6374,7 @@ img {
     border-radius: 8px;
     height: 300px;
     overflow-y: scroll;
-    line-height: 1.6;
     position: relative;
-  }
-  #mask .container .scrollCover .content ul, #mask .container .scrollCover .content ol,
-  #mask_below .container .scrollCover .content ul,
-  #mask_below .container .scrollCover .content ol {
-    margin: 12px 0;
-    margin-left: 24px;
   }
   #mask .container .scrollCover .btnToEnd,
   #mask_below .container .scrollCover .btnToEnd {
