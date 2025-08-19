@@ -7541,6 +7541,15 @@ img {
   header .container, header nav {
     height: 150px;
   }
+  header .goBack {
+    font-size: 1em;
+    font-weight: bold;
+    color: #1a1a1a;
+    transition: 0.3s;
+  }
+  header .goBack:hover, header .goBack:focus-visible {
+    color: #008C38;
+  }
   header .sidebarCtrl {
     width: 60px !important;
     height: 60px !important;
