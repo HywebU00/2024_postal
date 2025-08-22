@@ -9243,6 +9243,10 @@ img {
   .mp .main p, .mp .main li {
     margin: 10px 0;
   }
+  .mp .main p > span {
+    display: block;
+    text-align: center;
+  }
   .mp .main h2.mainTitle {
     text-align: center;
     font-size: 2em;
@@ -9934,6 +9938,10 @@ img {
   }
   .mp .main .terms a:hover {
     text-decoration: none;
+  }
+  .mp .main .terms p > span {
+    display: inline-block;
+    text-align: left;
   }
   .mp._page .main > section .container {
     padding: 1em 1.5em;
