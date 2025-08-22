@@ -9243,10 +9243,6 @@ img {
   .mp .main p, .mp .main li {
     margin: 10px 0;
   }
-  .mp .main p > span {
-    display: block;
-    text-align: center;
-  }
   .mp .main h2.mainTitle {
     text-align: center;
     font-size: 2em;
