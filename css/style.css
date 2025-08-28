@@ -7900,6 +7900,7 @@ img {
     color: #008C38;
   }
   .main .centerLimit .info._list .points p b {
+    display: inline-block;
     font-size: 1.25em;
     color: #122514;
     padding-left: 36px;
