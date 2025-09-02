@@ -8018,9 +8018,15 @@ img {
     background: url(../images/icon-boCoin.svg) left 50% no-repeat;
     background-size: 30px;
   }
+  .main .userPoints .btnGrp,
+  .main a.userPoints .btnGrp {
+    width: 100%;
+    justify-content: flex-end;
+  }
   .main .userPoints .btn,
   .main a.userPoints .btn {
     padding: 8px 20px;
+    flex: 0 1 auto;
   }
   @media (max-width: 992px) {
     .main .userPoints .btnGrp,
@@ -8030,7 +8036,6 @@ img {
     }
     .main .userPoints .btnGrp .btn,
     .main a.userPoints .btnGrp .btn {
-      flex: 1 1 50%;
       margin: 0 4px;
     }
   }
