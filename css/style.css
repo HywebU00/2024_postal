@@ -7017,6 +7017,7 @@ img {
     font-weight: normal;
     color: #bdbdbd;
     text-decoration: line-through;
+    text-align: left;
   }
   .giftCard .card .cardInfo .up {
     min-height: 111px;
