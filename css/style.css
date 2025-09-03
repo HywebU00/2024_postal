@@ -7370,6 +7370,11 @@ img {
   .recipient p.user {
     margin-top: 12px !important;
   }
+  .recipient a {
+    display: block;
+    word-break: keep-all;
+    padding: 10px 0 10px 10px;
+  }
   .recipient._deliverType {
     font-size: 90%;
   }
