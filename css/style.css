@@ -8166,6 +8166,9 @@ img {
   .main .setBox ._linkItems a span._state._undo {
     color: rgb(186, 0, 0);
   }
+  .main .setBox ._linkItems a span._state._setting {
+    color: #015BE1;
+  }
   .main .setBox ._linkItems a:last-child {
     border-bottom: none;
   }
