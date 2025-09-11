@@ -6080,6 +6080,12 @@ img {
   form .formGrp .content._address input {
     flex: 1 1 100%;
   }
+  @media (max-width: 576px) {
+    form .formGrp .content._address {
+      -moz-column-gap: 4px;
+           column-gap: 4px;
+    }
+  }
   form .formGrp .tip {
     display: flex;
     justify-content: space-between;
@@ -6183,6 +6189,17 @@ img {
   select.error {
     border: 1px solid #ba0000;
     box-shadow: 0 0 0 1px #ba0000;
+  }
+  input[disabled],
+  select[disabled] {
+    background: #eee;
+    opacity: 1;
+  }
+  @media (max-width: 576px) {
+    input,
+    select {
+      padding: 12px 12px;
+    }
   }
   select {
     -webkit-appearance: none;
