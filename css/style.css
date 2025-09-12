@@ -8914,6 +8914,7 @@ img {
     }
     .QA_flex ._QA .item .A {
       margin-bottom: 20px;
+      padding: 0 14px;
     }
     .QA_flex.act ._sticky {
       width: 100%;
