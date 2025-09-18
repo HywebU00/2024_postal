@@ -5702,6 +5702,10 @@ img {
   .btnGrp._right {
     justify-content: flex-end;
   }
+  .btnGrp._stable {
+    max-width: 280px;
+    margin: auto;
+  }
   .btnGrp._merge {
     flex-wrap: nowrap;
     flex-direction: row;
@@ -7697,6 +7701,7 @@ img {
     border-radius: 20px;
     margin: 10px 0;
     transition: 0.3s;
+    visibility: hidden;
   }
   header nav a.lang:hover {
     color: #fff;
@@ -7735,6 +7740,11 @@ img {
   header nav .menu a:hover:after {
     width: 32px;
     height: 32px;
+  }
+  @media (max-width: 1100px) {
+    header nav .menu a {
+      padding: 22px 28px;
+    }
   }
   @media (max-width: 992px) {
     header .container, header h1, header nav {
@@ -7803,7 +7813,7 @@ img {
     margin: auto;
     background: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    padding: 2em 5em;
+    padding: 2em 3em;
     border-radius: 12px;
   }
   .main .centerLimit h3 {
@@ -7976,6 +7986,9 @@ img {
   .main .centerLimit .functions {
     margin: 2em 0;
   }
+  .main .centerLimit .note {
+    color: #BDBDBD;
+  }
   .main .centerLimit .memberCode {
     text-align: center;
     margin: 0 auto;
@@ -8012,8 +8025,6 @@ img {
     color: #EA3349;
   }
   .main .centerLimit._pure {
-    max-width: -moz-min-content;
-    max-width: min-content;
     background: none;
     box-shadow: none;
   }
